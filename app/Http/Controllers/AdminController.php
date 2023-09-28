@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
-class ViewsController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        
+        $data_admin = Admin::all();
+        return view('admin.index', compact('data_admin'));
     }
 
     /**
@@ -61,9 +62,5 @@ class ViewsController extends Controller
     public function destroy(string $id)
     {
         //
-    }
-
-    public function home(){
-        return view('index-op-2');
     }
 }

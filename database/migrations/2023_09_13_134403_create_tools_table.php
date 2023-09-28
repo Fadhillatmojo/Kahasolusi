@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('tools', function (Blueprint $table) {
             $table->id("tool_id");
-            $table->string("tool_name")->unique();
-            $table->longText("tool_desc");
             $table->string("tool_image_url");
             $table->timestamps();
             

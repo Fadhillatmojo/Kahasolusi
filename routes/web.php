@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewsController;
 /*
@@ -18,4 +19,7 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [ViewsController::class, 'home']);
+
+Route::get('/daftaradmin', [AdminController::class, 'index']);
+
 
