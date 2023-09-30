@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('domain_experts', function (Blueprint $table) {
-            $table->id("domain_id");
-            $table->string("domain_name")->unique();
-            $table->string("domain_image_url");
+        Schema::create('roles', function (Blueprint $table) {
+            $table->id("role_id");
+            $table->string("role_name")->unique();
+            $table->string("role_image_url");
+            $table->unsignedBigInteger("admin_id")->required();
             $table->timestamps();
             
             // relasional pada table
-            $table->unsignedBigInteger("admin_id");
-            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('domain_experts');
+        Schema::dropIfExists('roles');
     }
 };

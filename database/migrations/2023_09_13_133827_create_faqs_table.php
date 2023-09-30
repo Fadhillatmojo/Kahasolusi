@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string("faq_title")->unique();
             $table->longText("faq_answer");
             $table->string("person_image_url");
+            $table->unsignedBigInteger('admin_id')->required();
             $table->timestamps();
             
             // relasional pada table
-            $table->unsignedBigInteger("admin_id");
-            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('restrict')->onUpdate('cascade');
 
         });
     }

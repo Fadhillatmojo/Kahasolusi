@@ -9,11 +9,6 @@ class ViewsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-        
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -65,5 +60,19 @@ class ViewsController extends Controller
 
     public function home(){
         return view('index-op-2');
+    }
+    public function index(){
+        return view('admin.index2');
+    }
+
+    public function portfolios(){
+        return view('admin.portfolios', [
+            "title"=>"portfolios"
+        ]);
+    }
+    public function roles(){
+        return view('admin.roles', [
+            "title"=>"roles"
+        ]);
     }
 }

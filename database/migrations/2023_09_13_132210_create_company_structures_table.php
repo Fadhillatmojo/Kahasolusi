@@ -16,19 +16,14 @@ return new class extends Migration
             $table->string("person_name");
             $table->string("person_position");
             $table->string("person_image_url");
+            $table->unsignedBigInteger('admin_id')->required();
             $table->timestamps();
 
             // relasi
-            $table->unsignedBigInteger('admin_id')->nullable();
-            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('restrict')->onUpdate('cascade');
             
         });
 
-        // Schema::create('company_structures', function (Blueprint $table) {
-        //     // $table->unsignedBigInteger('admin_id')->nullable();
-        //     $table->foreign('admin_id')->references('admin_id')->on('admins')->onDelete('cascade');
-
-        // });
     }
 
     /**
