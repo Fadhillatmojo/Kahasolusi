@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id("faq_id");
             $table->string("faq_title")->unique();
             $table->longText("faq_answer");
-            $table->string("person_image_url");
             $table->unsignedBigInteger('admin_id')->required();
             $table->timestamps();
             

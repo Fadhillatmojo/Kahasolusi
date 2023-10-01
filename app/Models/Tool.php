@@ -3,13 +3,13 @@
 namespace App\Models;
 
 use App\Models\Admin;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Company_structure extends Model
+class Tool extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'person_id';
+    protected $primaryKey = 'tool_id';
     public function Admin(){
         return $this->belongsTo(Admin::class, 'admin_id', 'admin_id');
     }

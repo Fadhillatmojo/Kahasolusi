@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
-use Database\Factories\AdminsFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class AdminSeeder extends Seeder
 {
@@ -14,11 +14,13 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
+        Admin::truncate();
         // Admin::insert([
         //     "admin_username"=> "John Doe",
         //     "admin_email"=> "eko@gmail.com",
         //     "admin_password"=> "okeokwojwo"
         // ]);
-        Admin::factory(10)->create();
+        Admin::factory(3)->create();
     }
 }
