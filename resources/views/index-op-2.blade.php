@@ -1,5 +1,6 @@
 @extends('component.root')
 @section('body')
+
     <!-- Start Banner 
     ============================================= -->
     <div class="banner-area top-pad-extra text-regular right-shape content-less">
