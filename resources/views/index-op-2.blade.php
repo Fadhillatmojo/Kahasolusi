@@ -18,7 +18,7 @@
                                             <h4 data-animation="animated slideInDown">Best Cleaning Service</h4>
                                             <h2 data-animation="animated slideInLeft">Amazing quality cleaning service agency</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
+                                                <a class="btn btn-theme primary effect btn-md smooth-menu" href="#contact">Book a Schedule</a>
                                             </div>  
                                         </div>
                                     </div>

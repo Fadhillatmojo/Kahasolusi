@@ -82,7 +82,7 @@
 
     <!-- Header 
     ============================================= -->
-    <header id="home">
+    <header id="header">
 
         <div class="container box-nav">
             <div class="row">
