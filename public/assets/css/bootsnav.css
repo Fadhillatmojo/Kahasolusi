@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 /* Varialbes */
 :root {
-	--font-default: 'Yantramanav', sans-serif;
+	--font-default: 'Josefin Sans';
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
+	/* ga tau kasih nama apa  */
+	--dark-blue:#122245;
 	--dark: #004876;
 	--white: #ffffff; 
 	--color-primary: #1239ac; 
@@ -2092,7 +2095,7 @@ nav.navbar.bootsnav {
 	}
 	/* Nav box */
 	nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
-		background: var(--color-primary);
+		background: var(--dark-blue);
 		top: 95px;
 		width: auto;
 		left: auto;

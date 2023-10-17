@@ -75,12 +75,16 @@ Sidebar heading:  20px 'Yantramanav', sans-serif
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 /* Varialbes */
 :root {
-	--font-default: 'Yantramanav', sans-serif;
+	--font-default: 'Josefin Sans';
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
+	/* namanin apa  */
+	--orange:#F16724;
+	--dark-blue:#122245;
 	--dark: #06278a;
 	--dark-secondary: #06278a;
 	--white: #ffffff; 
@@ -247,7 +251,7 @@ select:focus {
 
 ul {
 	margin: 0;
-	list-style-type: none;
+	/* list-style-type: none; */
 }
 
 a,
@@ -453,7 +457,7 @@ input {
 }
 
 .bg-dark {
-	background-color:var(--dark) !important;
+	background-color:var(--orange) !important;
 }
 
 .bg-dark-secondary {
@@ -563,7 +567,7 @@ input {
 
 .default-padding {
 	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-bottom: 220px;
 }
 
 .default-padding-top {
@@ -1026,7 +1030,34 @@ button:focus {
 	box-shadow: inherit !important;
 	outline: inherit !important;
 }
+/* tambahan */
+.row-visi-misi{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container-portfolios-title{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+}
 
+.container-portfolios-title h2{
+	font-weight: 600;
+    margin-bottom: 25px;
+}
+.card .card-portfolios{
+	border-radius: 15px 15px 13px 13px;
+	background: #FFF;
+	box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.10);
+}
+.portfolios-link{
+	display: flex;
+	justify-content: flex-end
+}
 
 /* Start Site Heading */
 
@@ -1589,11 +1620,16 @@ body,
 }
 
 .banner-area .content {
+	display: flex;
+	image-orientation: revert;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	z-index: 9;
 	overflow: hidden;
 	padding-bottom: 30px;
 	padding-top: 30px;
+	align-content: center;
 }
 
 
@@ -2614,12 +2650,9 @@ body,
 
 .about-us-area .thumb img:nth-child(2) {
 	position: absolute;
-	right: 0;
-	bottom: -65px;
-	width: 50%;
-	border-radius: 50%;
-	border: 10px solid var(--color-secondary);
-	box-shadow: none;
+    right: 5%;
+    bottom: -60%;
+    width: 70%;
 }
 
 .about-us-area .thumb .experience {

@@ -3,17 +3,6 @@
     <!-- Start Banner 
     ============================================= -->
     <div class="banner-area top-pad-extra text-regular right-shape content-less">
-        <!-- Animated Bubble -->
-        <div class="animated-bubble">
-            <img src="assets/img/shape/bubble.png" alt="Bubble">
-            <img src="assets/img/shape/bubble-mini.png" alt="Bubble">
-            <img src="assets/img/shape/bubble.png" alt="Bubble">
-            <img src="assets/img/shape/bubble.png" alt="Bubble">
-            <img src="assets/img/shape/bubble-mini.png" alt="Bubble">
-            <img src="assets/img/shape/bubble.png" alt="Bubble">
-            <img src="assets/img/shape/bubble-mid.png" alt="Bubble">
-        </div>
-        <!-- End Animated Bubble -->
         <div id="bootcarousel" class="carousel text-light slide animate_text" data-ride="carousel">
 
             <!-- Wrapper for slides -->
@@ -29,9 +18,6 @@
                                             <h2 data-animation="animated slideInLeft">Amazing quality cleaning service agency</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
                                                 <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
-                                                 <a href="https://www.youtube.com/watch?v=owhuBrGIOsE" class="popup-youtube secondary theme relative video-play-button">
-                                                    <i class="fa fa-play"></i>
-                                                </a>
                                             </div>  
                                         </div>
                                     </div>
@@ -51,9 +37,6 @@
                                             <h2 data-animation="animated slideInLeft">Disinfecting & Deodorizing Spray Services</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
                                                 <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
-                                                 <a href="https://www.youtube.com/watch?v=owhuBrGIOsE" class="popup-youtube theme secondary relative video-play-button">
-                                                    <i class="fa fa-play"></i>
-                                                </a>
                                             </div>  
                                         </div>
                                     </div>
@@ -77,53 +60,10 @@
     </div>
     <!-- End Banner -->
 
-    <!-- Start About 
-    ============================================= -->
-    <div id="about" class="about-us-area overflow-hidden default-padding">
-        <div class="container">
-            <div class="about-items">
-                <!-- Shape -->
-                <div class="shape">
-                    <img src="assets/img/shape/8.png" alt="Shape">
-                </div>
-                <!-- End Shape -->
-                <div class="row align-center">
-                    <div class="col-lg-6">
-                        <div class="thumb">
-                            <img src="assets/img/800x800.png" alt="Thumb">
-                            <img src="assets/img/800x800.png" alt="Thumb">
-                            <div class="experience">
-                                <h2>26</h2>
-                                <h4>Years Experiences</h4>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 info">
-                        <h2>We are committed to give <br> our best services</h2>
-                        <blockquote>
-                            Local operations team on-call 24 hours a day, available to work at a moment’s notice.
-                        </blockquote>
-                        <p>
-                            Friendly bachelor entrance to on by. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection.
-                        </p>
-                        <div class="bottom-info">
-                            <div class="button">
-                                <a data-animation="animated zoomInUp" class="btn btn-theme primary effect btn-md" href="#">Contact Us</a>
-                            </div>
-                            <div class="contact">
-                                <div class="content">
-                                    <span>Get Free Estimate</span>
-                                    <h5>+44-20-7328-4499</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Area -->
+    @include('component.about')
 
+    @include('component.portfolios')
+    
     <!-- Start Services Types 
     ============================================= -->
     <div id="services" class="services-types-area shadow overflow-hidden bg-theme text-light default-padding">

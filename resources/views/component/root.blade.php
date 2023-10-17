@@ -44,13 +44,14 @@
             <div class="row align-center">
                 <div class="col-lg-3 logo">
                     <a href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        <img src="assets/img/183x55.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <div class="col-lg-9 info item-flex space-between">
                      <ul>
                         <li>
-                            <i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM
+                            <!-- <i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM -->
+                            Header
                         </li>
                     </ul>
                     <div class="social">
@@ -86,21 +87,6 @@
             <div class="row">
                 <!-- Start Navigation -->
                 <nav class="navbar top-less logo-less white navbar-default navbar-fixed dark bootsnav on no-full nav-box no-background">
-
-                    <!-- Start Top Search -->
-                    <div class="top-search">
-                        <div class="container">
-                            <form method="get">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Top Search -->
-
                     <div class="container nav-container">
                         <div class="row">
                             <!-- Start Header Navigation -->
@@ -115,57 +101,40 @@
                             <!-- End Header Navigation -->
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="col-lg-9">
+                            
                                 <div class="collapse navbar-collapse" id="navbar-menu">
-                                    <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-                                        <li class="dropdown active dropdown-right">
-                                            <a href="#home" class="dropdown-toggle smooth-menu active" data-toggle="dropdown" >Home</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="index.html">Home Version One</a></li>
-                                                <li><a href="index-2.html">Home Version Two</a></li>
-                                                <li><a href="index-3.html">Home Version Three</a></li>
-                                                <li><a href="index-4.html">Home Version Four</a></li>
-                                                <li><a href="index-op.html">Home Onepage</a></li>
-                                                <li><a href="index-op-2.html">Home Onepage Two</a></li>
-                                                <li><a href="index-op-3.html">Home Onepage Three</a></li>
-                                            </ul>
+                                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                                        <li>
+                                            <a class="smooth-menu" href="#header">Home</a>
                                         </li>
                                         <li>
                                             <a class="smooth-menu" href="#about">About</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#services">Services</a>
+                                            <a class="smooth-menu" href="#portfolios">Portfolios</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#features">Features</a>
+                                            <a class="smooth-menu" href="#roles">Roles</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#pricing">Pricing</a>
+                                            <a class="smooth-menu" href="#tools">Tools</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#blog">Blog</a>
+                                            <a class="smooth-menu" href="#founders">Founders</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#faqs">FAQs</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#testimonials">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#contact">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            
                             <!-- /.navbar-collapse -->
-
-                            <!-- Start Atribute Navigation -->
-                            <div class="col-lg-3">
-                                <div class="attr-nav">
-                                    <ul>
-                                        <li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
-                                        <li class="side-menu">
-                                            <a href="#">
-                                                <span class="bar-1"></span>
-                                                <span class="bar-2"></span>
-                                                <span class="bar-3"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> 
-                            </div>       
-                            <!-- End Atribute Navigation -->
                         </div>
 
                     </div>
@@ -235,6 +204,8 @@
     <!-- End Header -->
 
 				@yield('body')
+
+                
 
     <!-- Start Footer 
     ============================================= -->
