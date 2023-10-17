@@ -1,5 +1,4 @@
-
-    <!-- Start Testimonials Area 
+ <!-- Start Testimonials Area 
     ============================================= -->
     <div id="testimonials" class="testimonials-area carousel-shadow relative default-padding">
         <div class="container">
