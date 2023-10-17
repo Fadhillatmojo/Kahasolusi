@@ -27,6 +27,7 @@
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="css/try.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
 </head>
