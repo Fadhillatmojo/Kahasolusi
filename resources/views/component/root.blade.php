@@ -203,10 +203,8 @@
 
     </header>
     <!-- End Header -->
-
+    
 				@yield('body')
-
-                
 
     <!-- Start Footer 
     ============================================= -->
@@ -218,12 +216,17 @@
         <!-- End illustration -->
         <div class="container">
             <div class="f-items default-padding">
-                <div class="row">
+                <div class="row-footer">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <img src="assets/img/logo-light.png" alt="Logo">
+                            <img src="assets/img/183x55.png" alt="Logo">
                             <p>
-                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address did showing.
+                            PT Kaha Solusi Indonesia
+                            </p>
+                            <p>
+                                HEADQUARTER
+                                Pucung 001/001 Tamanmartani Kalasan Sleman Yogyakarta
+                                Telp. 085293037949
                             </p>
                             <form action="#">
                                 <input type="email" placeholder="Your Email" class="form-control" name="email">
@@ -235,28 +238,37 @@
                         <div class="f-item link">
                             <h4 class="widget-title">Quick LInk</h4>
                             <ul>
-                                <li>
-                                    <a href="index.html"><i class="fas fa-angle-right"></i> Home</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> About us</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> Compnay History</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> Features</a>
-                                </li>
-                                <li>
-                                    <a href="blog-standard.html"><i class="fas fa-angle-right"></i> Blog Page</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fas fa-angle-right"></i> Login</a>
-                                </li>
+                            <li>
+                                            <a class="smooth-menu" href="#header">Home</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#about">About</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#portfolios">Portfolios</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#roles">Roles</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#tools">Tools</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#founders">Founders</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#faqs">FAQs</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#testimonials">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#contact">Contact</a>
+                                        </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 item">
+                    <!-- <div class="col-lg-3 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Services</h4>
                             <ul>
@@ -280,7 +292,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-6 item">
                         <div class="f-item contact-widget">
                             <h4 class="widget-title">Contact Info</h4>
