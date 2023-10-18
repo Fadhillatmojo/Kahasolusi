@@ -117,3 +117,37 @@ svg.mask{
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+.testimonial-carousel .item .content::before {
+	bottom: 0px;
+}
+.card-testi-item{
+	display: flex;
+	width: 100%;
+	height: auto;
+	padding: 100px;
+}
+.contact-area{
+	margin: 0px 130px;
+	margin-bottom: 200px;
+	border-radius: 40px;
+}
+.telp {
+	display: flex;
+	padding: 0px 20px;
+}
+.col-lg-6.info {
+    padding-left: 60px;
+}
+.footer{
+	margin-top: 100px;
+	background: #122245;
+}
+.link-footer{
+	width: 150px;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.widget-poin{
+	color: #FFF;
+}

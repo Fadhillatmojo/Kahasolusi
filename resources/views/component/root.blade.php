@@ -208,11 +208,11 @@
 
     <!-- Start Footer 
     ============================================= -->
-    <footer class="bg-theme text-light">
-        <!-- illustration -->
+    <footer class="footer text-light">
+        <!-- illustration
         <div class="animate-illustration">
             <img src="assets/img/illustration/2.png" alt="illustration">
-        </div>
+        </div> -->
         <!-- End illustration -->
         <div class="container">
             <div class="f-items default-padding">
@@ -228,98 +228,54 @@
                                 Pucung 001/001 Tamanmartani Kalasan Sleman Yogyakarta
                                 Telp. 085293037949
                             </p>
-                            <form action="#">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email">
-                                <button type="submit"> <i class="arrow_right"></i></button>  
-                            </form>
+                            <div class="widget social">
+                            <ul class="link-footer">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Quick LInk</h4>
-                            <ul>
-                            <li>
-                                            <a class="smooth-menu" href="#header">Home</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#about">About</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#portfolios">Portfolios</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#roles">Roles</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#tools">Tools</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#founders">Founders</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#faqs">FAQs</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#testimonials">Testimonials</a>
-                                        </li>
-                                        <li>
-                                            <a class="smooth-menu" href="#contact">Contact</a>
-                                        </li>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <a href="#header"><i class="fas fa-angle-right"></i>Home</a>
+                                </li>
+                                <li>
+                                    <a href="#about"><i class="fas fa-angle-right"></i>About us</a>
+                                </li>
+                                <li>
+                                    <a href="#portfolios"><i class="fas fa-angle-right"></i>Portfolios</a>
+                                </li>
+                                <li>
+                                    <a href="#roles"><i class="fas fa-angle-right"></i>Roles</a>
+                                </li>
+                                <li>
+                                    <a href="#tools"><i class="fas fa-angle-right"></i>Tools</a>
+                                </li>
+                                <li>
+                                    <a href="#founders"><i class="fas fa-angle-right"></i>Founders</a>
+                                </li>
+                                <li>
+                                    <a href="#faqs"><i class="fas fa-angle-right"></i>FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="#contact"><i class="fas fa-angle-right"></i>Contact</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-6 item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Services</h4>
-                            <ul>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> House Cleaning</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Carpet</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Garden</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Bedroom</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Residential</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Maid Services</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
-                    <div class="col-lg-3 col-md-6 item">
-                        <div class="f-item contact-widget">
-                            <h4 class="widget-title">Contact Info</h4>
-                            <div class="address">
-                                <ul>
-                                    <li>
-                                        5919 Trussville Crossings Pkwy, new Dusting town, Austria
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-clock"></i>
-                                        </div>
-                                        <div class="content">
-                                            <strong>Opening Hours:</strong>
-                                            8:00 AM – 7:45 PM
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div class="content">
-                                            <strong>Phone:</strong>
-                                            <a href="tel:2151234567">+123 34598768</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="maps-area">
+                        <div class="container">
+                            <div class="google-maps">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14767.262289338461!2d70.79414485000001!3d22.284975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1424308883981"></iframe>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -334,29 +290,11 @@
                         <div class="col-lg-6">
                             <p>&copy; Copyright 2022. All Rights Reserved by <a href="#">validthemes</a></p>
                         </div>
-                        <div class="col-lg-6 text-right link">
-                            <ul>
-                                <li>
-                                    <a href="#">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Support</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End Footer Bottom -->
-        <!-- Fixed Shape -->
-        <div class="fixed-shape-left">
-            <img src="assets/img/shape/5.png" alt="Shape">
-        </div>
-        <!-- End Fixed Shape -->
     </footer>
     <!-- End Footer -->
     

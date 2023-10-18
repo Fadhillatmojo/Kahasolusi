@@ -4,28 +4,42 @@
         <div class="container">
             <div class="contact-content">
                 <div class="row">
-                    <div class="col-lg-4 info">
-                        <div class="content text-light text-center">
-                            <div class="thumb">
-                                <img src="assets/img/illustration/4.png" alt="Thumb">
-                            </div>
+                    <div class="col-lg-6 info">
+                        <div class="contact-info">
                             <ul>
-                                <li>
-                                    <i class="fal fa-map-marker-alt"></i>
-                                    <p>
-                                        22 Baker Street, <br> London, United Kingdom, <br> W1U 3BW
-                                    </p>
+                                <li style="padding:0px 20px;list-style: none;">
+                                    <h1><b>Don’t Hesitate to Contact Us</b></h1>
                                 </li>
-                                <li>
-                                    <i class="fal fa-phone-alt"></i>
-                                    <p>
-                                        +44-20-7328-4499 <br> +99-34-8878-9989
-                                    </p>
+                                <li class="telp">
+                                        <div class="icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="content" style="margin-left: 10px;">
+                                            <strong>Telp. 085293037949</strong>
+                                        </div>
+                                </li>
+                                <li class="telp">
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="content" style="margin-left: 10px;">
+                                            <strong>Email: info@kahasolusi.com <br>Website: kahasolusi.com</strong>
+                                        </div>
+                                </li>
+                                <li class="telp">
+                                        <div class="icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="content" style="margin-left: 10px;">
+                                            <h5>Headquarter</h5>
+                                            <strong>Pucung 001/001 Tamanmartani Kalasan Sleman Yogyakarta</strong>
+                                        </div>
                                 </li>
                             </ul>
                         </div>
+                            
                     </div>
-                    <div class="col-lg-8 contact-form-box">
+                    <div class="col-lg-6 contact-form-box">
                         <div class="form-box">
                             <h2>Let's talk?</h2>
                             <p>
@@ -68,7 +82,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <!-- Alert Message -->
+
                                 <div class="col-lg-12 alert-notification">
                                     <div id="message" class="alert-msg"></div>
                                 </div>
