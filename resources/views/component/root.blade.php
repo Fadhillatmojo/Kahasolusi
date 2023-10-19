@@ -27,6 +27,7 @@
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="css/try.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
 </head>
@@ -44,13 +45,14 @@
             <div class="row align-center">
                 <div class="col-lg-3 logo">
                     <a href="index.html">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                        <img src="assets/img/183x55.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <div class="col-lg-9 info item-flex space-between">
                      <ul>
                         <li>
-                            <i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM
+                            <!-- <i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM -->
+                            Header
                         </li>
                     </ul>
                     <div class="social">
@@ -80,27 +82,12 @@
 
     <!-- Header 
     ============================================= -->
-    <header id="home">
+    <header id="header">
 
         <div class="container box-nav">
             <div class="row">
                 <!-- Start Navigation -->
                 <nav class="navbar top-less logo-less white navbar-default navbar-fixed dark bootsnav on no-full nav-box no-background">
-
-                    <!-- Start Top Search -->
-                    <div class="top-search">
-                        <div class="container">
-                            <form method="get">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Top Search -->
-
                     <div class="container nav-container">
                         <div class="row">
                             <!-- Start Header Navigation -->
@@ -115,57 +102,40 @@
                             <!-- End Header Navigation -->
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="col-lg-9">
+                            
                                 <div class="collapse navbar-collapse" id="navbar-menu">
-                                    <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-                                        <li class="dropdown active dropdown-right">
-                                            <a href="#home" class="dropdown-toggle smooth-menu active" data-toggle="dropdown" >Home</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="index.html">Home Version One</a></li>
-                                                <li><a href="index-2.html">Home Version Two</a></li>
-                                                <li><a href="index-3.html">Home Version Three</a></li>
-                                                <li><a href="index-4.html">Home Version Four</a></li>
-                                                <li><a href="index-op.html">Home Onepage</a></li>
-                                                <li><a href="index-op-2.html">Home Onepage Two</a></li>
-                                                <li><a href="index-op-3.html">Home Onepage Three</a></li>
-                                            </ul>
+                                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                                        <li>
+                                            <a class="smooth-menu" href="#header">Home</a>
                                         </li>
                                         <li>
                                             <a class="smooth-menu" href="#about">About</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#services">Services</a>
+                                            <a class="smooth-menu" href="#portfolios">Portfolios</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#features">Features</a>
+                                            <a class="smooth-menu" href="#roles">Roles</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#pricing">Pricing</a>
+                                            <a class="smooth-menu" href="#tools">Tools</a>
                                         </li>
                                         <li>
-                                            <a class="smooth-menu" href="#blog">Blog</a>
+                                            <a class="smooth-menu" href="#founders">Founders</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#faqs">FAQs</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#testimonials">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a class="smooth-menu" href="#contact">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            
                             <!-- /.navbar-collapse -->
-
-                            <!-- Start Atribute Navigation -->
-                            <div class="col-lg-3">
-                                <div class="attr-nav">
-                                    <ul>
-                                        <li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
-                                        <li class="side-menu">
-                                            <a href="#">
-                                                <span class="bar-1"></span>
-                                                <span class="bar-2"></span>
-                                                <span class="bar-3"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> 
-                            </div>       
-                            <!-- End Atribute Navigation -->
                         </div>
 
                     </div>
@@ -233,109 +203,79 @@
 
     </header>
     <!-- End Header -->
-
+    
 				@yield('body')
 
     <!-- Start Footer 
     ============================================= -->
-    <footer class="bg-theme text-light">
-        <!-- illustration -->
+    <footer class="footer text-light">
+        <!-- illustration
         <div class="animate-illustration">
             <img src="assets/img/illustration/2.png" alt="illustration">
-        </div>
+        </div> -->
         <!-- End illustration -->
         <div class="container">
             <div class="f-items default-padding">
-                <div class="row">
+                <div class="row-footer">
                     <div class="col-lg-4 col-md-6 item">
                         <div class="f-item about">
-                            <img src="assets/img/logo-light.png" alt="Logo">
+                            <img src="assets/img/183x55.png" alt="Logo">
                             <p>
-                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address did showing.
+                            PT Kaha Solusi Indonesia
                             </p>
-                            <form action="#">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email">
-                                <button type="submit"> <i class="arrow_right"></i></button>  
-                            </form>
+                            <p>
+                                HEADQUARTER
+                                Pucung 001/001 Tamanmartani Kalasan Sleman Yogyakarta
+                                Telp. 085293037949
+                            </p>
+                            <div class="widget social">
+                            <ul class="link-footer">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">Quick LInk</h4>
-                            <ul>
+                            <ul style="list-style: none;">
                                 <li>
-                                    <a href="index.html"><i class="fas fa-angle-right"></i> Home</a>
+                                    <a href="#header"><i class="fas fa-angle-right"></i>Home</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> About us</a>
+                                    <a href="#about"><i class="fas fa-angle-right"></i>About us</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> Compnay History</a>
+                                    <a href="#portfolios"><i class="fas fa-angle-right"></i>Portfolios</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html"><i class="fas fa-angle-right"></i> Features</a>
+                                    <a href="#roles"><i class="fas fa-angle-right"></i>Roles</a>
                                 </li>
                                 <li>
-                                    <a href="blog-standard.html"><i class="fas fa-angle-right"></i> Blog Page</a>
+                                    <a href="#tools"><i class="fas fa-angle-right"></i>Tools</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fas fa-angle-right"></i> Login</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Services</h4>
-                            <ul>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> House Cleaning</a>
+                                    <a href="#founders"><i class="fas fa-angle-right"></i>Founders</a>
                                 </li>
                                 <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Carpet</a>
+                                    <a href="#faqs"><i class="fas fa-angle-right"></i>FAQs</a>
                                 </li>
                                 <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Garden</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Bedroom</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Residential</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html"><i class="fas fa-angle-right"></i> Maid Services</a>
+                                    <a href="#contact"><i class="fas fa-angle-right"></i>Contact</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 item">
-                        <div class="f-item contact-widget">
-                            <h4 class="widget-title">Contact Info</h4>
-                            <div class="address">
-                                <ul>
-                                    <li>
-                                        5919 Trussville Crossings Pkwy, new Dusting town, Austria
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-clock"></i>
-                                        </div>
-                                        <div class="content">
-                                            <strong>Opening Hours:</strong>
-                                            8:00 AM – 7:45 PM
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                        <div class="content">
-                                            <strong>Phone:</strong>
-                                            <a href="tel:2151234567">+123 34598768</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="maps-area">
+                        <div class="container">
+                            <div class="google-maps">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14767.262289338461!2d70.79414485000001!3d22.284975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1424308883981"></iframe>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -350,29 +290,11 @@
                         <div class="col-lg-6">
                             <p>&copy; Copyright 2022. All Rights Reserved by <a href="#">validthemes</a></p>
                         </div>
-                        <div class="col-lg-6 text-right link">
-                            <ul>
-                                <li>
-                                    <a href="#">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Support</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End Footer Bottom -->
-        <!-- Fixed Shape -->
-        <div class="fixed-shape-left">
-            <img src="assets/img/shape/5.png" alt="Shape">
-        </div>
-        <!-- End Fixed Shape -->
     </footer>
     <!-- End Footer -->
     

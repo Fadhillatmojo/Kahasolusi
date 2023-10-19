@@ -59,7 +59,7 @@ class ViewsController extends Controller
     }
 
     public function home(){
-        return view('index-op-2');
+        return view('dashboard');
     }
     public function index(){
         return view('admin.index2');
