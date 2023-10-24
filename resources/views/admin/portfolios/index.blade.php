@@ -1,4 +1,4 @@
-@extends('admin.root-admin')
+@extends('admin.layouts.root-admin')
 @section('content')
     <div class="nav">
         <div class="d-flex justify-content-between align-items-center w-100 mb-3 mb-md-0">

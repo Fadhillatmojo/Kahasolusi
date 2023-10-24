@@ -84,8 +84,7 @@
             </aside>
 
         </div>
-
-
+        
         <div class="col-12 col-xl-9">
             @yield('content')
         </div>

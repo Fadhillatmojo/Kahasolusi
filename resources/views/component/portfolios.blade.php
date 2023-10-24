@@ -16,4 +16,25 @@
                 </div>
             </div>
         </div>
+
+        {{--  Ini aku udah nyoba yang ngambil data dari si model via controller dashboardclientcontroller  --}}
+        <div class="row row-cols-1 row-cols-lg-3" >
+            @foreach ($portfolios as $portfolio)
+                <div class="col d-flex justify-content-center">
+                    <div class="card" style="width: 373px;">
+                        <div class="card-portfolios">
+                        <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {{ $portfolio->portfolio_title }}
+                                </h5>
+                                <div class="portfolios-link">
+                                    <a href="#" class="btn btn-primary align-center">Visit Link</a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
 </div>

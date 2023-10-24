@@ -62,16 +62,16 @@ class ViewsController extends Controller
         return view('dashboard');
     }
     public function index(){
-        return view('admin.index2');
+        return view('admin.dashboard-admin');
     }
 
     public function portfolios(){
-        return view('admin.portfolios', [
+        return view('admin.portfolios.index', [
             "title"=>"portfolios"
         ]);
     }
     public function roles(){
-        return view('admin.roles', [
+        return view('admin.roles.index', [
             "title"=>"roles"
         ]);
     }

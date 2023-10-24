@@ -2,25 +2,20 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyStructureController;
+use App\Http\Controllers\DashboardClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewsController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', [ViewsController::class, 'home']);
+// rute untuk menampilkan dashboard client
+Route::controller(DashboardClientController::class)->group(function () {
+    Route::get('/', 'index');
+});
 
+// ini yang ada di bawah sementara semua
 // rute untuk admin
 Route::prefix('admin')->group(function() {
     Route::get('/portfolios', [ViewsController::class, 'portfolios']);

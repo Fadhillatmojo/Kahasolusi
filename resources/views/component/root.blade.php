@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Cleanu - Cleaning Services Template">
+    <meta name="description" content="Kahasolusi - Segala Solusi dalam Genggaman Anda">
 
     <!-- ========== Page Title ========== -->
-    <title>Cleanu - Cleaning Services Template</title>
+    <title>Kahasolusi | Company Profile</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -204,7 +204,9 @@
     </header>
     <!-- End Header -->
     
-				@yield('body')
+    <div class="container">
+        @yield('body')
+    </div>
 
     <!-- Start Footer 
     ============================================= -->
@@ -288,7 +290,7 @@
                 <div class="footer-bottom-box">
                     <div class="row">
                         <div class="col-lg-6">
-                            <p>&copy; Copyright 2022. All Rights Reserved by <a href="#">validthemes</a></p>
+                            <p>&copy; Copyright 2023. All Rights Reserved by Kahasolusi</p>
                         </div>
                     </div>
                 </div>

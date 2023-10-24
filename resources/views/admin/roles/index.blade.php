@@ -1,4 +1,4 @@
-@extends('admin.root-admin')
+@extends('admin.layouts.root-admin')
 @section('content')
 	<h4>
 		roles
