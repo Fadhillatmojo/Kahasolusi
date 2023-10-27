@@ -1,11 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+:root {
+	--font-default: 'Josefin Sans';
+	--fontawesome: "Font Awesome 5 Pro";
+	--black: #000000;
+	/* namanin apa  */
+	--orange:#F16724;
+	--dark-blue:#122245;
+	--dark: #0E2144;
+	--dark-secondary: #06278a;
+	--white: #ffffff; 
+	--color-primary: #1239ac; 
+	--color-secondary: #ffb400; 
+	--color-heading: #1d2746;
+	--color-paragraph: #666666;
+	--border-default: #e7e7e7;
+	--box-shadow-primary: 0 0 25px rgb(0 0 0 / 8%);
+	--box-shadow-secondary: 0 10px 30px 0 rgb(44 130 237 / 40%);
+	--box-shadow-tertiary: 0px 2px 12px 0px #e7e7e7;
+	--box-shadow-dark: 0px 0px 0px;
+	--bg-gray: #eef0f6;
+	--bg-gradient: linear-gradient(to right, #1239ac, #00f3dd, #1239ac);
+}
+
 html, body {
-  font-family: "Poppins";
+  font-family: "Josefin Sans";
   font-style: normal;
   background-color: #F8F8FA;
   overflow-x: hidden;
   position: relative;
 }
+
+/* Page Login */
+#container-login{
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+#footer-login{
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+#footer-login a{
+  color: var(--dark) !important;
+  text-decoration: none;
+}
+/* End page login */
 
 .btn-statistics, .nav-input, .nav-input-group .btn-nav-input, .nav .btn-notif, #toggle-navbar {
   background-color: transparent;

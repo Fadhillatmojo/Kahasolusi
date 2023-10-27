@@ -1,6 +1,17 @@
-    <!-- Start Banner 
+<!-- Start Banner 
     ============================================= -->
     <div class="banner-area top-pad-extra text-regular right-shape content-less">
+        <!-- Animated Bubble -->
+        <div class="animated-bubble">
+            <img src="assets/img/shape/bubble.png" alt="Bubble">
+            <img src="assets/img/shape/bubble-mini.png" alt="Bubble">
+            <img src="assets/img/shape/bubble.png" alt="Bubble">
+            <img src="assets/img/shape/bubble.png" alt="Bubble">
+            <img src="assets/img/shape/bubble-mini.png" alt="Bubble">
+            <img src="assets/img/shape/bubble.png" alt="Bubble">
+            <img src="assets/img/shape/bubble-mid.png" alt="Bubble">
+        </div>
+        <!-- End Animated Bubble -->
         <div id="bootcarousel" class="carousel text-light slide animate_text" data-ride="carousel">
 
             <!-- Wrapper for slides -->
@@ -15,7 +26,10 @@
                                             <h4 data-animation="animated slideInDown">Best Cleaning Service</h4>
                                             <h2 data-animation="animated slideInLeft">Amazing quality cleaning service agency</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md smooth-menu" href="#contact">Book a Schedule</a>
+                                                <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
+                                                 <a href="https://www.youtube.com/watch?v=owhuBrGIOsE" class="popup-youtube secondary theme relative video-play-button">
+                                                    <i class="fa fa-play"></i>
+                                                </a>
                                             </div>  
                                         </div>
                                     </div>
@@ -35,6 +49,9 @@
                                             <h2 data-animation="animated slideInLeft">Disinfecting & Deodorizing Spray Services</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
                                                 <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
+                                                 <a href="https://www.youtube.com/watch?v=owhuBrGIOsE" class="popup-youtube theme secondary relative video-play-button">
+                                                    <i class="fa fa-play"></i>
+                                                </a>
                                             </div>  
                                         </div>
                                     </div>
