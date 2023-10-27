@@ -204,9 +204,8 @@
     </header>
     <!-- End Header -->
     
-    <div class="container">
-        @yield('body')
-    </div>
+
+    @yield('body')
 
     {{--  start footer  --}}
     <div class="mt-3">
