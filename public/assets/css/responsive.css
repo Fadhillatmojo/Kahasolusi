@@ -52,6 +52,12 @@
         margin-left: 0;
     }
 	/* About */
+	.col-lg-6.info{
+		padding-left: 0px;
+	}
+	.about-us-area .info h2{
+		text-align: center;
+	}
 	.about-us-area .thumb .experience {
 		left: 0;
 		bottom: 0;
@@ -69,9 +75,10 @@
 		width: 100%;
 	}
 	.about-us-area .thumb img:nth-child(2) {
-		width: 250px;
+		display: none;
+		/* width: 250px;
 		bottom: 20px;
-		right: 50px;
+		right: 50px; */
 	}
 	.about-us-area .thumb::after {
 		display: none;
@@ -235,6 +242,11 @@
 		text-align: center;
 	}
 	/* Portfolio */
+	.card{
+		width: 54%;
+		margin: 10px;
+	}
+
 	.gallery-items.colums-2 .pf-item,
 	.gallery-items.colums-3 .pf-item,
 	.gallery-items.colums-4 .pf-item {
@@ -845,6 +857,12 @@
 		margin-top: 30px;
 	}
 	/* Portfolio */
+	.card{
+		width: 70%;
+	}
+	.btn{
+		font-size: 10px;
+	}
 	.gallery-items.colums-2 .pf-item,
 	.gallery-items.colums-3 .pf-item,
 	.gallery-items.colums-4 .pf-item {

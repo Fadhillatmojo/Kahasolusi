@@ -3,8 +3,9 @@
             <h5>PORTFOLIOS</h5>
             <h2>Our Recent Project</h2>
         </div>
-        <div class="container-portofolios-content">
-            <div class="card" style="width: 373px; height: 331px;flex-shrink: 0;">
+
+        {{-- <div class="container-portofolios-content">
+            <div class="card" style="width: 32%;flex-shrink: 0;">
                 <div class="card-portfolios">
                 <img src="assets/img/IDMC.png" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -15,13 +16,13 @@
                     </div> 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         {{--  Ini aku udah nyoba yang ngambil data dari si model via controller dashboardclientcontroller  --}}
         <div class="row row-cols-1 row-cols-lg-3" >
             @foreach ($portfolios as $portfolio)
                 <div class="col d-flex justify-content-center">
-                    <div class="card" style="width: 373px;">
+                    <div class="card">
                         <div class="card-portfolios">
                         <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
                             <div class="card-body">
