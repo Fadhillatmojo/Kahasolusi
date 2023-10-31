@@ -16,24 +16,27 @@ Route::controller(DashboardClientController::class)->group(function () {
     Route::get('/', 'index');
 });
 
-Route::prefix('admin')->group(function () {
-    Route::controller(AdminController::class)->group(function () {
-        Route::middleware(['guest'])->group(function () {
-            Route::get('/login','login')->name('login');
-            Route::post('/authenticate', 'authenticate')->name('authenticate');
+Route::middleware(['prevent-back-history'])->group(function () {
+    
+    Route::prefix('admin')->group(function () {
+        Route::controller(AdminController::class)->group(function () {
+            Route::middleware(['isGuest'])->group(function () {
+                Route::get('/login','login')->name('login');
+                Route::post('/authenticate', 'authenticate')->name('authenticate');
+            });
         });
-    });
-    Route::middleware(['auth:admin'])->group(function () {
-        Route::controller(PortfolioController::class)->group(function () {
-            Route::get('/portfolios','index')->name('portfolio');
+        Route::middleware(['auth:admin'])->group(function () {
+            Route::controller(PortfolioController::class)->group(function () {
+                Route::get('/portfolios','index')->name('portfolio');
+            });
+            
+            // rute untuk logout
+            Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+            
         });
-
-        // rute untuk logout
-        Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
-
     });
 });
-
+    
 
 // // // ini yang ada di bawah sementara semua
 // // // rute untuk admin
