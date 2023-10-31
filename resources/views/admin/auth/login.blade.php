@@ -22,10 +22,10 @@
 					<p>
 						Manage Kahasolusi’s company profile easily
 					</p>
-					<form action="" method="POST">
+					<form action="{{ route('authenticate') }}" method="POST">
 						@csrf
 						<div class="my-4">
-							<input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Username">
+							<input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Email">
 							@if ($errors->has('email'))
 								<span class="text-danger">{{ $errors->first('email') }}</span>
 							@endif
