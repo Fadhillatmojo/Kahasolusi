@@ -208,9 +208,7 @@
     @yield('body')
 
     {{--  start footer  --}}
-    <div class="mt-3">
 
-    </div>
     @include('component.footer')
     {{--  end footer  --}}
     

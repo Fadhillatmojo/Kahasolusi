@@ -151,6 +151,17 @@ aside #toggle-navbar {
   color: #121F3E;
 }
 
+/* logout */
+.logout{
+  background-color: transparent;
+  border: none;
+}
+.logout:visited{
+  color: white !important;
+}
+/* end logout btn */
+
+
 .col-navbar {
   transition: 1s;
 }
