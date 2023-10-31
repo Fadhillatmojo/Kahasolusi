@@ -21,7 +21,7 @@
                             Friendly bachelor entrance to on by. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection.
                         </p>
                         <div class="row-visi-misi">
-                            <div class="col-lg-3 visi-title">
+                            <div class="col-md-2 col-lg-3 visi-title">
                                 <h3>Visi</h3>
                             </div>
                             <div class="visi-content">
@@ -29,10 +29,10 @@
                             </div>
                         </div>
                         <div class="row-visi-misi">
-                            <div class="col-lg-3 misi-title">
+                            <div class="col-md-2 col-lg-3 misi-title">
                                 <h3>Misi</h3>
                             </div>
-                            <div class="misi-content">
+                            <div class="col-lg-3 misi-content">
                                 <ul class="misi-button">
                                     <li>loren</li>
                                     <li>loren</li>
@@ -40,18 +40,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="bottom-info">
-                            <div class="button">
-                                <a data-animation="animated zoomInUp" class="btn btn-theme primary effect btn-md" href="#">Contact Us</a>
-                            </div>
-                            <div class="contact">
-                                <div class="content">
-                                    <span>Get Free Estimate</span>
-                                    <h5>+44-20-7328-4499</h5>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>
