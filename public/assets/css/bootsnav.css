@@ -385,9 +385,9 @@ nav.navbar.bootsnav.logo-less .navbar-brand {
 	display: none;
 }
 
-nav.navbar.navbar-default.logo-less .navbar-collapse {
+/* nav.navbar.navbar-default.logo-less .navbar-collapse {
 	margin-left: -15px;
-}
+} */
 
 .navbar-default.navbar.navbar-sidebar.bg-dark .social-share {
 	padding: 0 30px;
@@ -1362,6 +1362,7 @@ nav.navbar.bootsnav.navbar-fixed.nav-box {
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: 70px;
 }
 
 nav.navbar.bootsnav.navbar-fixed.no-background {
@@ -2098,6 +2099,7 @@ nav.navbar.bootsnav {
 		background: var(--dark-blue);
 		top: 95px;
 		width: auto;
+		height: 70px;
 		left: auto;
 		border-radius: 5px;
 	}
@@ -2174,6 +2176,7 @@ nav.navbar.bootsnav {
 		padding-left: 30px;
 		padding-right: 30px;
 		width: 100%;
+		height: 70px;
 	}
 	nav.navbar.bootsnav .navbar-toggle {
 		display: inline-block;
