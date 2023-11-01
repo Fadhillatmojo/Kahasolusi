@@ -1350,6 +1350,7 @@ nav.navbar.bootsnav.navbar-fixed.nav-box.no-background {
 	background: var(--white) none repeat scroll 0 0;
 	top: 115px;
 	width: auto;
+	height: 90px;
 	left: auto;
 }
 
@@ -1807,8 +1808,11 @@ nav.navbar.bootsnav {
 	nav.navbar.bootsnav.menu-center ul.nav.navbar-center {
 		float: none;
 		margin: 0 auto;
-		display: table;
+		width: 100%;
+		display: flex;
 		table-layout: fixed;
+		flex-direction: row;
+		justify-content: space-evenly;
 	}
 	nav.bootsnav.navbar-brand-top .navbar-header {
 		display: block;
@@ -3172,6 +3176,7 @@ nav.bootsnav.navbar-full .navbar-toggle:hover span {
 		left: 0;
 		top: 0;
 		width: 100%;
+		height: 91px;
 	}
 }
 

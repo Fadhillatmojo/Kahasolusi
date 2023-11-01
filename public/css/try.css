@@ -8,21 +8,23 @@
 }
 .smooth-menu{
 	padding-bottom: 0px !important;
+	text-align: center;
 }
-.smooth-menu:before{
-	content: "";
-	position: absolute;
-	bottom: -3px;
-	height: 4px;
-	width: 70%;
-	align-self: center;
-	background:#F16724;
-	border-radius: 50px;
-	transform: scaleX(0);
-	transition: transform 0.2s linear;
+.smooth-menu:before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 80%;
+    background: #F16724;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.2s linear;
 }
-.smooth-menu:hover:before{
-	transform: scaleX(1);
+
+.smooth-menu:hover:before, .smooth-menu.active:before {
+    transform: scaleX(1);
 }
 
 /* slide-tool */
@@ -50,7 +52,10 @@
 		transform: translateX(-100%);
 	}
 }
-
+/* about */
+.misi-content {
+	margin-left: 10px;
+}
 .row-visi-misi{
     display: flex;
     flex-wrap: nowrap;
@@ -64,6 +69,11 @@
 	flex-direction: column;
 	align-content: center;
 }
+/* portfolios */
+.card{
+box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
+}
+
 
 .container-portfolios-title, .container-tools-title,.container-roles-title, .container-founders-title, .container-faqs-title h2{
 	font-weight: 600;
