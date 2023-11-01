@@ -92,7 +92,18 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 }
 .portfolios-link{
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
+}
+.btn-visit{
+	background-color: #F16724;
+	padding: 8px 10px;
+	border-radius: 4px;
+	color: #FFF;
+	text-decoration: underline;
+}
+#see-more{
+	padding-top: 40px;
+	text-align: end;
 }
 .container-portofolios-content{
 	display: flex;

@@ -6703,34 +6703,37 @@ ul.achivement li .counter .timer {
 /* Pagination */
 
 .pagination li {
-	display: inline-block;
-	margin-top: 7px;
+	display: flex;
 }
-
-ul.pagination {
-	display: block;
-	margin-top: 30px;
-}
-
 .pagination li a {
 	display: inline-block;
 	padding: 15px 20px;
-	border-radius: 5px;
 	margin: 0 2px;
+	border: none;
+	color:var(--dark-blue);
+	font-weight: 800;
+	line-height: 19px;
+}
+.pagination li span {
+	display: inline-block;
+	padding: 15px 20px;
+	margin: 0 10px;
+	border: none;
+
 	color:var(--color-heading);
 	font-weight: 800;
 	line-height: 19px;
 }
 
-.pagination li.page-item.active a {
-	background:var(--color-primary);
-	border-color:var(--color-primary);
+.active-pagination span{
+	background-color: var(--dark-blue);
+	border-radius: 8px;
+	color: white !important;
 }
-
-.pagination i {
+/* .pagination i {
 	position: relative;
 	top: 1px;
-}
+} */
 
 
 /* ============================================================== 
