@@ -4857,7 +4857,7 @@ ul.achivement li .counter .timer {
 
 @media only screen and (min-width: 1367px) {
 	.services-style-two-area .container-full {
-		margin-left: calc((100% - 1200px)/ 2);
+		/* margin-left: calc((100% - 1200px)/ 2); */
 		width: auto;
 		min-width: auto;
 		max-width: inherit;
