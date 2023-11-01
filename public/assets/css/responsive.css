@@ -6,6 +6,9 @@
 /* Tablet Layout: 768px.*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.btn-md{
+		font-size: 10px;
+	}
 	.heading-left p {
 		margin-top: 15px;
 	}
@@ -52,6 +55,18 @@
         margin-left: 0;
     }
 	/* About */
+	.roles-title {
+		font-size: 17px !important;
+	}
+	p.text-left {
+		font-size: small;
+	}
+	.misi-button{
+		font-size: small;
+	}
+	.VisiMisiTitle{
+		font-size: x-large;
+	}
 	.col-lg-6.info{
 		padding-left: 0px;
 	}
@@ -693,6 +708,21 @@
 		margin-left: 0;
 	}
 	/* About */
+	.roles-title {
+		font-size: 12px !important;
+	}
+	.btn-md{
+		font-size: 7px;
+	}
+	p.text-left{
+		font-size: small;
+	}
+	.misi-button{
+		font-size: small;
+	}
+	.VisiMisiTitle{
+		font-size: large;
+	}
 	.about-us-area {
 		text-align: center;
 	}

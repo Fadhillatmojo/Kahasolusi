@@ -6,7 +6,24 @@
 .card{
 	margin: 10px;
 }
-
+.smooth-menu{
+	padding-bottom: 0px !important;
+}
+.smooth-menu:before{
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	height: 4px;
+	width: 70%;
+	align-self: center;
+	background:#F16724;
+	border-radius: 50px;
+	transform: scaleX(0);
+	transition: transform 0.2s linear;
+}
+.smooth-menu:hover:before{
+	transform: scaleX(1);
+}
 
 /* slide-tool */
 
@@ -67,10 +84,6 @@
 	display: flex;
 	justify-content: flex-end
 }
-.about-us-area{
-	padding-bottom: 220px;
-
-}
 .container-portofolios-content{
 	display: flex;
 	justify-content: center;
@@ -84,8 +97,8 @@
 	justify-content: center;
 }
 .image-roles{
-	width: 70%;
-	height: 70%;
+	width: 60%;
+	height: 60%;
 	background-color: #fff;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	clip-path: circle(40%);
@@ -96,7 +109,7 @@
 	align-items: center;
 }
 .roles-title{
-	font-size: 30px;
+	font-size: 25px;
 	width: 183px;
 	height: 63px;
 	text-align: center;

@@ -547,7 +547,7 @@ input {
 }
 
 .shadow.gradient::after {
-	background: linear-gradient(90deg, rgba(6, 39, 138, 0.846376) 20%, rgba(0, 0, 0, 0) 100%);
+	/* background: linear-gradient(90deg, rgba(6, 39, 138, 0.846376) 20%, rgba(0, 0, 0, 0) 100%); */
 	content: "";
 	height: 100%;
 	left: 0;
@@ -687,7 +687,7 @@ a:active {
 .btn.btn-light.effect {
 	color:var(--color-heading);
 	border: 2px solid transparent;
-	box-shadow: 0 10px 30px 0 rgb(44 130 237 / 40%);
+	/* box-shadow: 0 10px 30px 0 rgb(44 130 237 / 40%); */
 	overflow: hidden;
 	position: relative;
 }
@@ -732,7 +732,7 @@ a:active {
 
 .btn.btn-theme.effect {
 	color: var(--white);
-	border: 2px solid var(--color-primary);
+	border: 2px solid var(--orange);
 	overflow: hidden;
 	position: relative;
 	z-index: 1;
@@ -750,7 +750,7 @@ a:active {
 	content: "";
 	height: 100%;
 	width: 100%;
-	background:var(--color-primary);
+	background:var(--orange);
 	z-index: -1;
 	transition: all 0.35s ease-in-out;
 }
@@ -1742,7 +1742,7 @@ body,
 	z-index: 9;
 	display: inline-block;
 	text-align: center;
-	border: 2px solid #fff;
+	/* border: 2px solid #fff; */
 	border-radius: 50%;
 	color: var(--white);
 	opacity: 0;
@@ -1789,7 +1789,7 @@ body,
 	top: 50%;
 	content: "";
 	height: 1px;
-	width: 80px;
+	/* width: 80px; */
 	background: var(--white);
 }
 
@@ -1798,9 +1798,9 @@ body,
 	left: 20px;
 	top: 22px;
 	content: "";
-	border-top: 6px solid transparent;
-	border-bottom: 6px solid transparent;
-	border-right: 6px solid #ffffff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #ffffff;
 }
 
 .banner-area:hover .carousel-control.left {
@@ -1827,7 +1827,7 @@ body,
 	top: 50%;
 	content: "";
 	height: 1px;
-	width: 80px;
+	/* width: 80px; */
 	background: var(--white);
 }
 
@@ -1836,9 +1836,9 @@ body,
 	right: 20px;
 	top: 23px;
 	content: "";
-	border-top: 6px solid transparent;
-	border-bottom: 6px solid transparent;
-	border-left: 6px solid #ffffff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #ffffff;
 }
 
 .banner-area:hover .carousel-control.shadow.right {
@@ -2028,12 +2028,12 @@ body,
 
 .banner-area.text-regular .content h4 {
 	font-weight: 400;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 
 .banner-area.text-regular .content h2 {
 	font-weight: 500;
-	font-size: 70px;
+	font-size: 60px;
 	line-height: 1;
 	margin-bottom: 30px;
 }

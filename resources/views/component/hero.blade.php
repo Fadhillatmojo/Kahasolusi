@@ -5,17 +5,17 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="carousel-item active bg-cover" style="background-image: url(assets/img/2440x1578.png);">
+                <div class="carousel-item active bg-cover" style="background-image: url(assets/img/HeroPict1.png);">
                     <div class="box-table">
                         <div class="box-cell shadow gradient">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <div class="content">
-                                            <h4 data-animation="animated slideInDown">Best Cleaning Service</h4>
-                                            <h2 data-animation="animated slideInLeft">Amazing quality cleaning service agency</h2>
+                                            <h4 data-animation="animated slideInDown">Connecting the World, One Solution at a Time.</h4>
+                                            <h2 data-animation="animated slideInLeft">Hello! We are Solve Your Technology Business</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
+                                                <a class="btn btn-theme primary effect btn-md" href="#">Get Started</a>
                                             </div>  
                                         </div>
                                     </div>
@@ -24,17 +24,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item bg-cover" style="background-image: url(assets/img/2440x1578.png);">
+                <div class="carousel-item bg-cover" style="background-image: url(assets/img/HeroPict1.png);">
                     <div class="box-table">
                         <div class="box-cell shadow gradient">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <div class="content">
-                                            <h4 data-animation="animated slideInRight">Professional Sanitizing</h4>
-                                            <h2 data-animation="animated slideInLeft">Disinfecting & Deodorizing Spray Services</h2>
+                                            <h4 data-animation="animated slideInRight">Connecting the World, One Solution at a Time.</h4>
+                                            <h2 data-animation="animated slideInLeft">Hello! We are Solve Your Technology Business</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md" href="#">Book a Schedule</a>
+                                                <a class="btn btn-theme primary effect btn-md" href="#">Get Started</a>
                                             </div>  
                                         </div>
                                     </div>
