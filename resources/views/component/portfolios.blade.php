@@ -18,28 +18,47 @@
         </div>
     </div> --}}
 
-    {{--  Ini aku udah nyoba yang ngambil data dari si model via controller dashboardclientcontroller  --}}
-    <div class="row row-cols-1 row-cols-lg-3" >
-        @foreach ($portfolios as $portfolio)
-            <div class="col d-flex justify-content-center">
-                <div class="card">
-                    <div class="card-portfolios">
-                        <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                {{ $portfolio->portfolio_title }}
-                            </h5>
-                        </div> 
+    <div id="project" class="project-area overflow-hidden default-padding">
+        <div class="container">
+            <div class="project-items-area">
+                <div class="masonary">
+                    <div class="row row-cols-1 row-cols-lg-3" >
+                        @foreach ($portfolios as $portfolio)
+                            <div class="col d-flex justify-content-center">
+                                <!-- Single Item -->
+                                <div class="pf-item">
+                                    <div class="card">
+                                        <div class="project-style-two">
+                                            <div class="cover-info">
+                                                <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        {{ $portfolio->portfolio_title }}
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="info">
+                                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure repellat iste harum, asperiores excepturi nihil</span>
+                                                <h4><a href="#">Link</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                            </div>
+                            
+                        @endforeach
                     </div>
+                    {{-- See more button --}}
+                    <h4 id="see-more">
+                        <a href="{{ route('seeMorePortfolio') }}">
+                            See More >>
+                        </a>
+                    </h4>
                 </div>
             </div>
-        @endforeach
+        </div>
     </div>
-
-    {{-- See more button --}}
-    <h4 id="see-more">
-        <a href="{{ route('seeMorePortfolio') }}">
-            See More >>
-        </a>
-    </h4>
+    <!-- End Projects Area -->
 </div>

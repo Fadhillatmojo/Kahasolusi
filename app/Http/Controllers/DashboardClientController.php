@@ -27,4 +27,9 @@ class DashboardClientController extends Controller
         $portfolios = Portfolio::paginate(9);
         return view('client.see-more-portfolio', compact('portfolios'));
     }
+
+    public function seeMorePortfolio(){
+        $portfolios = Portfolio::paginate(9);
+        return view('client.see-more-portfolio', compact('portfolios'));
+    }
 }
