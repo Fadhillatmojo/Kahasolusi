@@ -36,5 +36,10 @@
         @endforeach
     </div>
 
-    
+    {{-- See more button --}}
+    <h4 id="see-more">
+        <a href="{{ route('seeMorePortfolio') }}">
+            See More >>
+        </a>
+    </h4>
 </div>
