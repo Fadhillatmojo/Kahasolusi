@@ -45,31 +45,30 @@
             <div class="row align-center">
                 <div class="col-lg-3 logo">
                     <a href="index.html">
-                        <img src="assets/img/183x55.png" class="logo" alt="Logo">
+                        <img src="assets/img/KahaLogo.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <div class="col-lg-9 info item-flex space-between">
                      <ul>
                         <li>
-                            <!-- <i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM -->
-                            Header
+                            <i class="fas fa-clock"></i> Working Hours: 9:00 AM – 5:00 PM
                         </li>
                     </ul>
                     <div class="social">
                         <ul>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <img src="assets/img/icon/ic_baseline-facebook.png">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-twitter"></i>
+                                    <img src="assets/img/icon/formkit_instagram.png">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
+                                    <img src="assets/img/icon/ic_twitter.png">
                                 </a>
                             </li>
                         </ul>
@@ -96,7 +95,7 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                                 <a class="navbar-brand" href="index.html">
-                                    <img src="assets/img/183x55.png" class="logo" alt="Logo">
+                                    <img src="assets/img/KahaLogo.png" class="logo" alt="Logo">
                                 </a>
                             </div>
                             <!-- End Header Navigation -->
@@ -106,6 +105,8 @@
                                 <div class="collapse navbar-collapse" id="navbar-menu">
                                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                                         <li>
+                                            {{-- nyoba scrool view navbar tapi masih belom --}}
+                                            {{-- <a class="active smooth-menu" href="#header">Home</a> --}}
                                             <a class="smooth-menu" href="#header">Home</a>
                                         </li>
                                         <li>
@@ -233,6 +234,7 @@
     <script src="assets/js/jquery.twentytwenty.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
+    {{-- masih ngebug --}}
+    {{-- <script src="assets/js/try.js"></script> --}}
 </body>
 </html>
