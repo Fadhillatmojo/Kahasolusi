@@ -22,4 +22,10 @@ class DashboardClientController extends Controller
         $tools = Tool::get();
         return view('dashboard', compact('faqs', 'founders', 'portfolios', 'roles', 'testimonials', 'tools'));
     }
+
+    public function showPortfolio($id)
+    {
+        $portfolio = Portfolio::findOrFail($id);
+        return view('client.portfolio-detail', compact('portfolio'));
+    }
 }
