@@ -2,7 +2,7 @@
         <div class="container-roles-title">
             <h2>Roles</h2>
         </div>
-        <div class="row row-cols-1 row-cols-lg-4">
+        <div class="row row-cols-2 row-cols-lg-4">
             {{-- batas --}}
             <div class="container-roles-content">
                 <div class="roles-card">
