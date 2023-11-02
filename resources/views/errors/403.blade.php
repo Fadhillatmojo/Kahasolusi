@@ -1,7 +1,6 @@
 @extends('component.root')
 @section('body')
-    <!-- Start 403
-    ============================================= -->
+    <!-- Start 403 -->
     <div class="error-page-area default-padding text-center">
         <div class="container">
             <div class="error-box">
