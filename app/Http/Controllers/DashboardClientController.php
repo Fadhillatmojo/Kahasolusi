@@ -15,7 +15,7 @@ class DashboardClientController extends Controller
     public function index()
     {
         $faqs = FAQ::get();
-        $founders = Company_structure::get();
+        $founders = Company_structure::paginate(4);
         $portfolios = Portfolio::paginate(6);
         $roles = Role::paginate(8);
         $testimonials = Testimonial::get();
