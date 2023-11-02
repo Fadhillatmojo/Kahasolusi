@@ -4,10 +4,11 @@
 	--black: #000000;
 	/* namanin apa  */
 	--orange:#F16724;
-	--dark-blue:#122245;
+	--dark-blue:#0E2144;
+	--light-blue:#5F7CBA;
 	--dark: #0E2144;
 	--dark-secondary: #06278a;
-	--white: #ffffff; 
+	--white: #F1F4FF; 
 	--color-primary: #1239ac; 
 	--color-secondary: #ffb400; 
 	--color-heading: #1d2746;
@@ -24,7 +25,7 @@
 html, body {
   font-family: "Josefin Sans";
   font-style: normal;
-  background-color: #F8F8FA;
+  background-color: var(--white);
   overflow-x: hidden;
   position: relative;
 }
@@ -73,8 +74,8 @@ html, body {
 }
 
 aside {
-  background-color: #fff;
-  padding: 50px 24px;
+  background-color: var(--dark-blue);
+  padding: 0px;
   padding-bottom: 250px;
   height: 100vh;
   overflow-y: scroll;
@@ -93,6 +94,11 @@ aside #toggle-navbar {
   align-items: center;
   text-decoration: none;
 }
+.logo-admin-section{
+  background-color: var(--light-blue);
+}
+.item-admin-section{
+}
 @media (min-width: 1200px) {
   .sidebar-logo {
     padding: 0 24px;
@@ -103,7 +109,7 @@ aside #toggle-navbar {
   font-weight: 800;
   font-size: 20px;
   line-height: 30px;
-  color: #121F3E;
+  color: var(--white);
   margin-left: 16px;
 }
 .sidebar-title {
@@ -119,18 +125,18 @@ aside #toggle-navbar {
   display: block;
   background: transparent;
   height: 46px;
-  border-radius: 16px;
-  padding: 0 11px;
-  margin-bottom: 8px;
+  border-radius: 16px 0 0 16px;
+  padding: 10px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .sidebar-item.active {
-  background: #4640DE;
+  padding: 0 20px;
+  background: var(--white);
 }
 .sidebar-item.active span {
-  color: #fff;
+  color: var(--dark-blue);
 }
 .sidebar-item.active svg path {
   stroke: #fff;
@@ -148,7 +154,7 @@ aside #toggle-navbar {
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
-  color: #121F3E;
+  color: var(--white);
 }
 
 /* logout */
