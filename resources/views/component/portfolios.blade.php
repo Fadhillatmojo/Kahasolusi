@@ -4,6 +4,20 @@
         <h2>Our Recent Project</h2>
     </div>
 
+    {{-- <div class="container-portofolios-content">
+        <div class="card" style="width: 32%;flex-shrink: 0;">
+            <div class="card-portfolios">
+            <img src="assets/img/IDMC.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Aplikasi Integrated Development Management Centre (IDMC)</h5>
+                    <div class="portfolios-link">
+                        <a href="#" class="btn btn-primary align-center">Visit Link</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div> --}}
+
     <div id="project" class="project-area overflow-hidden default-padding">
         <div class="container">
             <div class="project-items-area">
@@ -36,11 +50,15 @@
                             
                         @endforeach
                     </div>
-
+                    {{-- See more button --}}
+                    <h4 id="see-more">
+                        <a href="{{ route('seeMorePortfolio') }}">
+                            See More >>
+                        </a>
+                    </h4>
                 </div>
             </div>
         </div>
-        </div>
-
     </div>
+    <!-- End Projects Area -->
 </div>
