@@ -10,6 +10,12 @@ class Role extends Model
 {
     use HasFactory;
     protected $primaryKey = 'role_id';
+    protected $fillable = [
+        'role_name',
+        'role_image_url',
+        'admin_id'
+    ];
+
     public function Admin(){
         return $this->belongsTo(Admin::class, 'admin_id', 'admin_id');
     }

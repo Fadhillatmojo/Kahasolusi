@@ -17,7 +17,7 @@ class DashboardClientController extends Controller
         $faqs = FAQ::get();
         $founders = Company_structure::get();
         $portfolios = Portfolio::paginate(6);
-        $roles = Role::get();
+        $roles = Role::paginate(8);
         $testimonials = Testimonial::get();
         $tools = Tool::get();
         return view('dashboard', compact('faqs', 'founders', 'portfolios', 'roles', 'testimonials', 'tools'));
