@@ -23,14 +23,9 @@ class DashboardClientController extends Controller
         return view('dashboard', compact('faqs', 'founders', 'portfolios', 'roles', 'testimonials', 'tools'));
     }
 
-    public function showPortfolio($id)
-    {
-        $portfolio = Portfolio::findOrFail($id);
-        return view('client.portfolio-detail', compact('portfolio'));
-    }
-
     public function seeMorePortfolio(){
         $portfolios = Portfolio::paginate(9);
         return view('client.see-more-portfolio', compact('portfolios'));
     }
+
 }

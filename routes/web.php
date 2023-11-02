@@ -14,7 +14,7 @@ Route::get('/welcome', function () {
 // rute untuk menampilkan dashboard client
 Route::controller(DashboardClientController::class)->group(function () {
     Route::get('/', 'index');
-    Route::get('/portfolio/{id}','showPortfolio');
+    Route::get('/portfolios','seeMorePortfolio')->name('seeMorePortfolio');
 });
 
 Route::middleware(['prevent-back-history'])->group(function () {
