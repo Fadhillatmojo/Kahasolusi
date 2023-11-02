@@ -7,7 +7,7 @@
             <div class="error-box">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1>4<span><img src="assets/img/illustration/10.png" alt="illustration"></span>4</h1>
+                        <h1>4<span><img src="{{ asset('assets/img/illustration/10.png') }}" alt="illustration"></span>4</h1>
                         <h2>Sorry Page Was Not Found!</h2>
                         <p>
                             Household shameless incommode at no objection behaviour. Especially do at he possession insensible sympathize boisterous it. Songs he on an widen me event truth.
