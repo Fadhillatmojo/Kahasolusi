@@ -16,6 +16,6 @@ class RoleSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         Role::truncate();
-        Role::factory(10)->create();
+        Role::factory(6)->create();
     }
 }

@@ -13,7 +13,8 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolios = Portfolio::paginate(6);
-        return view('admin.portfolios.index', compact('portfolios'));
+        $showButton = true; // true karena portfolio dapat ditambah sampai tak terhingga
+        return view('admin.portfolios.index', compact('portfolios', 'showButton'));
     }
 
     /**

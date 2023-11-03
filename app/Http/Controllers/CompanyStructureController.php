@@ -8,8 +8,9 @@ use App\Models\Company_structure;
 class CompanyStructureController extends Controller
 {
     public function index(){
-        $data_company_structures = Company_structure::with('Admin')->get();
-        return view('admin.company_structures', compact('data_company_structures'));
+        $founders = Company_structure::paginate(5);
+        $showButton = true;
+        return view('admin.company_structures.index', compact('founders', 'showButton'));
     }
 
     /**

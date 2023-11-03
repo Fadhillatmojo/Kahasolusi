@@ -17,7 +17,7 @@ class isGuest
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::guard('admin')->check()){
-            return redirect()->route('portfolio')->with([
+            return redirect()->route('portfolios.index')->with([
                'message' => 'You are logged in' 
             ]);
         }

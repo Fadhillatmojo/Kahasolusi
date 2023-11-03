@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ViewsController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\CompanyStructureController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\ToolController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -27,31 +30,21 @@ Route::middleware(['prevent-back-history'])->group(function () {
             });
         });
         Route::middleware(['auth:admin'])->group(function () {
-            Route::controller(PortfolioController::class)->group(function () {
-                Route::get('/portfolios','index')->name('portfolio');
-                Route::get('/portfolios/create','create')->name('create');
-            });
-            
+            // rute untuk portfolios
+            Route::resource('portfolios', PortfolioController::class);
+            // rute untuk roles
+            Route::resource('roles', RoleController::class);
+            // rute untuk tools
+            Route::resource('tools', ToolController::class);
+            // rute untuk founders
+            Route::resource('founders', CompanyStructureController::class);
+            // rute untuk faqs
+            Route::resource('faqs', FAQController::class);
+            // rute untuk testimonials
+            Route::resource('testimonials', TestimonialController::class);
             // rute untuk logout
             Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
             
         });
     });
 });
-    
-
-// // // ini yang ada di bawah sementara semua
-// // // rute untuk admin
-// // Route::prefix('admin')->group(function() {
-// //     Route::get('/portfolios', [ViewsController::class, 'portfolios']);
-// //     Route::get('/roles', [ViewsController::class, 'roles']);
-
-// // });
-
-// // //rute untuk daftar admin(sementara aja ini cuma nampilin biasa data nya)
-// // Route::prefix('daftar')->group(function() {
-// //     Route::get('/admin', [AdminController::class, 'index']);
-// //     Route::get('/structures', [CompanyStructureController::class, 'index']);
-// // });
-
-

@@ -45,34 +45,34 @@
                 </div>
                 
                 <div class="item-admin-section ps-3">
-                    <a href="#" class="sidebar-item active" onclick="toggleActive(this)">
+                    <a href="{{ route('portfolios.index') }}" class="sidebar-item {{ Request::routeIs('portfolios.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide" class="me-3">
                         <span>Portfolios</span>
                     </a>
     
-                    <a href="#" class="sidebar-item" onclick="toggleActive(this)">
+                    <a href="{{ route('roles.index') }}" class="sidebar-item {{ Request::routeIs('roles.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
                         
                         <span>Roles</span>
                     </a>
                     
-                    <a href="#" class="sidebar-item" onclick="toggleActive(this)">
+                    <a href="{{ route('tools.index') }}" class="sidebar-item {{ Request::routeIs('tools.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide" class="me-3">
                         
                         <span>Tools</span>
                     </a>
                     
-                    <a href="#" class="sidebar-item" onclick="toggleActive(this)">
+                    <a href="{{ route('founders.index') }}" class="sidebar-item {{ Request::routeIs('founders.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">
                         
                         <span>Founders</span>
                     </a>
-                    <a href="#" class="sidebar-item" onclick="toggleActive(this)">
+                    <a href="{{ route('faqs.index') }}" class="sidebar-item {{ Request::routeIs('faqs.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconFAQ.svg') }}" alt="hide" class="me-3">
                         
                         <span>FAQs</span>
                     </a>
-                    <a href="#" class="sidebar-item" onclick="toggleActive(this)">
+                    <a href="{{ route('testimonials.index') }}" class="sidebar-item {{ Request::routeIs('testimonials.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconTestimonial.svg') }}" alt="hide" class="me-3">
                         
                         <span>Testimonials</span>
@@ -111,15 +111,18 @@
                         <input type="text" class="nav-input" placeholder="Search Item">
                         <button class="btn-nav-input"><img src="../adminassets/img/global/search.svg" alt=""></button>
                     </div> --}}
-
-                    <button class="btn-notif d-none d-md-block">
-                        <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
-                    </button>
+                    @if (!Request::routeIs('faqs.index'))
+                        @if ($showButton)
+                            <button class="btn-notif d-none d-md-block">
+                                <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
+                            </button>
+                        @endif
+                    @endif
                 </div>
             </div>
 
             <div class="content">
-                <div class="row" style="overflow-x :auto">
+                <div class="" style="overflow-x:auto">
                     @yield('table')
                 </div>
 

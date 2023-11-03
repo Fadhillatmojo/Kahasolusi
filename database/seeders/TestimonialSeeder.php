@@ -16,6 +16,6 @@ class TestimonialSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         Testimonial::truncate();
-        Testimonial::factory(10)->create();
+        Testimonial::factory(2)->create();
     }
 }

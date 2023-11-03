@@ -21,7 +21,7 @@ class AdminController extends Controller
 
         if (Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('portfolio')->withSuccess('Kamu berhasil Login!');
+            return redirect()->route('portfolios.index')->withSuccess('Kamu berhasil Login!');
         }
         return back()->withErrors([
             'email'=> 'Kredensial yang dimasukkan tidak valid'

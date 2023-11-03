@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQ;
 use Illuminate\Http\Request;
 
 class FAQController extends Controller
@@ -11,7 +12,10 @@ class FAQController extends Controller
      */
     public function index()
     {
-        //
+        $count = FAQ::count();
+        $faqs = FAQ::paginate(6);
+        $showButton = $count <=6;
+        return view('admin.faqs.index', compact('faqs', 'showButton'));
     }
 
     /**
