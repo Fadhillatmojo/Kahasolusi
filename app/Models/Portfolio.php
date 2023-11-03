@@ -15,6 +15,7 @@ class Portfolio extends Model
         'portfolio_desc',
         'portfolio_url',
         'portfolio_image_url',
+        'portfolio_year',
         'admin_id',
     ];
     public function Admin(){

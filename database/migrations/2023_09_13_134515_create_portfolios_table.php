@@ -17,6 +17,7 @@ return new class extends Migration
             $table->longText("portfolio_desc");
             $table->string("portfolio_url");
             $table->string("portfolio_image_url");
+            $table->year("portfolio_year");
             $table->unsignedBigInteger("admin_id")->required();
             $table->timestamps();
             
