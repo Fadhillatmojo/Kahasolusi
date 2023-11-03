@@ -17,9 +17,9 @@ class AdminSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         Admin::truncate();
         // Admin::insert([
-        //     "admin_username"=> "John Doe",
-        //     "admin_email"=> "eko@gmail.com",
-        //     "admin_password"=> "okeokwojwo"
+        //     "admin_username"=> "fadhil",
+        //     "admin_email"=> "fadhillatmojo@gmail.com",
+        //     "admin_password"=> "rahasia"
         // ]);
         Admin::factory(3)->create();
     }

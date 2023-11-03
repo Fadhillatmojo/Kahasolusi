@@ -29,6 +29,7 @@ Route::middleware(['prevent-back-history'])->group(function () {
         Route::middleware(['auth:admin'])->group(function () {
             Route::controller(PortfolioController::class)->group(function () {
                 Route::get('/portfolios','index')->name('portfolio');
+                Route::get('/portfolios/create','create')->name('create');
             });
             
             // rute untuk logout

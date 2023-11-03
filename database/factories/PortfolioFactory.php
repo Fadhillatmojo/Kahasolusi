@@ -22,6 +22,7 @@ class PortfolioFactory extends Factory
             'portfolio_desc'=>$this->faker->paragraph(),
             'portfolio_url'=>$this->faker->url(),
             'portfolio_image_url'=>$this->faker->imageUrl(640, 480, 'portfolio', true),
+            'portfolio_year'=>$this->faker->year(),
             'admin_id'=>Arr::random([1,2,3])
         ];
     }
