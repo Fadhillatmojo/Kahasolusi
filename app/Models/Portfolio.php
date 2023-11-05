@@ -10,6 +10,14 @@ class Portfolio extends Model
 {
     use HasFactory;
     protected $primaryKey = 'portfolio_id';
+    protected $fillable = [
+        'portfolio_title',
+        'portfolio_desc',
+        'portfolio_url',
+        'portfolio_image_url',
+        'portfolio_year',
+        'admin_id',
+    ];
     public function Admin(){
         return $this->belongsTo(Admin::class, 'admin_id', 'admin_id');
     }

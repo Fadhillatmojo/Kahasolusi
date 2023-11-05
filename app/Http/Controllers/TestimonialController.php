@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class TestimonialController extends Controller
@@ -11,7 +12,10 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        //
+        $count = Testimonial::count();
+        $testimonials = Testimonial::paginate(6);
+        $showButton = $count <= 3;
+        return view('admin.testimonials.index', compact('testimonials', 'showButton'));
     }
 
     /**

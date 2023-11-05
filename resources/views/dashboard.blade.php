@@ -1,22 +1,26 @@
 @extends('component.root')
 @section('body')
     @include('component.hero')
-    <div class="container">
-        @include('component.about')
-    
-        @include('component.portfolios')
+    <div class="container-fluid">
+        <div class="container">
+            @include('component.about')
         
-        @include('component.roles')
+            @include('component.portfolios')
+            
+            @include('component.roles')
+        </div>
     
         @include('component.tools')
-    
-        @include('component.founders')
-        
-        @include('component.faqs')
-        
-        @include('component.testimonials')
-        
-        @include('component.contact')
+        <div class="container">
+            @include('component.founders')
+            
+            @include('component.faqs')
+            
+            @include('component.testimonials')
+            
+            @include('component.contact')
+
+        </div>
 
     </div>
 @endsection

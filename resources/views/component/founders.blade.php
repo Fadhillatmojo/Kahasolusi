@@ -22,61 +22,30 @@
         <div class="container-full">
             <div class="services-tyle-two-box text-center">
                 <div class="services-4-col-carousel owl-carousel owl-theme">
-                    <!-- Single Item -->
-                    <div class="single-item">
-                        <img src="assets/img/commisioner-pict.jpg" class="founder-img" alt="...">
-                        <h4><a href="services-details.html">John Taylor</a></h4>
-                        <div class="thumb"></div>
-                        <p>
-                            Commisioner
-                        </p>
-                    </div>
+                    @foreach ($founders as $founder)
+                        <!-- Single Item -->
+                        <div class="single-item">
+                            <img src="{{ $founder->person_image_url }}" class="founder-img" alt="person">
+                            <h4><a href="#">{{ $founder->person_name }}</a></h4>
+                            <div class="thumb"></div>
+                            <p>
+                                {{ $founder->person_position }}
+                            </p>
+                        </div>
+                    @endforeach
                     <!-- End Single Item -->
-                    <!-- Single Item -->
+
+                    
+                    {{-- <!-- Single Item -->
                     <div class="single-item">
-                        <div class="thumb"></div>
-                        <h4><a href="services-details.html">Lorem</a></h4>
-                        <p>
-                            Lorem ipsum dolor sit
-                        </p>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item">
-                        <div class="thumb"></div>
-                        <h4><a href="services-details.html">Lorem</a></h4>
+                        <img src="assets/img/commisioner-pict.jpg" class="founder-img" alt="person">
+                        <h4><a href="#">Lorem</a></h4>
                         <p>
                             Lorem ipsum dolor sit
                         </p>
                     </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item">
-                        <div class="thumb"></div>
-                        <h4><a href="services-details.html">Lorem</a></h4>
-                        <p>
-                            Lorem ipsum dolor sit
-                        </p>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item">
-                        <div class="thumb"></div>
-                        <h4><a href="services-details.html">Lorem</a></h4>
-                        <p>
-                            Lorem ipsum dolor sit
-                        </p>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item">
-                        <div class="thumb"></div>
-                        <h4><a href="services-details.html">Lorem</a></h4>
-                        <p>
-                            Lorem ipsum dolor sit
-                        </p>
-                    </div>
-                    <!-- End Single Item -->
+                    <!-- End Single Item --> --}}
+                    
                 </div>
             </div>
         </div>

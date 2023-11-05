@@ -15,7 +15,7 @@
                                             <h4 data-animation="animated slideInDown">Connecting the World, One Solution at a Time.</h4>
                                             <h2 data-animation="animated slideInLeft">Hello! We are Solve Your Technology Business</h2>
                                             <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md" href="#">Contact Us</a>
+                                                <a class="btn btn-theme primary effect btn-md" href="#">Contact US</a>
                                             </div>  
                                         </div>
                                     </div>

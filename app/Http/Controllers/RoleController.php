@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -11,7 +12,10 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $count = Role::count();
+        $roles = Role::paginate(6);
+        $showButton = $count <= 8;
+        return view('admin.roles.index', compact('roles', 'showButton'));
     }
 
     /**
