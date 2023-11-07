@@ -4893,6 +4893,7 @@ ul.achivement li .counter .timer {
 	z-index: 1;
 	background: var(--white);
 	margin: 0px 22px;
+	border-radius: 15px;
 }
 
 .services-style-two-area .services-4-col-carousel.owl-carousel .owl-item .single-item .thumb {
@@ -7601,7 +7602,7 @@ footer.bg-theme .footer-bottom {
   }
   .accordion .card-header h4:after {
 	font-family: "Font Awesome 5 Pro";
-	content: "\f107";
+	content: "\f106";
 	position: absolute;
 	right: 15px;
 	top: 20px;
@@ -7609,7 +7610,7 @@ footer.bg-theme .footer-bottom {
   }
   
   .accordion .card-header h4.collapsed:after {
-	content: "\f105";
+	content: "\f107";
 	font-weight: 700;
 	color: #999999;
   }
@@ -7619,8 +7620,10 @@ footer.bg-theme .footer-bottom {
 	margin-bottom: 31px;
 	overflow: inherit;
 	background: transparent;
-	border-radius: 5px;
+	border-radius: 15px;
 	padding: 0;
+	background: white;
+	width: 100%;
   }
   
   .faq-area .faq-content .card:last-child {
@@ -7653,8 +7656,7 @@ footer.bg-theme .footer-bottom {
   
   .faq-area .faq-content .card .card-body {
 	background: var(--white);
-	margin-top: 15px;
-	border-radius: 0 10px 0 0;
+	border-radius:15px;
 	padding: 30px;
   }
   
@@ -7690,11 +7692,10 @@ footer.bg-theme .footer-bottom {
   }
   
   .faq-area .faq-content .card .card-header h4 {
-	background: var(--color-primary);
-	color: var(--white);
+	background:white;
 	padding: 20px;
 	padding-right: 45px;
-	border-radius: 0 0 15px 0;
+	border-radius: 15px;
   }
   
   .faq-area .faq-content .card .card-header h4.collapsed {
@@ -7703,6 +7704,7 @@ footer.bg-theme .footer-bottom {
 	padding-right: 45px;
 	border: 1px solid #e7e7e7;
 	background-color: var(--white);
+	border-radius: 10px;
   }
   
   .faq-area.bg-gray .faq-content .card .card-header h4.collapsed {

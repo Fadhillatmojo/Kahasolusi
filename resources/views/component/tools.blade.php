@@ -4,19 +4,43 @@
     </div>
     <div class="marquee-container">
         <div class="marquee-content">
-            {{-- isinya --}}
+            
                 <div class="container-tools-content">
                     @foreach ($tools as $tool)
                         <div class="card-tools">
                             <img src="{{ $tool->tool_image_url }}" class="tools-image" alt="tool">
                         </div>
                     @endforeach
-                    
-                    {{-- <div class="card-tools">
-                        <img src="assets/img/tools-logo/google-bigQuery.png" class="tools-image" alt="...">
-                    </div> --}}
                 </div>
-            </div>
+                <div class="container-tools-content">
+                    @foreach ($tools as $tool)
+                        <div class="card-tools">
+                            <img src="{{ $tool->tool_image_url }}" class="tools-image" alt="tool">
+                        </div>
+                    @endforeach
+                </div>
         </div>
+
+        
+        <div class="marquee-content-reverse">
+
+            
+                <div class="container-tools-content">
+                    @foreach ($tools as $tool)
+                        <div class="card-tools">
+                            <img src="{{ $tool->tool_image_url }}" class="tools-image" alt="tool">
+                        </div>
+                    @endforeach
+                </div>
+                <div class="container-tools-content">
+                    @foreach ($tools as $tool)
+                        <div class="card-tools">
+                            <img src="{{ $tool->tool_image_url }}" class="tools-image" alt="tool">
+                        </div>
+                    @endforeach
+                </div>
+        </div>
+
+
     </div>
 </div>
