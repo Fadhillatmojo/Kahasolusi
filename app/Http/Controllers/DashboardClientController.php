@@ -14,7 +14,7 @@ class DashboardClientController extends Controller
 {
     public function index()
     {
-        $faqs = FAQ::paginate(6);
+        $faqs = FAQ::paginate(6)->chunk(3);
         $founders = Company_structure::paginate(4);
         $portfolios = Portfolio::paginate(6);
         $roles = Role::paginate(8);
