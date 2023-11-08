@@ -12,6 +12,13 @@
 	.heading-left p {
 		margin-top: 15px;
 	}
+	/* navbar */
+	a.smooth-menu{
+		text-align: left;
+	}
+	.smooth-menu:before {
+		width: 95% !important;
+	}
 	/* Topbar */
 	.top-bar-area .item-flex {
 		display: none;
@@ -407,6 +414,16 @@
     .services-style-three:nth-child(2) {
     	margin-top: 0;
     }
+
+	/* tools */
+	.marquee-content {
+		animation: marquee 10s linear infinite !important;
+	}
+	.marquee-content-reverse {
+		animation: marquee-reverse 10s linear infinite !important;
+	}
+
+
 	/* Testimonials */
 	.carousel-shadow .owl-stage-outer {
 		margin-bottom: -30px;
@@ -635,6 +652,13 @@
 	.breadcrumb-area {
 		padding: 80px 0;
 		position: relative;
+	}
+	/* navbar */
+	a.smooth-menu{
+		text-align: left;
+	}
+	.smooth-menu:before {
+		width: 95% !important;
 	}
 	/* Topbar */
 	.top-bar-area {
@@ -1195,6 +1219,16 @@
 	.services-style-three:nth-child(2) {
 		margin-top: 30px;
 	}
+
+
+
+	/* tools */
+	div#tools{
+		display: none !important;
+	}
+
+
+	
 	/* Testimonials */
 	.carousel-shadow .owl-stage-outer {
 		margin-bottom: -30px;

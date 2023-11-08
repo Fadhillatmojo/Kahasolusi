@@ -14,7 +14,7 @@ class DashboardClientController extends Controller
 {
     public function index()
     {
-        $faqs = FAQ::get();
+        $faqs = FAQ::paginate(6);
         $founders = Company_structure::paginate(4);
         $portfolios = Portfolio::paginate(6);
         $roles = Role::paginate(8);
@@ -22,7 +22,6 @@ class DashboardClientController extends Controller
         $tools = Tool::get();
         return view('dashboard', compact('faqs', 'founders', 'portfolios', 'roles', 'testimonials', 'tools'));
     }
-
     public function seeMorePortfolio(){
         $portfolios = Portfolio::paginate(9);
         return view('client.see-more-portfolio', compact('portfolios'));
