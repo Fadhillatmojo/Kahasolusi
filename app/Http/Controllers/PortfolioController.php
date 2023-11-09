@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PortfolioController extends Controller
 {
@@ -12,9 +13,11 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::paginate(6);
-        $showButton = true; // true karena portfolio dapat ditambah sampai tak terhingga
-        return view('admin.portfolios.index', compact('portfolios', 'showButton'));
+        if (Auth::guard('admin')->check()) {
+            $portfolios = Portfolio::paginate(6);
+            $showButton = true; // true karena portfolio dapat ditambah sampai tak terhingga
+            return view('admin.portfolios.index', compact('portfolios', 'showButton'));
+        }
     }
 
     /**
@@ -22,7 +25,9 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('admin.portfolios.create');
+        if (Auth::guard('admin')->check()) {
+            return view('admin.portfolios.create');
+        }
     }
 
     /**
@@ -30,7 +35,15 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Auth::guard('admin')->check()) {
+            $validated = $request->validate([
+                'portfolio_title' => 'required|string|max:250',
+                'portfolio_desc' => 'required|string|max:250',
+                'portfolio_image_url' => 'required|image|mimes:jpeg,jpg,png|max:2048'
+            ]);
+            dd($request->all());
+        }
+        
     }
 
     // public function show(string $id)
