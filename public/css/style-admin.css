@@ -511,3 +511,14 @@ aside #toggle-navbar {
   justify-content: center;
   align-items: center;
 }
+
+/* form section */
+.title-form{
+  background-color: var(--dark);
+  color: var(--white);
+  width: 30%;
+}
+
+input[type="file"] {
+  display: flex;
+}

@@ -18,7 +18,7 @@
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
-    <link rel="stylesheet" href="../css/style-admin.css">
+    <link rel="stylesheet" href="{{ asset('../css/style-admin.css')}}">
     {{-- end style sheet CSS admin --}}
     
     {{-- title admin --}}
@@ -116,6 +116,8 @@
                             <button class="btn-notif d-none d-md-block">
                                 <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
                             </button>
+                        @else
+                            
                         @endif
                     @endif
                 </div>
