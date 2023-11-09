@@ -20,22 +20,37 @@
     {{-- end title admin --}}
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="d-flex flex-row justify-content-between">
-            <div class="py-2 title-form text-center rounded-3">
-                <h4 style="margin: 0">@yield('titleForm')</h4>
-            </div>
+    <div class="d-flex py-5">
+        <div class="col-lg-3 col-1 d-flex justify-content-center">
             <a href="@yield('routeback')" class="d-flex align-items-center">
                 <img src="{{ asset('../adminassets/img/global/icon_back.svg') }}" alt="">
             </a>
         </div>
-        <div class="mt-5 d-flex justify-content-center">
-            <div class="w-50">
-                @yield('form')
+        <div class="col-lg-6 col-10">
+            <div class="py-2 title-form text-center rounded-3">
+                <h4 style="margin: 0">@yield('titleForm')</h4>
             </div>
         </div>
+        <div class="col-lg-3 col-1">
+        </div>        
 	</div>
-
+    <div class="d-flex">
+        <div class="col-lg-3 col-1 d-flex justify-content-center">
+        </div>
+        <div class="col-lg-6 col-10">
+            @yield('form')
+        </div>
+        <div class="col-lg-3 col-1">
+        </div>        
+	</div>
+    
+    {{-- <div class="d-flex flex-row justify-content-between">
+        <a href="@yield('routeback')" class="d-flex align-items-center">
+            <img src="{{ asset('../adminassets/img/global/icon_back.svg') }}" alt="">
+        </a>
+    </div>
+    <div class="mt-5 d-flex justify-content-center">
+    </div> --}}
 
 
 	{{-- Ini adalah section javascrip tag --}}

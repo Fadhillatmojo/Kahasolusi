@@ -516,7 +516,6 @@ aside #toggle-navbar {
 .title-form{
   background-color: var(--dark);
   color: var(--white);
-  width: 30%;
 }
 
 input[type="file"] {
