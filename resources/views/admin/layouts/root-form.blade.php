@@ -43,17 +43,10 @@
         <div class="col-lg-3 col-1">
         </div>        
 	</div>
-    
-    {{-- <div class="d-flex flex-row justify-content-between">
-        <a href="@yield('routeback')" class="d-flex align-items-center">
-            <img src="{{ asset('../adminassets/img/global/icon_back.svg') }}" alt="">
-        </a>
-    </div>
-    <div class="mt-5 d-flex justify-content-center">
-    </div> --}}
-
 
 	{{-- Ini adalah section javascrip tag --}}
+    @stack('scripts')
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
