@@ -16,7 +16,11 @@
                                     <div class="card">
                                         <div class="project-style-two">
                                             <div class="cover-info">
-                                                <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
+                                                @if (Str::contains($portfolio->portfolio_image_url, ['http://', 'https://']))
+                                                    <img src="{{ $portfolio->portfolio_image_url }}" class="card-img-top" alt="portfolio">
+                                                @else
+                                                    <img src="{{ asset('storage/portfolios/' . $portfolio->portfolio_image_url) }}" class="card-img-top" alt="portfolio">
+                                                @endif
                                                 <div class="card-body">
                                                     <h5 class="card-title">
                                                         {{ $portfolio->portfolio_title }}
@@ -28,7 +32,9 @@
                                                 <span>
                                                     {{ $portfolio->portfolio_desc }}
                                                 </span>
-                                                <h4><a href="{{ $portfolio->portfolio_url }}">Go to link ></a></h4>
+                                                @if ($portfolio->portfolio_url != null)
+                                                    <h4><a href="{{ $portfolio->portfolio_url }}">Go to link ></a></h4>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
