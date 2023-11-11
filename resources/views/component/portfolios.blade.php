@@ -22,7 +22,7 @@
                                                     <img src="{{ asset('storage/portfolios/' . $portfolio->portfolio_image_url) }}" class="card-img-top" alt="portfolio">
                                                 @endif
                                                 <div class="card-body">
-                                                    <h5 class="card-title">
+                                                    <h5 class="card-title" style="word-wrap:break-word">
                                                         {{ $portfolio->portfolio_title }}
                                                     </h5>
                                                 </div>

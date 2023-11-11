@@ -26,7 +26,7 @@
             <div class="confirmation-content">
                 <p>Anda yakin ingin menghapus Portfolio ini?</p>
                 <button class="me-2 py-2 px-3 btn-cancel" onclick="hideDeleteConfirmation()">Batal</button>
-                <button class="btn btn-danger" onclick="submitDeleteForm()">Hapus</button>
+                <button id="btnDelete" class="btn btn-danger">Hapus</button>
             </div>
         </div>
     </div>
@@ -51,20 +51,20 @@
                 <td>{{ $portfolio->portfolio_desc }}</td>
                 <td class="align-middle text-center">
                     @if (Str::contains($portfolio->portfolio_image_url, ['http://', 'https://']))
-                        <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
+                        <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @else
-                        <img src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
+                        <img src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @endif
                 </td>
                 <td class="align-middle text-center">{{ $portfolio->portfolio_year }}</td>
                 <td class="align-middle"><a href="{{ $portfolio->portfolio_url }}" target="_blank">{{ $portfolio->portfolio_url }}</a></td>
                 <td class="text-center align-middle">
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-center">
                         <a href="{{ route('portfolios.edit', $portfolio->portfolio_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
-                        <form id="deleteForm" action="{{ route('portfolios.destroy', $portfolio->portfolio_id) }}" method="POST">
+                        <form id="deleteForm_{{ $portfolio->portfolio_id }}" action="{{ route('portfolios.destroy', $portfolio->portfolio_id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="button" id="btn-delete" onclick="showDeleteConfirmation()"><img src="{{ asset('../adminassets/img/global/action/iconActionDelete.svg') }}"></button>
+                            <button type="button" id="btn-delete" onclick="showDeleteConfirmation('{{ $portfolio->portfolio_id }}')"><img src="{{ asset('../adminassets/img/global/action/iconActionDelete.svg') }}"></button>
                         </form>
                     </div>
                 </td>
@@ -80,19 +80,24 @@
                 // Sembunyikan pop-up
                 document.getElementById('popup-container').style.display = 'none';
             }
-            function showDeleteConfirmation() {
+            function showDeleteConfirmation(portfolioId) {
                 document.getElementById('popup-container-confirm').style.display = 'flex';
                 document.getElementById('confirmation-popup').style.display = 'block';
+                document.getElementById('btnDelete').onclick = function() {
+                    submitDeleteForm(portfolioId);
+                };
             }
 
-            function hideDeleteConfirmation() {
+            function hideDeleteConfirmation(portfolioId) {
                 document.getElementById('popup-container-confirm').style.display = 'none';
                 document.getElementById('confirmation-popup').style.display = 'none';
             }
 
-            function submitDeleteForm() {
-                // Jika pengguna mengklik "Hapus" pada popup, submit formulir untuk menghapus
-                document.getElementById('deleteForm').submit();
+            function submitDeleteForm(portfolioId) {
+                // Construct the form ID dynamically based on the portfolio ID
+                var formId = 'deleteForm_' + portfolioId;
+                // Submit the form with the constructed ID
+                document.getElementById(formId).submit();
             }
         </script>
     @endpush

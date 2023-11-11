@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 class PortfolioController extends Controller
 {
     /**
-     * Menampilkan halaman utama portfolio.
+     * Menampilkan halaman utama portfolios.
      */
     public function index()
     {
@@ -23,7 +23,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Menampilkan Halaman Create Portfolios.
+     * Menampilkan Halaman Create Portfolio.
      */
     public function create()
     {
@@ -41,7 +41,7 @@ class PortfolioController extends Controller
             $request->validate([
                 'portfolio_title'       => 'required|string|max:40',
                 'portfolio_desc'        => 'required|string|max:120',
-                'portfolio_year'        => 'required|string|max:4',
+                'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
                 'portfolio_url'         => 'nullable|string|max:225',
                 'portfolio_image_url'   => 'required|image|mimes:jpeg,jpg,png|max:2048'
             ]);
@@ -95,7 +95,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Menampilkan halaman edit data portfolios.
+     * Menampilkan halaman edit data portfolio.
      */
     public function edit(string $id)
     {
@@ -104,14 +104,14 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Rute Update data Portfolio.
+     * Function Update data Portfolio.
      */
     public function update(Request $request, string $id)
     {
         $request->validate([
             'portfolio_title'       => 'required|string|max:40',
             'portfolio_desc'        => 'required|string|max:120',
-            'portfolio_year'        => 'required|string|max:4',
+            'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
             'portfolio_url'         => 'nullable|string|max:225',
             'portfolio_image_url'   => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
         ]);
@@ -194,9 +194,15 @@ class PortfolioController extends Controller
      */
     public function destroy(string $id)
     {
+        // portfolio objek
         $portfolio = Portfolio::findOrFail($id);
+        // image path
+        $imagePath = 'public/portfolios/' . $portfolio->portfolio_image_url;
 
-        Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
+        // check if image exist
+        if (Storage::exists($imagePath)) {
+            Storage::delete($imagePath);
+        }
 
         $portfolio->delete();
 

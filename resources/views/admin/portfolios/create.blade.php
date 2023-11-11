@@ -55,7 +55,7 @@
                     <label for="portfolio_year">Year</label>
                 </td>
                 <td>
-                    <input type="year" placeholder="YYYY" min="0" max="9999" id="portfolio_year" name="portfolio_year">
+                    <input class="form-control" type="year" placeholder="YYYY" min="1900" max="2120" id="portfolio_year" name="portfolio_year">
                     @if ($errors->has('portfolio_year'))
                         <span class="text-danger">{{ $errors->first('portfolio_year') }}</span>
                     @endif
@@ -74,10 +74,10 @@
             </tr>
             <tr>
                 <td>
-                    <label for="portfolio_image_url">Photo Portfolio</label>
+                    <label for="portfolio_image_url">Image<br>(400x300 is recomended)</label>
                 </td>
                 <td>
-                    <input type="file" class="form-control" id="" name="portfolio_image_url" value="">
+                    <input type="file" class="form-control" id="portfolio_image_url" name="portfolio_image_url" value="">
                     @if ($errors->has('portfolio_image_url'))
                         <span class="text-danger">{{ $errors->first('portfolio_image_url') }}</span>
                     @endif
