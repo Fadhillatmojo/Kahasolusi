@@ -41,7 +41,7 @@ class PortfolioController extends Controller
             $request->validate([
                 'portfolio_title'       => 'required|string|max:40',
                 'portfolio_desc'        => 'required|string|max:120',
-                'portfolio_year'        => 'required|string|max:4',
+                'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
                 'portfolio_url'         => 'nullable|string|max:225',
                 'portfolio_image_url'   => 'required|image|mimes:jpeg,jpg,png|max:2048'
             ]);
@@ -111,7 +111,7 @@ class PortfolioController extends Controller
         $request->validate([
             'portfolio_title'       => 'required|string|max:40',
             'portfolio_desc'        => 'required|string|max:120',
-            'portfolio_year'        => 'required|string|max:4',
+            'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
             'portfolio_url'         => 'nullable|string|max:225',
             'portfolio_image_url'   => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
         ]);

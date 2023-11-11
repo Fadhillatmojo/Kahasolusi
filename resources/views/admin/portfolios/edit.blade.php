@@ -56,7 +56,7 @@
 					<label for="portfolio_year">Year</label>
 				</td>
 				<td>
-					<input type="year" placeholder="YYYY" min="1999" max="2500" id="portfolio_year" name="portfolio_year" value="{{ $portfolio->portfolio_year }}">
+					<input class="form-control" type="year" placeholder="2023" min="1900" max="2120" id="portfolio_year" name="portfolio_year" value="{{ $portfolio->portfolio_year }}">
 					@if ($errors->has('portfolio_year'))
 						<span class="text-danger">{{ $errors->first('portfolio_year') }}</span>
 					@endif
