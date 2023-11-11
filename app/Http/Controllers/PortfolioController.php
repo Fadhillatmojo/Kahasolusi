@@ -194,9 +194,15 @@ class PortfolioController extends Controller
      */
     public function destroy(string $id)
     {
+        // portfolio objek
         $portfolio = Portfolio::findOrFail($id);
+        // image path
+        $imagePath = 'public/portfolios/' . $portfolio->portfolio_image_url;
 
-        Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
+        // check if image exist
+        if (Storage::exists($imagePath)) {
+            Storage::delete($imagePath);
+        }
 
         $portfolio->delete();
 

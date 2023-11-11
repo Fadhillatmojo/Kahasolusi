@@ -113,11 +113,13 @@
                     </div> --}}
                     @if (!Request::routeIs('faqs.index'))
                         @if ($showButton)
-                            <button class="btn-notif d-none d-md-block">
+                            <button class="btn-add d-md-block">
                                 <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
                             </button>
                         @else
-                            
+                        <button class="btn-add d-md-block" disabled>
+                            <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}" alt="">
+                        </button>
                         @endif
                     @endif
                 </div>
