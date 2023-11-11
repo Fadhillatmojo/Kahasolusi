@@ -51,9 +51,9 @@
                 <td>{{ $portfolio->portfolio_desc }}</td>
                 <td class="align-middle text-center">
                     @if (Str::contains($portfolio->portfolio_image_url, ['http://', 'https://']))
-                        <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
+                        <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @else
-                        <img src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
+                        <img src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @endif
                 </td>
                 <td class="align-middle text-center">{{ $portfolio->portfolio_year }}</td>

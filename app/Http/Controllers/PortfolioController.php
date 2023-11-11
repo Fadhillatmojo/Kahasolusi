@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 class PortfolioController extends Controller
 {
     /**
-     * Menampilkan halaman utama portfolio.
+     * Menampilkan halaman utama portfolios.
      */
     public function index()
     {
@@ -23,7 +23,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Menampilkan Halaman Create Portfolios.
+     * Menampilkan Halaman Create Portfolio.
      */
     public function create()
     {
@@ -95,7 +95,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Menampilkan halaman edit data portfolios.
+     * Menampilkan halaman edit data portfolio.
      */
     public function edit(string $id)
     {
@@ -104,7 +104,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Rute Update data Portfolio.
+     * Function Update data Portfolio.
      */
     public function update(Request $request, string $id)
     {

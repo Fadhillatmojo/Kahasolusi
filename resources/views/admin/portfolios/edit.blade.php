@@ -75,26 +75,26 @@
 			</tr>
 			<tr>
 				<td>
-					<label for="portfolio_image_url">Image</label>
+					<label for="portfolio_image_url">Image<br>(400x300 is recomended)</label>
 				</td>
 				<td>
-				<div id="img-container" class="d-inline-block align-items-center py-2 px-3">
-					@if (Str::contains($portfolio->portfolio_image_url, ['http', 'https']))
-						<img id="preview-image" src="{{ $portfolio->portfolio_image_url }}" class="mb-2" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
-					@else
-						<img id="preview-image" src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="168" height="94">
-					@endif
-					<label id="label-upload" for="img-upload" class="ms-3">
-						<img src="{{ asset('../adminassets/img/global/action/iconUpload.svg') }}">
-					</label>
-					<input id="img-upload" type="file" class="d-none @error('portfolio_image_url') is-invalid @enderror" name="portfolio_image_url" onchange="document.getElementById('preview-image').src = window.URL.createObjectURL(this.files[0])">
+					<div id="img-container" class="d-inline-block align-items-center py-2 px-3">
+						@if (Str::contains($portfolio->portfolio_image_url, ['http', 'https']))
+							<img id="preview-image" src="{{ $portfolio->portfolio_image_url }}" class="mb-2" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
+						@else
+							<img id="preview-image" src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
+						@endif
+						<label id="label-upload" for="img-upload" class="ms-3">
+							<img src="{{ asset('../adminassets/img/global/action/iconUpload.svg') }}">
+						</label>
+						<input id="img-upload" type="file" class="d-none @error('portfolio_image_url') is-invalid @enderror" name="portfolio_image_url" onchange="document.getElementById('preview-image').src = window.URL.createObjectURL(this.files[0])">
+						@if ($errors->has('portfolio_image_url'))
+							<span class="tet-danger">{{ $errors->first('portfolio_image_url')}}</span>
+						@endif
+					</div>
 					@if ($errors->has('portfolio_image_url'))
-						<span class="tet-danger">{{ $errors->first('portfolio_image_url')}}</span>
+						<span class="text-danger">{{ $errors->first('portfolio_image_url') }}</span>
 					@endif
-				</div>
-				@if ($errors->has('portfolio_image_url'))
-					<span class="text-danger">{{ $errors->first('portfolio_image_url') }}</span>
-				@endif
 				</td>
 			</tr>
 			<tr>
