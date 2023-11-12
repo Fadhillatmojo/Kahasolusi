@@ -44,7 +44,7 @@
                     <label for="role_image_url">Role Image<br>(150x150 is recomended)</label>
                 </td>
                 <td>
-                    <input type="file" class="form-control" id="role_image_url" name="role_image_url" value="">
+                    <input type="file" class="form-control" id="role_image_url" name="role_image_url">
                     @if ($errors->has('role_image_url'))
                         <span class="text-danger">{{ $errors->first('role_image_url') }}</span>
                     @endif
