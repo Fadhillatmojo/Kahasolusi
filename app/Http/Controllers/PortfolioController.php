@@ -99,8 +99,10 @@ class PortfolioController extends Controller
      */
     public function edit(string $id)
     {
-        $portfolio = Portfolio::findOrFail($id);
-        return view('admin.portfolios.edit', compact('portfolio'));
+        if (Auth::guard('admin')->check()) {
+            $portfolio = Portfolio::findOrFail($id);
+            return view('admin.portfolios.edit', compact('portfolio'));
+        }
     }
 
     /**
@@ -108,84 +110,86 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'portfolio_title'       => 'required|string|max:40',
-            'portfolio_desc'        => 'required|string|max:120',
-            'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
-            'portfolio_url'         => 'nullable|string|max:225',
-            'portfolio_image_url'   => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
-        ]);
-        $portfolio = Portfolio::findOrFail($id);
-
-        // percabangan apakah requestnya terdapat portfolio url atau tidak
-        if ($request->portfolio_url == null) { 
-            if ($request->hasFile('portfolio_image_url')){
-                // ini untuk mendapatkan original filename
-                $originalFileName = $request->file('portfolio_image_url')->getClientOriginalName();
-                $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
-                // ini untuk mendapatkan extension originalnya
-                $originalExtension = $request->file('portfolio_image_url')->getClientOriginalExtension();
-                // ini adalah nama file yang akan disimpan ke database
-                $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
-                // ini adalah path tempat menaruh foto di dalam foldernya di laravel
-                $path = storage_path('app/public/portfolios/' . $savedFileName);
-                $photoResized = Image::make($request->file('portfolio_image_url'));
-                $photoResized->resize(400,300)->save($path);
-
-                Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
-                // ini untuk mengupdate datanya
-                $portfolio->update([
-                    'portfolio_title'       => $request->portfolio_title,
-                    'portfolio_desc'        => $request->portfolio_desc,
-                    'portfolio_year'        => $request->portfolio_year,
-                    'portfolio_url'        => null,
-                    'portfolio_image_url'   => $savedFileName,
-                ]);
+        if (Auth::guard('admin')->check()) {
+            $request->validate([
+                'portfolio_title'       => 'required|string|max:40',
+                'portfolio_desc'        => 'required|string|max:120',
+                'portfolio_year'        => 'required|integer|digits:4|between:1900,2120',
+                'portfolio_url'         => 'nullable|string|max:225',
+                'portfolio_image_url'   => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
+            ]);
+            $portfolio = Portfolio::findOrFail($id);
+    
+            // percabangan apakah requestnya terdapat portfolio url atau tidak
+            if ($request->portfolio_url == null) { 
+                if ($request->hasFile('portfolio_image_url')){
+                    // ini untuk mendapatkan original filename
+                    $originalFileName = $request->file('portfolio_image_url')->getClientOriginalName();
+                    $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
+                    // ini untuk mendapatkan extension originalnya
+                    $originalExtension = $request->file('portfolio_image_url')->getClientOriginalExtension();
+                    // ini adalah nama file yang akan disimpan ke database
+                    $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
+                    // ini adalah path tempat menaruh foto di dalam foldernya di laravel
+                    $path = storage_path('app/public/portfolios/' . $savedFileName);
+                    $photoResized = Image::make($request->file('portfolio_image_url'));
+                    $photoResized->resize(400,300)->save($path);
+    
+                    Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
+                    // ini untuk mengupdate datanya
+                    $portfolio->update([
+                        'portfolio_title'       => $request->portfolio_title,
+                        'portfolio_desc'        => $request->portfolio_desc,
+                        'portfolio_year'        => $request->portfolio_year,
+                        'portfolio_url'        => null,
+                        'portfolio_image_url'   => $savedFileName,
+                    ]);
+                } else {
+                    $portfolio->update([
+                        'portfolio_title'       => $request->portfolio_title,
+                        'portfolio_desc'        => $request->portfolio_desc,
+                        'portfolio_year'        => $request->portfolio_year,
+                        'portfolio_url'        => null,
+                    ]);
+                }
+                
+                //redirect to new edit form
+                return redirect()->route('portfolios.edit', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
+    
             } else {
-                $portfolio->update([
-                    'portfolio_title'       => $request->portfolio_title,
-                    'portfolio_desc'        => $request->portfolio_desc,
-                    'portfolio_year'        => $request->portfolio_year,
-                    'portfolio_url'        => null,
-                ]);
+                if ($request->hasFile('portfolio_image_url')){
+                    // ini untuk mendapatkan original filename
+                    $originalFileName = $request->file('portfolio_image_url')->getClientOriginalName();
+                    $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
+                    // ini untuk mendapatkan extension originalnya
+                    $originalExtension = $request->file('portfolio_image_url')->getClientOriginalExtension();
+                    // ini adalah nama file yang akan disimpan ke database
+                    $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
+                    // ini adalah path tempat menaruh foto di dalam foldernya di laravel
+                    $path = storage_path('app/public/portfolios/' . $savedFileName);
+                    $photoResized = Image::make($request->file('portfolio_image_url'));
+                    $photoResized->resize(400,300)->save($path);
+    
+                    Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
+                    // ini untuk mengupdate datanya
+                    $portfolio->update([
+                        'portfolio_title'       => $request->portfolio_title,
+                        'portfolio_desc'        => $request->portfolio_desc,
+                        'portfolio_year'        => $request->portfolio_year,
+                        'portfolio_url'         => $request->portfolio_url,
+                        'portfolio_image_url'   => $savedFileName,
+                    ]);
+                } else {
+                    $portfolio->update([
+                        'portfolio_title'       => $request->portfolio_title,
+                        'portfolio_desc'        => $request->portfolio_desc,
+                        'portfolio_url'         => $request->portfolio_url,
+                        'portfolio_year'        => $request->portfolio_year,
+                    ]);
+                }
+                //redirect to new edit form
+                return redirect()->route('portfolios.edit', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
             }
-            
-            //redirect to new edit form
-            return redirect()->route('portfolios.edit', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
-
-        } else {
-            if ($request->hasFile('portfolio_image_url')){
-                // ini untuk mendapatkan original filename
-                $originalFileName = $request->file('portfolio_image_url')->getClientOriginalName();
-                $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
-                // ini untuk mendapatkan extension originalnya
-                $originalExtension = $request->file('portfolio_image_url')->getClientOriginalExtension();
-                // ini adalah nama file yang akan disimpan ke database
-                $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
-                // ini adalah path tempat menaruh foto di dalam foldernya di laravel
-                $path = storage_path('app/public/portfolios/' . $savedFileName);
-                $photoResized = Image::make($request->file('portfolio_image_url'));
-                $photoResized->resize(400,300)->save($path);
-
-                Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
-                // ini untuk mengupdate datanya
-                $portfolio->update([
-                    'portfolio_title'       => $request->portfolio_title,
-                    'portfolio_desc'        => $request->portfolio_desc,
-                    'portfolio_year'        => $request->portfolio_year,
-                    'portfolio_url'         => $request->portfolio_url,
-                    'portfolio_image_url'   => $savedFileName,
-                ]);
-            } else {
-                $portfolio->update([
-                    'portfolio_title'       => $request->portfolio_title,
-                    'portfolio_desc'        => $request->portfolio_desc,
-                    'portfolio_url'         => $request->portfolio_url,
-                    'portfolio_year'        => $request->portfolio_year,
-                ]);
-            }
-            //redirect to new edit form
-            return redirect()->route('portfolios.edit', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
         }
     }
 
@@ -194,18 +198,20 @@ class PortfolioController extends Controller
      */
     public function destroy(string $id)
     {
-        // portfolio objek
-        $portfolio = Portfolio::findOrFail($id);
-        // image path
-        $imagePath = 'public/portfolios/' . $portfolio->portfolio_image_url;
-
-        // check if image exist
-        if (Storage::exists($imagePath)) {
-            Storage::delete($imagePath);
+        if (Auth::guard('admin')->check()) {
+            // portfolio objek
+            $portfolio = Portfolio::findOrFail($id);
+            // image path
+            $imagePath = 'public/portfolios/' . $portfolio->portfolio_image_url;
+            
+            // check if image exist
+            if (Storage::exists($imagePath)) {
+                Storage::delete($imagePath);
+            }
+            
+            $portfolio->delete();
+            
+            return redirect()->route('portfolios.index')->with(['message' => 'Data Berhasil Dihapus!']);
         }
-
-        $portfolio->delete();
-
-        return redirect()->route('portfolios.index')->with(['message' => 'Data Berhasil Dihapus!']);
     }
 }

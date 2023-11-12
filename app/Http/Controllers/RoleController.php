@@ -15,10 +15,12 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $count = Role::count();
-        $roles = Role::paginate(8);
-        $showButton = $count < 8;
-        return view('admin.roles.index', compact('roles', 'showButton'));
+        if (Auth::guard('admin')->check()) {
+            $count = Role::count();
+            $roles = Role::paginate(8);
+            $showButton = $count < 8;
+            return view('admin.roles.index', compact('roles', 'showButton'));
+        }
     }
 
     /**
@@ -69,8 +71,10 @@ class RoleController extends Controller
      */
     public function edit(string $id)
     {
-        $role = Role::findOrFail($id);
-        return view('admin.roles.edit', compact('role'));
+        if (Auth::guard('admin')->check()) {
+            $role = Role::findOrFail($id);
+            return view('admin.roles.edit', compact('role'));
+        }
     }
 
     /**
@@ -78,39 +82,41 @@ class RoleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'role_name'       => 'required|string|max:30',
-            'role_image_url'  => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
-        ]);
-        $role = Role::findOrFail($id);
-
-        // percabangan untuk mengecek apakah di request itu punya image atau tidak
-        if ($request->hasFile('role_image_url')){
-            // ini untuk mendapatkan original filename
-            $originalFileName = $request->file('role_image_url')->getClientOriginalName();
-            $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
-            // ini untuk mendapatkan extension originalnya
-            $originalExtension = $request->file('role_image_url')->getClientOriginalExtension();
-            // ini adalah nama file yang akan disimpan ke database
-            $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
-            // ini adalah path tempat menaruh foto di dalam foldernya di laravel
-            $path = storage_path('app/public/roles/' . $savedFileName);
-            $photoResized = Image::make($request->file('role_image_url'));
-            $photoResized->resize(150,150)->save($path);
-
-            Storage::delete('public/roles/'.$role->role_image_url);
-            // ini untuk mengupdate datanya
-            $role->update([
-                'role_name'       => $request->role_name,
-                'role_image_url'  => $savedFileName,
+        if (Auth::guard('admin')->check()) {
+            $request->validate([
+                'role_name'       => 'required|string|max:30',
+                'role_image_url'  => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
             ]);
-        } else {
-            $role->update([
-                'role_name'       => $request->role_name,
-            ]);
+            $role = Role::findOrFail($id);
+    
+            // percabangan untuk mengecek apakah di request itu punya image atau tidak
+            if ($request->hasFile('role_image_url')){
+                // ini untuk mendapatkan original filename
+                $originalFileName = $request->file('role_image_url')->getClientOriginalName();
+                $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
+                // ini untuk mendapatkan extension originalnya
+                $originalExtension = $request->file('role_image_url')->getClientOriginalExtension();
+                // ini adalah nama file yang akan disimpan ke database
+                $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
+                // ini adalah path tempat menaruh foto di dalam foldernya di laravel
+                $path = storage_path('app/public/roles/' . $savedFileName);
+                $photoResized = Image::make($request->file('role_image_url'));
+                $photoResized->resize(150,150)->save($path);
+    
+                Storage::delete('public/roles/'.$role->role_image_url);
+                // ini untuk mengupdate datanya
+                $role->update([
+                    'role_name'       => $request->role_name,
+                    'role_image_url'  => $savedFileName,
+                ]);
+            } else {
+                $role->update([
+                    'role_name'       => $request->role_name,
+                ]);
+            }
+            //redirect to new edit form
+            return redirect()->route('roles.edit', $role->role_id)->with(['message' => 'Role Berhasil Diubah!']);
         }
-        //redirect to new edit form
-        return redirect()->route('roles.edit', $role->role_id)->with(['message' => 'Role Berhasil Diubah!']);
     }
 
     /**
@@ -118,18 +124,20 @@ class RoleController extends Controller
      */
     public function destroy(string $id)
     {
-        // role objek
-        $role = Role::findOrFail($id);
-        // image path
-        $imagePath = 'public/roles/' . $role->role_image_url;
-
-        // check if image exist
-        if (Storage::exists($imagePath)) {
-            Storage::delete($imagePath);
+        if (Auth::guard('admin')->check()) {
+            // role objek
+            $role = Role::findOrFail($id);
+            // image path
+            $imagePath = 'public/roles/' . $role->role_image_url;
+    
+            // check if image exist
+            if (Storage::exists($imagePath)) {
+                Storage::delete($imagePath);
+            }
+    
+            $role->delete();
+    
+            return redirect()->route('roles.index')->with(['message' => 'Data Berhasil Dihapus!']);
         }
-
-        $role->delete();
-
-        return redirect()->route('roles.index')->with(['message' => 'Data Berhasil Dihapus!']);
     }
 }
