@@ -4,7 +4,7 @@
         <h2>Our Recent Project</h2>
     </div>
 
-    <div id="project" class="project-area overflow-hidden default-padding">
+    <div id="project" class="project-area overflow-hidden">
         <div class="container">
             <div class="project-items-area">
                 <div class="masonary">

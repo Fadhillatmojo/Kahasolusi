@@ -15,12 +15,13 @@
         <div class="container">
             <div class="testimonial-items">
                 <div class="row">
-                    <div class="col-lg-10 offset">
-                        <div class="testimonial-carousel owl-carousel owl-theme">
+                    <div class="col-lg-10">
+                        <div class="testimonial-carousel owl-carousel owl-theme testi">
                             <!-- peritem -->
                             <div class="item">
-                                <div class="card">
+                                <div class="card-testi">
                                     <div class="card-testi-item">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
                                         <div class="card-testi-item-text">
                                             <b>
                                             Solusi Software Berkualitas Tinggi
@@ -39,15 +40,14 @@
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                         </div>
-                                        <img src="assets/img/800x800.png" alt="Thumb">
                                     </div>
                                 </div>
                             </div>
-                            <!-- akhir item -->
                             <!-- peritem -->
                             <div class="item">
-                                <div class="card">
+                                <div class="card-testi">
                                     <div class="card-testi-item">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
                                         <div class="card-testi-item-text">
                                             <b>
                                             Solusi Software Berkualitas Tinggi
@@ -66,15 +66,14 @@
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                         </div>
-                                        <img src="assets/img/800x800.png" alt="Thumb">
                                     </div>
                                 </div>
                             </div>
-                            <!-- akhir item -->
                             <!-- peritem -->
                             <div class="item">
-                                <div class="card">
+                                <div class="card-testi">
                                     <div class="card-testi-item">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
                                         <div class="card-testi-item-text">
                                             <b>
                                             Solusi Software Berkualitas Tinggi
@@ -93,11 +92,9 @@
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                         </div>
-                                        <img src="assets/img/800x800.png" alt="Thumb">
                                     </div>
                                 </div>
                             </div>
-                            <!-- akhir item -->
                         </div>
                     </div>
                 </div>
