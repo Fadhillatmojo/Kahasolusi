@@ -18,7 +18,7 @@
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
-    <link rel="stylesheet" href="../css/style-admin.css">
+    <link rel="stylesheet" href="{{ asset('../css/style-admin.css')}}">
     {{-- end style sheet CSS admin --}}
     
     {{-- title admin --}}
@@ -113,9 +113,13 @@
                     </div> --}}
                     @if (!Request::routeIs('faqs.index'))
                         @if ($showButton)
-                            <button class="btn-notif d-none d-md-block">
+                            <button class="btn-add d-md-block">
                                 <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
                             </button>
+                        @else
+                        <button class="btn-add d-md-block" disabled>
+                            <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}" alt="">
+                        </button>
                         @endif
                     @endif
                 </div>
@@ -131,6 +135,7 @@
     </div>
 
     {{-- Ini adalah section javascrip tag --}}
+    @stack('scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script>

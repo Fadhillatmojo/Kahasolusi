@@ -11,7 +11,7 @@
                 {{-- <img class="image-roles" src="{{ $role->role_image_url }}"> --}}
                 <div class="container-text">
                     {{-- <p class="roles-title">CEO of the Company</p> --}}
-                    <p class="roles-title">{{ $role->role_name }}</p>
+                    <p class="roles-title" style="word-wrap:break-word">{{ $role->role_name }}</p>
                 </div>
             </div>
         </div>

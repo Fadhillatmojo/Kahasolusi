@@ -47,7 +47,7 @@ html, body {
 }
 /* End page login */
 
-.btn-statistics, .nav-input, .nav-input-group .btn-nav-input, .nav .btn-notif, #toggle-navbar {
+.btn-statistics, .nav-input, .nav-input-group .btn-nav-input, .nav .btn-add, #toggle-navbar {
   background-color: transparent;
   border: none;
   outline: none;
@@ -189,19 +189,19 @@ aside #toggle-navbar {
     padding: 50px 64px 24px 0px;
   }
 }
-.nav .btn-notif {
+.nav .btn-add {
   width: 46px;
   height: 46px;
   background: #fff;
   border-radius: 50%;
   margin-left: 20px;
 }
-.nav .btn-notif img {
+.nav .btn-add img {
   width: 24px;
   height: 24px;
 }
 @media (min-width: 992px) {
-  .nav .btn-notif {
+  .nav .btn-add {
     width: 52px;
   }
 }
@@ -510,4 +510,111 @@ aside #toggle-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* form section */
+.title-form{
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+#table-form{
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  vertical-align: middle;
+}
+
+.btn-action-form{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  background-color: var(--light-blue);
+}
+
+#btn-delete{
+  border: none;
+  background-color: var(--white);
+}
+
+/* edit form */
+#img-container{
+  background-color: #fff;
+  border: solid 1px #c5c5c5;
+  border-radius: 10px;
+}
+#label-upload{
+  cursor: pointer;
+}
+/* success pop up */
+#popup-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-box {
+  display: flex;
+  align-items: center;
+  padding: 35px;
+  border: solid 1px black;
+  background-color: var(--dark);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#close-popup {
+  margin-top: -40px;
+  margin-right: -10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* konfirmasi delete */
+#popup-container-confirm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-popup {
+  border: solid 1px black;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--dark);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-content {
+  text-align: center;
+}
+
+
+.btn-cancel{
+  color: var(--white);
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  border: none;
+}
+.btn-cancel:hover{
+  background-color: #43598a;
 }
