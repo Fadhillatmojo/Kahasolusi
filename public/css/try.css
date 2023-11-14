@@ -38,7 +38,7 @@ html, body, .wrapper {
 	white-space: nowrap;
 	width: 100%; 
 	border: none;
-	background: white;
+	background: #f3f7ff;
 }
 
 .marquee-content {
@@ -214,11 +214,6 @@ svg.mask{
 	margin-bottom: 31px;
 }
 
-.row-footer{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
 /* testi */
 .testimonial-carousel .item {
 	background: #F1F4FF;
@@ -258,6 +253,8 @@ svg.mask{
 .contactUs{
 	font-size: 50px;
 	margin-bottom: 70px;
+	padding:0px 20px;
+	list-style: none;
 }
 .bg-theme .contact-content form input, .bg-theme .contact-content form textarea {
     background: white;
@@ -286,16 +283,49 @@ li.telp, li.mail, li.loc .icon i {
 }
 .content{
 	margin-left: 20px !important;
-	font-size: 25px !important;
+	font-size: 25px ;
 }
 .contact-area{
 	margin: 0px 130px;
 	margin-bottom: 200px;
 	border-radius: 40px;
 }
+.box-background{
+	background-color: #F16724;
+	width: 100%;
+	padding: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	color: #F16724;
+}
+/* Style for the background box */
+.background-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.container.bg{
+	position: relative;
+	bottom: 30px;
+	width: 94.5%;
+	z-index: -1;
+}
+
+.included-bg{
+	margin-bottom: 100px;
+}
+
+/* footer */
 .footer{
 	margin-top: 100px;
 	background: #122245;
+}
+.row-footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .link-footer{
 	width: 150px;
@@ -303,6 +333,10 @@ li.telp, li.mail, li.loc .icon i {
 	display: flex;
 	justify-content: space-around;
 }
+.maps-area iframe {
+    width: 100%;
+}
+
 .widget-poin{
 	color: #FFF;
 }

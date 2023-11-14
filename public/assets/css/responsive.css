@@ -280,13 +280,28 @@
 
 	/* kontak */
 	.contact-area {
-		margin: 0px 20px !important;
+		margin: 20px 0px 100px !important;
+		padding: 50px !important;
 	}	
 
 	.title-contact{
 		font-size: 30px;
 	}
-
+	.contact-form-box {
+		padding: 0px 30px 0px 20px !important;
+	}
+	.contact-content form button {
+		padding: 10px 30px;
+		font-size: 15px;
+	}
+	
+	/*footer*/
+	.maps-area iframe {
+		margin-top: 50px;
+	}
+	.container.bg{
+		display: none;
+	}
 	/* Pricing */
 	.pricing-area .fixed-sahpe-bottom {
 		width: 100%;
@@ -783,6 +798,41 @@
 	.appinment-forms {
 		margin-left: 0;
 	}
+	/* kontak */
+	div#contact {
+		margin: 0px;
+		margin-bottom: 100px;
+	}
+	.title-contact {
+		font-size: 30px !important;
+	}
+	li.telp, li.mail, li.loc .icon i {
+		font-size: 15px !important;
+	}
+	.content {
+		margin-left: 20px !important;
+		font-size: 15px !important;
+	}
+	.contactUs {
+		margin-bottom: 0px !important;
+	}
+	.mail, .loc {
+		margin-top: 0px !important;
+	}
+	.form-box{
+		padding: 0px 0px 0px 20px;
+	}
+	.contact-content .form-box p {
+		font-size: 15px !important;
+	}
+	.col-md-12.col-lg-12.input-name, .col-md-12.col-lg-6.input-email, .col-md-12.col-lg-6.input-phone, .col-md-12.col-lg-12.input-comment {
+		width: 100%;
+	}
+	.contact-content form button {
+		padding: 5px 20px;
+		font-size: 11px;
+	}
+
 	/* About */
 	.misi-button li{
 		text-align: left;
@@ -1513,10 +1563,6 @@
 		padding-left: 15px;
 		margin-top: 30px;
 	}
-	.bg-theme .contact-content .content {
-		padding: 50px;
-		background: var(--white);
-	}
 	.bg-theme .contact-content .content li,
 	.bg-theme .contact-content .content li p {
 		color: var(--color-heading);
@@ -1552,6 +1598,12 @@
 	}
 	footer .footer-bottom li::before {
 		left: -9px;
+	}
+	footer .widget-title, footer img {
+		text-align: center;
+	}
+	.maps-area {
+		margin-top: 50px;
 	}
 }
 
