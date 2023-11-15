@@ -25,8 +25,12 @@
                     @foreach ($founders as $founder)
                         <!-- Single Item -->
                         <div class="single-item">
-                            <img src="{{ $founder->person_image_url }}" class="founder-img" alt="person">
-                            <h4><a href="#">{{ $founder->person_name }}</a></h4>
+                            @if (Str::contains($founder->person_image_url, ['http://', 'https://']))
+                                <img src="{{ $founder->person_image_url }}" class="founder-img" alt="founders{{ $founder->person_id }}">
+                            @else
+                                <img src="{{ asset('storage/founders/' . $founder->person_image_url) }}" class="founder-img" alt="person">
+                            @endif
+                            <h4>{{ $founder->person_name }}</h4>
                             <div class="thumb"></div>
                             <p>
                                 {{ $founder->person_position }}

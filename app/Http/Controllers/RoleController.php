@@ -17,7 +17,7 @@ class RoleController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $count = Role::count();
-            $roles = Role::paginate(8);
+            $roles = Role::orderBy('created_at', 'DESC')->paginate(8);
             $showButton = $count < 8;
             return view('admin.roles.index', compact('roles', 'showButton'));
         }
@@ -54,7 +54,7 @@ class RoleController extends Controller
             // ini adalah path tempat menaruh foto di dalam foldernya di laravel
             $path = storage_path('app/public/roles/' . $savedFileName);
             $photoResized = Image::make($request->file('role_image_url'));
-            $photoResized->resize(150,150)->save($path);
+            $photoResized->fit(150,150)->save($path);
             // ini untuk create datanya
             Role::create([
                 'role_name'       => $request->role_name,
@@ -101,7 +101,7 @@ class RoleController extends Controller
                 // ini adalah path tempat menaruh foto di dalam foldernya di laravel
                 $path = storage_path('app/public/roles/' . $savedFileName);
                 $photoResized = Image::make($request->file('role_image_url'));
-                $photoResized->resize(150,150)->save($path);
+                $photoResized->fit(150,150)->save($path);
     
                 Storage::delete('public/roles/'.$role->role_image_url);
                 // ini untuk mengupdate datanya
@@ -120,7 +120,7 @@ class RoleController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * function Hapus data role.
      */
     public function destroy(string $id)
     {

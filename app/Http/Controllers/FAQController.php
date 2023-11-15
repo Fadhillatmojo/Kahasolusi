@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FAQ;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FAQController extends Controller
 {
@@ -12,42 +13,23 @@ class FAQController extends Controller
      */
     public function index()
     {
-        $count = FAQ::count();
-        $faqs = FAQ::paginate(6);
-        $showButton = $count <=6;
-        return view('admin.faqs.index', compact('faqs', 'showButton'));
+        if (Auth::guard('admin')->check()) {
+            $count = FAQ::count();
+            $faqs = FAQ::paginate(6);
+            $showButton = $count <=6;
+            return view('admin.faqs.index', compact('faqs', 'showButton'));
+        }
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * Menampilkan form editing FAQ.
      */
     public function edit(string $id)
     {
-        //
+        if (Auth::guard('admin')->check()) {
+            $faq = FAQ::findOrFail($id);
+            return view('admin.faqs.edit', compact('faq'));
+        }
     }
 
     /**
@@ -55,7 +37,19 @@ class FAQController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        if (Auth::guard('admin')->check()) {
+            $request->validate([
+                'faq_title'   => 'required|string|max:60',
+                'faq_answer'  => 'required|string|max:200'
+            ]);
+            $faq = FAQ::findOrFail($id);
+            $faq->update([
+                'faq_title'   => $request->faq_title,
+                'faq_answer'  => $request->faq_answer
+            ]);
+            //redirect to new edit form
+            return redirect()->route('faqs.edit', $faq->faq_id)->with(['message' => 'FAQ Berhasil Diubah!']);
+        }
     }
 
     /**

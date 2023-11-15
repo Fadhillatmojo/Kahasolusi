@@ -22,7 +22,7 @@
         <tbody>
             @foreach ($testimonials as $testimonial)
                 <tr>
-                    <td class="align-middle" style="font-weight: bold">{{ $testimonial->testimonial_client }}</td>
+                    <td class="align-middle text-center" style="font-weight: bold">{{ $testimonial->testimonial_client }}</td>
                     <td class="align-middle">{{ $testimonial->testimonial_desc }}</td>
                     <td class="text-center align-middle">
                         @for ($i = 0; $i < $testimonial->testimonial_rate; $i++)
