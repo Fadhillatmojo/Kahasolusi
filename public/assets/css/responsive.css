@@ -6,6 +6,38 @@
 /* Tablet Layout: 768px.*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.testimonial-carousel .item {
+		display: flex !important;
+		justify-content: center !important;
+	}	
+	.card-testi {
+		width: 80%;
+	}
+	.testimonial-carousel .owl-stage {
+		width: 300% !important;
+		margin-left: 30px;
+	}
+	.testimonial-carousel .owl-item {
+		width: 33.33%; 
+	}
+	.testimonial-carousel .owl-stage-outer {
+		overflow: hidden;
+	}
+	.testimonial-carousel .owl-stage {
+		transition: all 0.25s ease;
+	}
+	
+	/* Jika Anda ingin mengatur transformasi agar lebih mulus */
+	.testimonial-carousel .owl-stage {
+		transition: transform 0.25s ease;
+	}
+	.card-testi{
+		box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
+	}
+	.card-testi-item{
+		flex-direction: column !important;
+		padding: 30px !important;
+	}
 	.btn-md{
 		font-size: 10px;
 	}
@@ -245,6 +277,31 @@
 	.fun-factor-area.bg-theme .medium {
 		color: var(--white);
 	}
+
+	/* kontak */
+	.contact-area {
+		margin: 20px 0px 100px !important;
+		padding: 50px !important;
+	}	
+
+	.title-contact{
+		font-size: 30px;
+	}
+	.contact-form-box {
+		padding: 0px 30px 0px 20px !important;
+	}
+	.contact-content form button {
+		padding: 10px 30px;
+		font-size: 15px;
+	}
+	
+	/*footer*/
+	.maps-area iframe {
+		margin-top: 50px;
+	}
+	.container.bg{
+		display: none;
+	}
 	/* Pricing */
 	.pricing-area .fixed-sahpe-bottom {
 		width: 100%;
@@ -433,7 +490,6 @@
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
-		box-shadow: 0px 2px 12px 0px #e7e7e7;
 		text-align: center;
 		border-radius: 6px;
 	}
@@ -573,10 +629,9 @@
 	.contact-content .content {
 		overflow: hidden;
 	}
-	.bg-theme .contact-content .content {
+	/* .bg-theme .contact-content .content {
 		padding: 50px;
-		background: var(--white);
-	}
+	} */
 	.bg-theme .contact-content .content li,
 	.bg-theme .contact-content .content li p {
 		color: var(--color-heading);
@@ -743,6 +798,41 @@
 	.appinment-forms {
 		margin-left: 0;
 	}
+	/* kontak */
+	div#contact {
+		margin: 0px;
+		margin-bottom: 100px;
+	}
+	.title-contact {
+		font-size: 30px !important;
+	}
+	li.telp, li.mail, li.loc .icon i {
+		font-size: 15px !important;
+	}
+	.content {
+		margin-left: 20px !important;
+		font-size: 15px !important;
+	}
+	.contactUs {
+		margin-bottom: 0px !important;
+	}
+	.mail, .loc {
+		margin-top: 0px !important;
+	}
+	.form-box{
+		padding: 0px 0px 0px 20px;
+	}
+	.contact-content .form-box p {
+		font-size: 15px !important;
+	}
+	.col-md-12.col-lg-12.input-name, .col-md-12.col-lg-6.input-email, .col-md-12.col-lg-6.input-phone, .col-md-12.col-lg-12.input-comment {
+		width: 100%;
+	}
+	.contact-content form button {
+		padding: 5px 20px;
+		font-size: 11px;
+	}
+
 	/* About */
 	.misi-button li{
 		text-align: left;
@@ -914,6 +1004,37 @@
 	}
 	.features-area .single-item.award {
 		margin: 30px 0;
+	}
+	/* testi */
+	.testimonial-carousel .owl-stage {
+		width: 300% !important;
+		margin-left: 30px;
+	}
+	.testimonial-carousel .owl-item {
+		width: 33.33%; 
+	}
+	.testimonial-carousel .owl-stage-outer {
+		overflow: hidden;
+	}
+	.testimonial-carousel .owl-stage {
+		transition: all 0.25s ease;
+	}
+	/* Jika Anda ingin mengatur transformasi agar lebih mulus */
+	.testimonial-carousel .owl-stage {
+		transition: transform 0.25s ease;
+	}
+	.card-testi-item-text {
+		padding: 10px;
+	}
+	.rating{
+		width: 80%;
+	}
+	.testimonial-carousel .item .provider h5 {
+		font-size: 15px;
+	}
+	.card-testi-item{
+		flex-direction: column !important;
+		padding: 0px !important;
 	}
 	/* Choose us */
 	.choseus-style-one-area::after {
@@ -1230,6 +1351,12 @@
 
 	
 	/* Testimonials */
+	.card-testi-item-text b {
+		font-size: 15px;
+	}
+	.card-testi-item-text p {
+		font-size: 12px;
+	}
 	.carousel-shadow .owl-stage-outer {
 		margin-bottom: -30px;
 	}
@@ -1238,7 +1365,6 @@
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
-		box-shadow: 0px 2px 12px 0px #e7e7e7;
 		text-align: center;
 		border-radius: 6px;
 	}
@@ -1250,7 +1376,7 @@
 		background: transparent;
 	}
 	.testimonial-carousel .item img {
-		margin: auto auto 50px;
+		margin: 30px;
 	}
 	.testimonial-carousel .item .content img {
 		top: -36px;
@@ -1305,6 +1431,10 @@
 	.pricing-style-two .pricing-item {
 		text-align: center;
 	}
+
+
+
+	
 	/* Blog */
 	.blog-area .blog-thin-colums .thumb {
 		margin-bottom: 30px;
@@ -1433,10 +1563,6 @@
 		padding-left: 15px;
 		margin-top: 30px;
 	}
-	.bg-theme .contact-content .content {
-		padding: 50px;
-		background: var(--white);
-	}
 	.bg-theme .contact-content .content li,
 	.bg-theme .contact-content .content li p {
 		color: var(--color-heading);
@@ -1472,6 +1598,12 @@
 	}
 	footer .footer-bottom li::before {
 		left: -9px;
+	}
+	footer .widget-title, footer img {
+		text-align: center;
+	}
+	.maps-area {
+		margin-top: 50px;
 	}
 }
 

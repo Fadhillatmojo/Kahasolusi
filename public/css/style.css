@@ -4204,6 +4204,7 @@ body,
 .testimonial-carousel .item {
 	display: flex;
 	align-items: center;
+	background: white;
 }
 
 .testimonial-carousel .item>i {

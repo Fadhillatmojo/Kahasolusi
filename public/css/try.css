@@ -38,7 +38,7 @@ html, body, .wrapper {
 	white-space: nowrap;
 	width: 100%; 
 	border: none;
-	background: white;
+	background: #f3f7ff;
 }
 
 .marquee-content {
@@ -182,6 +182,7 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 	border-radius: 27px;
 	box-shadow: 0px 0px 100px 0px rgba(18, 34, 69, 0.07);
 	justify-content: center;
+	background: white;
 }
 .tools-image{
     width: 100%;
@@ -213,10 +214,14 @@ svg.mask{
 	margin-bottom: 31px;
 }
 
-.row-footer{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+/* testi */
+.testimonial-carousel .item {
+	background: #F1F4FF;
+}
+.card-testi{
+	box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
+	background: white;
+	border-radius: 20px;
 }
 .testimonial-carousel .item .content::before {
 	bottom: 0px;
@@ -226,19 +231,101 @@ svg.mask{
 	width: 100%;
 	height: auto;
 	padding: 100px;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+/* contact */
+.title-contact{
+	font-size: 50px;
+}
+.contact-area.bg-theme {
+    padding: 50px 10px;
+}
+.contact-form-box {
+    padding-right: 30px;
+}
+.contact-content .form-box p {
+    margin-bottom: 30px;
+    padding-right: 0px;
+    font-size: 20px;
+}
+.contactUs{
+	font-size: 50px;
+	margin-bottom: 70px;
+	padding:0px 20px;
+	list-style: none;
+}
+.bg-theme .contact-content form input, .bg-theme .contact-content form textarea {
+    background: white;
+	color: #122245;
+}
+
+.form-group input::placeholder {
+    color: #122245 !important; 
+}
+
+.form-group textarea::placeholder {
+    color: #122245 !important;
+}
+li.telp, li.mail, li.loc .icon i {
+    font-size: 35px;
+}
+.telp {
+	display: flex;
+	padding: 0px 20px;
+}
+.mail, .loc{
+	list-style-type: none;
+	margin-top: 40px;
+    display: flex;
+    margin-left: 20px;
+}
+.content{
+	margin-left: 20px !important;
+	font-size: 25px ;
 }
 .contact-area{
 	margin: 0px 130px;
 	margin-bottom: 200px;
 	border-radius: 40px;
 }
-.telp {
-	display: flex;
-	padding: 0px 20px;
+.box-background{
+	background-color: #F16724;
+	width: 100%;
+	padding: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	color: #F16724;
 }
+/* Style for the background box */
+.background-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.container.bg{
+	position: relative;
+	bottom: 30px;
+	width: 94.5%;
+	z-index: -1;
+}
+
+.included-bg{
+	margin-bottom: 100px;
+}
+
+/* footer */
 .footer{
 	margin-top: 100px;
 	background: #122245;
+}
+.row-footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .link-footer{
 	width: 150px;
@@ -246,6 +333,10 @@ svg.mask{
 	display: flex;
 	justify-content: space-around;
 }
+.maps-area iframe {
+    width: 100%;
+}
+
 .widget-poin{
 	color: #FFF;
 }
