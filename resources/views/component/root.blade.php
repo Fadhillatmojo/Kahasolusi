@@ -106,31 +106,31 @@
                                             <li>
                                                 {{-- nyoba scrool view navbar tapi masih belom --}}
                                                 {{-- <a class="active smooth-menu" href="#header">Home</a> --}}
-                                                <a class="smooth-menu" href="#header">Home</a>
+                                                <a href="/#header">Home</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#about">About</a>
+                                                <a href="/#about">About</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#portfolios">Portfolios</a>
+                                                <a href="/#portfolios">Portfolios</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#roles">Roles</a>
+                                                <a href="/#roles">Roles</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#tools">Tools</a>
+                                                <a href="/#tools">Tools</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#founders">Founders</a>
+                                                <a href="/#founders">Founders</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#faqs">FAQs</a>
+                                                <a href="/#faqs">FAQs</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#testimonials">Testimonials</a>
+                                                <a href="/#testimonials">Testimonials</a>
                                             </li>
                                             <li>
-                                                <a class="smooth-menu" href="#contact">Contact</a>
+                                                <a href="/#contact">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
