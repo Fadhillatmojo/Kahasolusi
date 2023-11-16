@@ -102,8 +102,13 @@ class RoleController extends Controller
                 $path = storage_path('app/public/roles/' . $savedFileName);
                 $photoResized = Image::make($request->file('role_image_url'));
                 $photoResized->fit(150,150)->save($path);
-    
-                Storage::delete('public/roles/'.$role->role_image_url);
+
+                // Menghapus data image
+                $imagePath = 'public/roles/' . $role->role_image_url;
+                if (Storage::exists($imagePath)) {
+                    Storage::delete($imagePath);
+                }
+                
                 // ini untuk mengupdate datanya
                 $role->update([
                     'role_name'       => $request->role_name,

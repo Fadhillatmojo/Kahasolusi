@@ -16,7 +16,7 @@ Route::get('/welcome', function () {
 
 // rute untuk menampilkan dashboard client
 Route::controller(DashboardClientController::class)->group(function () {
-    Route::get('/', 'index');
+    Route::get('/', 'index')->name('dashboardClient');
     Route::get('/portfolios','seeMorePortfolio')->name('seeMorePortfolio');
 });
 

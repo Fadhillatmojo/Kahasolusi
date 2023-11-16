@@ -577,6 +577,11 @@ aside #toggle-navbar {
   cursor: pointer;
 }
 
+#table-radio{
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+
 /* konfirmasi delete */
 #popup-container-confirm {
   display: none;

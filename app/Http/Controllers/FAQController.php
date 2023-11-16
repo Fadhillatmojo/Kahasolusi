@@ -33,7 +33,7 @@ class FAQController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Mengupdate pertanyaan dan jawaban dari FAQ.
      */
     public function update(Request $request, string $id)
     {
@@ -50,13 +50,5 @@ class FAQController extends Controller
             //redirect to new edit form
             return redirect()->route('faqs.edit', $faq->faq_id)->with(['message' => 'FAQ Berhasil Diubah!']);
         }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }
