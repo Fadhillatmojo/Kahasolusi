@@ -98,7 +98,11 @@ class ToolController extends Controller
             $photoResized = Image::make($request->file('tool_image_url'));
             $photoResized->fit(150,150)->save($path);
 
-            Storage::delete('public/tools/'.$tool->tool_image_url);
+            // Menghapus data image
+            $imagePath = 'public/tools/'.$tool->tool_image_url;
+            if (Storage::exists($imagePath)) {
+                Storage::delete($imagePath);
+            }
             // ini untuk mengupdate datanya
             $tool->update([
                 'tool_image_url'  => $savedFileName,

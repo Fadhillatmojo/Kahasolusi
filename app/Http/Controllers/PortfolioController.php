@@ -170,7 +170,11 @@ class PortfolioController extends Controller
                     $photoResized = Image::make($request->file('portfolio_image_url'));
                     $photoResized->fit(400,300)->save($path);
     
-                    Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
+                    // Menghapus data image
+                    $imagePath = 'public/portfolios/'.$portfolio->portfolio_image_url;
+                    if (Storage::exists($imagePath)) {
+                        Storage::delete($imagePath);
+                    }
                     // ini untuk mengupdate datanya
                     $portfolio->update([
                         'portfolio_title'       => $request->portfolio_title,
