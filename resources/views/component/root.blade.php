@@ -85,7 +85,7 @@
             <div class="container box-nav">
                 <div class="row">
                     <!-- Start Navigation -->
-                    <nav class="navbar top-less logo-less white navbar-default navbar-fixed dark bootsnav on no-full nav-box no-background">
+                    <nav class="navbar top-less logo-less white navbar-default navbar-fixed dark bootsnav on no-full nav-box no-background d-flex align-items-center">
                         <div class="container nav-container">
                             <div class="row">
                                 <!-- Start Header Navigation -->
@@ -106,31 +106,31 @@
                                             <li>
                                                 {{-- nyoba scrool view navbar tapi masih belom --}}
                                                 {{-- <a class="active smooth-menu" href="#header">Home</a> --}}
-                                                <a href="/#header">Home</a>
+                                                <a href="/#header" class="smooth-menu">Home</a>
                                             </li>
                                             <li>
-                                                <a href="/#about">About</a>
+                                                <a href="/#about" class="smooth-menu">About</a>
                                             </li>
                                             <li>
-                                                <a href="/#portfolios">Portfolios</a>
+                                                <a href="/#portfolios" class="smooth-menu">Portfolios</a>
                                             </li>
                                             <li>
-                                                <a href="/#roles">Roles</a>
+                                                <a href="/#roles" class="smooth-menu">Roles</a>
                                             </li>
                                             <li>
-                                                <a href="/#tools">Tools</a>
+                                                <a href="/#tools" class="smooth-menu">Tools</a>
                                             </li>
                                             <li>
-                                                <a href="/#founders">Founders</a>
+                                                <a href="/#founders" class="smooth-menu">Founders</a>
                                             </li>
                                             <li>
-                                                <a href="/#faqs">FAQs</a>
+                                                <a href="/#faqs" class="smooth-menu">FAQs</a>
                                             </li>
                                             <li>
-                                                <a href="/#testimonials">Testimonials</a>
+                                                <a href="/#testimonials" class="smooth-menu">Testimonials</a>
                                             </li>
                                             <li>
-                                                <a href="/#contact">Contact</a>
+                                                <a href="/#contact" class="smooth-menu">Contact</a>
                                             </li>
                                         </ul>
                                     </div>

@@ -434,7 +434,7 @@ nav.navbar.bootsnav ul.nav>li>a {
 	background-color: transparent !important;
 	font-size: 15px;
 	letter-spacing: 0.06em;
-	padding: 35px 15px;
+	padding: 0px;
 	text-transform: uppercase;
 	font-family:var(--font-default);
 	font-weight: 500 !important;
@@ -1417,10 +1417,10 @@ nav.navbar.bootsnav {
 
 @media (min-width: 1024px) and (max-width: 1200px) {
 	nav.navbar.bootsnav ul.nav>li>a {
-		padding: 35px 12px !important;
+		padding: 35px 12px;
 	}
 	nav.navbar.bootsnav.sticked ul.nav>li>a {
-		padding: 30px 12px !important;
+		padding: 30px 12px;
 	}
 }
 
