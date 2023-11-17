@@ -15,8 +15,9 @@ html, body, .wrapper {
 .card{
 	margin: 10px;
 }
-.smooth-menu{
-	padding-bottom: 0px !important;
+
+ul.nav>li>a.smooth-menu{
+	padding: 0 !important;
 	text-align: center;
 }
 .smooth-menu:before {
@@ -25,12 +26,19 @@ html, body, .wrapper {
     bottom: -3px;
     transform: translateX(-50%);
     height: 4px;
-    width: 80%;
+    width: 100%;
     background: #F16724;
     border-radius: 50px;
     transform: scaleX(0);
-    transition: transform 0.2s linear;
+    transition: transform 0.2s ease-in-out;
 }
+
+@media (min-width: 1024px){ 
+	ul.nav>li>a.smooth-menu{
+		padding: 0 !important;
+	}
+ }
+
 
 .smooth-menu:hover:before, .smooth-menu.active:before {
     transform: scaleX(1);
