@@ -104,10 +104,6 @@ Sidebar heading:  20px 'Yantramanav', sans-serif
 /*
 ** General Styles for HTML tags
 */
-
-
-
-
 * {
 	padding: 0;
 	margin: 0;
@@ -1450,7 +1446,7 @@ button:focus {
 	.top-bar-area.multi-content .logo a {
 		position: relative;
 		z-index: 1;
-		padding-right: 40px;
+		/* padding-right: 40px; */
 	}
 	.top-bar-area.multi-content .logo a::after {
 		position: absolute;
@@ -7782,7 +7778,7 @@ nav.navbar.bootsnav.navbar-transparent.white .attr-nav {
 	border-left: none;
 	min-height: auto;
 	display: inline-block;
-	float: right;
+	/* float: right; */
 }
 
 .banner-area.auto-height.banner-style-four .content {
@@ -8276,7 +8272,7 @@ nav.navbar.bootsnav.navbar-transparent.white .attr-nav {
 /* ============================================================== 
      # Home Plumber
 =================================================================== */
-
+/* 
 @media (min-width: 1024px) {
 	nav.navbar.bootsnav.navbar-fixed.nav-box.navbar-default.bg-white ul.nav>li>a, 
 	nav.navbar.bootsnav.navbar-fixed.nav-box.navbar-default.bg-white .attr-nav>ul>li>a {
@@ -8287,15 +8283,18 @@ nav.navbar.bootsnav.navbar-transparent.white .attr-nav {
 		top: 80px
 	}
 
-}
+} */
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 	nav.navbar.bootsnav.navbar-fixed.nav-box.navbar-default.bg-white .right-bar {
 		position: absolute;
 		right: 30px;
 		top: 10px;
 		left: auto;
 		width: auto;
+	}
+	ul.nav>li>a.smooth-menu{
+		padding: 0 !important;
 	}
 
 	nav.navbar.bootsnav.navbar-fixed.nav-box.navbar-default.bg-white .right-bar .search {

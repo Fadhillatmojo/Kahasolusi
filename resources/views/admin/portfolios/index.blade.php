@@ -36,12 +36,12 @@
     <table class="table table-bordered">
         <thead class="table-light text-center align-middle">
             <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Image</th>
-            <th scope="col">Years Added</th>
-            <th scope="col">Link</th>
-            <th scope="col">Action</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">Years Added</th>
+                <th scope="col">Link</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
