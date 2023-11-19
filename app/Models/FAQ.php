@@ -10,6 +10,11 @@ class FAQ extends Model
 {
     use HasFactory;
     protected $table = 'faqs';
+    protected $fillable = [
+        'faq_title',
+        'faq_answer',
+        'admin_id'
+    ];
     protected $primaryKey = 'faq_id';
     public function Admin(){
         return $this->belongsTo(Admin::class, 'admin_id', 'admin_id');

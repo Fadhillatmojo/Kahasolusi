@@ -44,8 +44,8 @@
         <tbody>
             @foreach ($roles as $role)
                 <tr>
-                    <td class="align-middle" style="font-weight: bold">{{ $role->role_name }}</td>
-                    <td class="text-center align-middle">
+                    <td class="align-middle text-center" style="font-weight: bold">{{ $role->role_name }}</td>
+                    <td class="align-middle text-center">
                         @if (Str::contains($role->role_image_url, ['http://', 'https://']))
                             <img src="{{ $role->role_image_url }}" alt="{{ $role->role_image_url }}" width="150" height="150">
                         @else

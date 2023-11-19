@@ -56,7 +56,7 @@ class PortfolioController extends Controller
                 // ini adalah path tempat menaruh foto di dalam foldernya di laravel
                 $path = storage_path('app/public/portfolios/' . $savedFileName);
                 $photoResized = Image::make($request->file('portfolio_image_url'));
-                $photoResized->resize(400,300)->save($path);
+                $photoResized->fit(400,300)->save($path);
                 // ini untuk create datanya
                 Portfolio::create([
                     'portfolio_title'       => $request->portfolio_title,
@@ -78,7 +78,7 @@ class PortfolioController extends Controller
                 $path = storage_path('app/public/portfolios/' . $savedFileName);
                 // ini adalah 
                 $photoResized = Image::make($request->file('portfolio_image_url'));
-                $photoResized->resize(400,300)->save($path);
+                $photoResized->fit(400,300)->save($path);
 
                 // ini untuk create datanya
                 Portfolio::create([
@@ -133,7 +133,7 @@ class PortfolioController extends Controller
                     // ini adalah path tempat menaruh foto di dalam foldernya di laravel
                     $path = storage_path('app/public/portfolios/' . $savedFileName);
                     $photoResized = Image::make($request->file('portfolio_image_url'));
-                    $photoResized->resize(400,300)->save($path);
+                    $photoResized->fit(400,300)->save($path);
     
                     Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
                     // ini untuk mengupdate datanya
@@ -168,7 +168,7 @@ class PortfolioController extends Controller
                     // ini adalah path tempat menaruh foto di dalam foldernya di laravel
                     $path = storage_path('app/public/portfolios/' . $savedFileName);
                     $photoResized = Image::make($request->file('portfolio_image_url'));
-                    $photoResized->resize(400,300)->save($path);
+                    $photoResized->fit(400,300)->save($path);
     
                     Storage::delete('public/portfolios/'.$portfolio->portfolio_image_url);
                     // ini untuk mengupdate datanya

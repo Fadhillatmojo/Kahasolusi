@@ -47,8 +47,8 @@
         <tbody>
             @foreach ($portfolios as $portfolio)
             <tr>
-                <td class="align-middle" style="font-weight: bold">{{ $portfolio->portfolio_title }}</td>
-                <td>{{ $portfolio->portfolio_desc }}</td>
+                <td class="align-middle text-center" style="font-weight: bold">{{ $portfolio->portfolio_title }}</td>
+                <td class="align-middle">{{ $portfolio->portfolio_desc }}</td>
                 <td class="align-middle text-center">
                     @if (Str::contains($portfolio->portfolio_image_url, ['http://', 'https://']))
                         <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
@@ -57,7 +57,7 @@
                     @endif
                 </td>
                 <td class="align-middle text-center">{{ $portfolio->portfolio_year }}</td>
-                <td class="align-middle"><a href="{{ $portfolio->portfolio_url }}" target="_blank">{{ $portfolio->portfolio_url }}</a></td>
+                <td class="align-middle text-center"><a href="{{ $portfolio->portfolio_url }}" target="_blank">{{ $portfolio->portfolio_url }}</a></td>
                 <td class="text-center align-middle">
                     <div class="d-flex justify-content-center">
                         <a href="{{ route('portfolios.edit', $portfolio->portfolio_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>

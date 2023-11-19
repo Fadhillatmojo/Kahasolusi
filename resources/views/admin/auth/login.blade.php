@@ -36,7 +36,7 @@
 								<span class="text-danger">{{ $errors->first('password') }}</span>
 							@endif
 						</div>
-						<button type="submit" class="btn btn-primary px-5" value="login">Login</button>
+						<button type="submit" class="btn-action-form px-5" value="login">Login</button>
 					</form>
 				</div>
 				<div class="col p-5">

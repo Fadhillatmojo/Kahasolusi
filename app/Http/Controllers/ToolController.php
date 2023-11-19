@@ -52,7 +52,7 @@ class ToolController extends Controller
             // ini adalah path tempat menaruh foto di dalam foldernya di laravel
             $path = storage_path('app/public/tools/' . $savedFileName);
             $photoResized = Image::make($request->file('tool_image_url'));
-            $photoResized->resize(258,110)->save($path);
+            $photoResized->fit(258,110)->save($path);
             // ini untuk create datanya
             tool::create([
                 'tool_image_url'  => $savedFileName,
@@ -80,7 +80,33 @@ class ToolController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        if (Auth::guard('admin')->check()) {}
+        if (Auth::guard('admin')->check()) {
+            $request->validate([
+                'tool_image_url'  => 'required|image|mimes:jpeg,jpg,png|max:2048'
+            ]);
+            $tool = Tool::findOrFail($id);
+    
+            // ini untuk mendapatkan original filename
+            $originalFileName = $request->file('tool_image_url')->getClientOriginalName();
+            $filename = pathinfo($originalFileName, PATHINFO_FILENAME);
+            // ini untuk mendapatkan extension originalnya
+            $originalExtension = $request->file('tool_image_url')->getClientOriginalExtension();
+            // ini adalah nama file yang akan disimpan ke database
+            $savedFileName = $filename . '_' . time() . '.' . $originalExtension;
+            // ini adalah path tempat menaruh foto di dalam foldernya di laravel
+            $path = storage_path('app/public/tools/' . $savedFileName);
+            $photoResized = Image::make($request->file('tool_image_url'));
+            $photoResized->fit(150,150)->save($path);
+
+            Storage::delete('public/tools/'.$tool->tool_image_url);
+            // ini untuk mengupdate datanya
+            $tool->update([
+                'tool_image_url'  => $savedFileName,
+            ]);
+
+            //redirect to new edit form
+            return redirect()->route('tools.edit', $tool->tool_id)->with(['message' => 'Tool Berhasil Diubah!']);
+        }
     }
 
     /**

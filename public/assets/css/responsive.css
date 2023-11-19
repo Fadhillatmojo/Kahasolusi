@@ -1671,14 +1671,18 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1350px) {
+	.container.bg {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1350px) {
 	/* global reset - start */
 	.order-last {
 		order: 0;
 	}
 }
-
-
 /* Custom layout. */
 
 @media only screen and (max-width: 400px) {

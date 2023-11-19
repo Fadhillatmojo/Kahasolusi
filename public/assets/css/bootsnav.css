@@ -2337,8 +2337,8 @@ nav.navbar.bootsnav {
 		margin-bottom: 0;
 	}
 	nav.navbar.bootsnav.no-full .navbar-collapse {
-		max-height: 350px;
-		overflow-y: auto !important;
+		/* max-height: 350px; */
+		/* overflow-y: auto !important; */
 	}
 	nav.navbar.bootsnav .navbar-collapse.collapse {
 		display: none !important;
