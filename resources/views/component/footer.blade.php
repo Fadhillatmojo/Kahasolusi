@@ -29,31 +29,31 @@
 				 </div>
 				 <div class="col-lg-2 col-md-6 item">
 					<div class="f-item link">
-					    <h4 class="widget-title">Quick LInk</h4>
+					    <h4 class="widget-title">Quick Link</h4>
 					    <ul style="list-style: none;">
 						   <li>
-							  <a href="#header"><i class="fas fa-angle-right"></i>Home</a>
+							  <a href="/#header"><i class="fas fa-angle-right"></i>Home</a>
 						   </li>
 						   <li>
-							  <a href="#about"><i class="fas fa-angle-right"></i>About us</a>
+							  <a href="/#about"><i class="fas fa-angle-right"></i>About us</a>
 						   </li>
 						   <li>
-							  <a href="#portfolios"><i class="fas fa-angle-right"></i>Portfolios</a>
+							  <a href="/#portfolios"><i class="fas fa-angle-right"></i>Portfolios</a>
 						   </li>
 						   <li>
-							  <a href="#roles"><i class="fas fa-angle-right"></i>Roles</a>
+							  <a href="/#roles"><i class="fas fa-angle-right"></i>Roles</a>
 						   </li>
 						   <li>
-							  <a href="#tools"><i class="fas fa-angle-right"></i>Tools</a>
+							  <a href="/#tools"><i class="fas fa-angle-right"></i>Tools</a>
 						   </li>
 						   <li>
-							  <a href="#founders"><i class="fas fa-angle-right"></i>Founders</a>
+							  <a href="/#founders"><i class="fas fa-angle-right"></i>Founders</a>
 						   </li>
 						   <li>
-							  <a href="#faqs"><i class="fas fa-angle-right"></i>FAQs</a>
+							  <a href="/#faqs"><i class="fas fa-angle-right"></i>FAQs</a>
 						   </li>
 						   <li>
-							  <a href="#contact"><i class="fas fa-angle-right"></i>Contact</a>
+							  <a href="/#contact"><i class="fas fa-angle-right"></i>Contact</a>
 						   </li>
 					    </ul>
 					</div>

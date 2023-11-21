@@ -1,3 +1,25 @@
+:root {
+	--font-default: 'Josefin Sans';
+	--fontawesome: "Font Awesome 5 Pro";
+	--black: #000000;
+	/* namanin apa  */
+	--orange:#F16724;
+	--dark-blue:#122245;
+	--dark: #06278a;
+	--dark-secondary: #06278a;
+	--white: #ffffff; 
+	--color-primary: #1239ac; 
+	--color-secondary: #ffb400; 
+	--color-heading: #1d2746;
+	--color-paragraph: #666666;
+	--border-default: #e7e7e7;
+	--box-shadow-primary: 0 0 25px rgb(0 0 0 / 8%);
+	--box-shadow-secondary: 0 10px 30px 0 rgb(44 130 237 / 40%);
+	--box-shadow-tertiary: 0px 2px 12px 0px #e7e7e7;
+	--box-shadow-dark: 0px 0px 0px;
+	--bg-gray: #eef0f6;
+	--bg-gradient: linear-gradient(to right, #1239ac, #00f3dd, #1239ac);
+}
 /* tambahan */
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
 	width: auto;
@@ -56,7 +78,7 @@ ul.nav>li>a.smooth-menu{
 
 .marquee-content {
 	display: flex;
-	animation: marquee 15s linear infinite;
+	animation: marquee 30s linear infinite;
 	width: 200%;
 	padding: 0 10px;
 	justify-content: space-around;
@@ -64,7 +86,7 @@ ul.nav>li>a.smooth-menu{
 }
 .marquee-content-reverse {
 	display: flex;
-	animation: marquee-reverse 15s linear infinite;
+	animation: marquee-reverse 30s linear infinite;
 	width: 200%;
 	padding: 0 10px;
 	justify-content: space-evenly;
@@ -193,7 +215,7 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 	padding: 26px 63px;
 	flex-shrink: 0;
 	border-radius: 27px;
-	box-shadow: 0px 0px 100px 0px rgba(18, 34, 69, 0.07);
+	box-shadow: 0px 0px 20px rgba(18, 34, 69, 0.02);
 	justify-content: center;
 	background: white;
 }
@@ -248,6 +270,12 @@ svg.mask{
 	align-items: center;
 }
 
+/* card testimonial */
+#card-testimonial{
+	background-color: var(--white) !important;
+	border-radius: 20px;
+	/* box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20); */
+}
 /* contact */
 .title-contact{
 	font-size: 50px;
@@ -353,3 +381,4 @@ li.telp, li.mail, li.loc .icon i {
 .widget-poin{
 	color: #FFF;
 }
+
