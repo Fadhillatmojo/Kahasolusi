@@ -54,7 +54,7 @@ host('staging')
     ->setPort(64000)
     ->set('remote_user', 'kahasolu')
     ->set('branch', 'development')
-    ->set('deploy_path', '/home/kahasolu/public_html');
+    ->set('deploy_path', '/home/kahasolu/web.kahasolusi.com');
 
 after('deploy:failed', 'deploy:unlock');  // Unlock after failed deploy
 after('deploy:info', 'deploy:unlock');  // Unlock after failed deploy
