@@ -32,28 +32,28 @@
     </div>
     {{-- end konfirmasi penghapusan --}}
 
-    <table class="table table-bordered">
-        <thead class="table-light text-center align-middle">
+    <table class="table rounded-corner">
+        <thead class="table text-center align-middle">
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Position</th>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
+                <th scope="col"class="index">Name</th>
+                <th scope="col" class="index">Position</th>
+                <th scope="col" class="index">Image</th>
+                <th scope="col" class="none-border-right index">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($founders as $founder)
                 <tr>
-                    <td class="align-middle text-center" style="font-weight: bold">{{ $founder->person_name }}</td>
-                    <td class="align-middle text-center">{{ $founder->person_position }}</td>
-                    <td class="text-center align-middle">
+                    <td class="align-middle text-center index" style="font-weight: bold">{{ $founder->person_name }}</td>
+                    <td class="align-middle text-center index">{{ $founder->person_position }}</td>
+                    <td class="text-center align-middle index">
                         @if (Str::contains($founder->person_image_url, ['http://', 'https://']))
                             <img src="{{ $founder->person_image_url }}" alt="{{ $founder->person_image_url }}" width="250" height="250">
                         @else
                             <img src="{{ (  asset('storage/founders/' . $founder->person_image_url)) }}" alt="{{ $founder->person_image_url }}" width="250" height="250">
                         @endif
                     </td>
-                    <td class="text-center align-middle">
+                    <td class="text-center align-middle none-border-right index">
                         <div class="d-flex justify-content-center">
                             <a href="{{ route('founders.edit', $founder->person_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
                             <form id="deleteForm_{{ $founder->person_id }}" action="{{ route('founders.destroy', $founder->person_id) }}" method="POST">
