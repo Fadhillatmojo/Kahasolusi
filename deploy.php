@@ -23,6 +23,10 @@ set('rsync_src', function () {
     return __DIR__; // If your project isn't in the root, you'll need to change this.
 });
 
+set('bin/php', function () {
+    return '/opt/alt/php82/usr/bin/php'; // only needed if using cpanel and the other
+});
+
 add('rsync', [
     'exclude' => [
         '.git',
