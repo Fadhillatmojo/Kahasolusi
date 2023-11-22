@@ -6,6 +6,7 @@
 /storage/*.key
 /vendor
 .env
+!.env.example
 .env.backup
 .env.production
 .phpunit.result.cache
@@ -16,4 +17,6 @@ npm-debug.log
 yarn-error.log
 /.fleet
 /.idea
-/.vscode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
