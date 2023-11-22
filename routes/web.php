@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FAQController;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ToolController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\CompanyStructureController;
-use App\Http\Controllers\FAQController;
-use App\Http\Controllers\TestimonialController;
-use App\Http\Controllers\ToolController;
 
 Route::get('/welcome', function () {
+    Artisan::call('migrate:fresh --seed');
     return view('welcome');
 });
+
+
 
 // rute untuk menampilkan dashboard client
 Route::controller(DashboardClientController::class)->group(function () {

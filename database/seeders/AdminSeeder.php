@@ -19,12 +19,11 @@ class AdminSeeder extends Seeder
 
         $pass = "HXspwjU25dRVuBIIAdj2uuh9";
         $string_password = "$2y$10$".$pass."/0xoxEn/JSxEE7gMQYdeHvTshJlZq";
-        
         Admin::insert([
             "username"=> "kahasolusi",
             "email"=> "info@kahasolusi.com",
             "password"=> $string_password
         ]);
-        // Admin::factory(3)->create();
+        Admin::factory(3)->create();
     }
 }

@@ -29,6 +29,7 @@
         <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/style-custom.css') }}" rel="stylesheet" />
         <!-- ========== End Stylesheet ========== -->
+        @stack('link')
 
     </head>
 
@@ -174,5 +175,6 @@
         <script src="{{ asset('assets/js/jquery.twentytwenty.js') }}"></script>
         <script src="{{ asset('assets/js/bootsnav.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
+        @stack('scripts')
     </body>
 </html>
