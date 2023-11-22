@@ -17,15 +17,15 @@
                     </div>
                     <div class="col-lg-6 info">
                         <h2 >About Us</h2>
-                        <p class="text-left">
-                            Kahasolusi merupakan perusahaan software house yang berdiri pada tanggal 01 Januari 2022, Berkantor pusat di Sleman D.I Yogyakarta. Kahasolusi mengembangakan produk dan layanan teknologi informasi berbasis website dan mobile apps dengan teknologi terbaru dan sudah melayani lebih dari 10 Project pemerintah Pusat maupun daerah untuk tahun pertamanya.
+                        <p class="text-justify">
+                            Berdiri tegak sejak tanggal 01 Januari 2022, Kahasolusi adalah sebuah perusahaan software house yang berlokasi di Yogyakarta. Kami berdedikasi untuk menciptakan solusi teknologi informasi berbasis website dan aplikasi mobile yang inovatif, menggunakan teknologi terkini yang stabil dan handal. Didukung oleh komunitas opensource, kami berkomitmen untuk memberikan produk dan layanan yang unggul untuk memenuhi kebutuhan pengguna.
                         </p>
                         <div class="row-visi-misi">
                             <div class="col-md-2 col-lg-3 visi-title">
                                 <h3 class="VisiMisiTitle">Visi</h3>
                             </div>
                             <div class="visi-content">
-                                <p class="text-left">Menjadi perusahaan software house terdepan yang memberdayakan inovasi teknologi untuk menghadirkan solusi digital terbaik bagi klien kami.</p>
+                                <p class="text-justify">Menjadi perusahaan software house terdepan yang memberdayakan inovasi teknologi untuk menghadirkan solusi digital terbaik bagi klien kami.</p>
                             </div>
                         </div>
                         <div class="row-visi-misi">
