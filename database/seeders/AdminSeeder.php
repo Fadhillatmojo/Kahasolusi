@@ -16,11 +16,15 @@ class AdminSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         Admin::truncate();
-        // Admin::insert([
-        //     "admin_username"=> "fadhil",
-        //     "admin_email"=> "fadhillatmojo@gmail.com",
-        //     "admin_password"=> "rahasia"
-        // ]);
-        Admin::factory(3)->create();
+
+        $pass = "HXspwjU25dRVuBIIAdj2uuh9";
+        $string_password = "$2y$10$".$pass."/0xoxEn/JSxEE7gMQYdeHvTshJlZq";
+        
+        Admin::insert([
+            "username"=> "kahasolusi",
+            "email"=> "info@kahasolusi.com",
+            "password"=> $string_password
+        ]);
+        // Admin::factory(3)->create();
     }
 }
