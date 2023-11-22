@@ -52,7 +52,7 @@ jobs:
           if_key_exists: replace
 
       - name: Deploy to Staging
-        run: php vendor/bin/dep deploy staging --branch="dev" -vv
+        run: php vendor/bin/dep deploy staging --branch="development" -vv
 
   deploy-production:
     name: Deploy Project to Production Server
