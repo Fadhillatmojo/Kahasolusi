@@ -48,9 +48,6 @@
 	a.smooth-menu{
 		text-align: left;
 	}
-	.smooth-menu:before {
-		width: 95% !important;
-	}
 	/* Topbar */
 	.top-bar-area .item-flex {
 		display: none;
@@ -474,10 +471,10 @@
 
 	/* tools */
 	.marquee-content {
-		animation: marquee 10s linear infinite !important;
+		animation: marquee 40s linear infinite !important;
 	}
 	.marquee-content-reverse {
-		animation: marquee-reverse 10s linear infinite !important;
+		animation: marquee-reverse 40s linear infinite !important;
 	}
 
 
@@ -712,9 +709,6 @@
 	a.smooth-menu{
 		text-align: left;
 	}
-	.smooth-menu:before {
-		width: 95% !important;
-	}
 	/* Topbar */
 	.top-bar-area {
 		display: none;
@@ -783,6 +777,7 @@
 	}
 	.banner-area.top-pad-extra .content {
 		padding-top: 140px;
+		margin: 0px !important;
 	}
 	.banner-area .carousel-item .bottom {
 		justify-content: center;
@@ -843,7 +838,7 @@
 	.btn-md{
 		font-size: 7px;
 	}
-	p.text-left{
+	p.text-justify{
 		font-size: small;
 	}
 	.misi-button{
