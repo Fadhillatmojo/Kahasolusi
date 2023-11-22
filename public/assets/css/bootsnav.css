@@ -1363,7 +1363,7 @@ nav.navbar.bootsnav.navbar-fixed.nav-box {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 70px;
+	height: 80px;
 }
 
 nav.navbar.bootsnav.navbar-fixed.no-background {
@@ -2180,7 +2180,7 @@ nav.navbar.bootsnav {
 		padding-left: 30px;
 		padding-right: 30px;
 		width: 100%;
-		height: 70px;
+		height: 80px;
 	}
 	nav.navbar.bootsnav .navbar-toggle {
 		display: inline-block;
