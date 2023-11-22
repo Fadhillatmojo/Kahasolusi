@@ -131,14 +131,14 @@
     # Missing X-Content-Type-Options is not specified
     Header set X-Content-Type-Options nosniff
 
-    Header set X-Permitted-Cross-Domain-Policies "none"
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+    #Header set X-Permitted-Cross-Domain-Policies "none"
+    #Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
     #Header set Content-Security-Policy "default-src * data:; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline'"
     #Header set Content-Security-Policy "default-src 'self'; script-src https: 'unsafe-inline'; img-src https: data: 'unsafe-inline'; style-src https: 'unsafe-inline'; object-src 'none'; child-src 'self'; frame-ancestors 'none'; frame-src 'self' *.hotjar.com; connect-src 'self' *.hotjar.com; base-uri 'self';form-action 'self'; font-src https: data: 'self' *.fontawesome.com; upgrade-insecure-requests; block-all-mixed-content"
     #Header set Content-Security-Policy "default-src 'self' data:; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
-    Header set Referrer-Policy "no-referrer-when-downgrade"
-    Header set Feature-Policy "accelerometer 'none'; ambient-light-sensor 'self'; autoplay 'self'; camera 'none'; cookie 'self'; docwrite 'self'; domain 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'self'; picture-in-picture 'self'; speaker 'self'; sync-script 'self'; sync-xhr 'self'; unsized-media 'self'; usb 'none'; vertical-scroll 'self'; vibrate 'none'; vr 'none'"
-    Header set Permissions-Policy "accelerometer=Origin(), autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=(), usb=()"
+    #Header set Referrer-Policy "no-referrer-when-downgrade"
+    #Header set Feature-Policy "accelerometer 'none'; ambient-light-sensor 'self'; autoplay 'self'; camera 'none'; cookie 'self'; docwrite 'self'; domain 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'self'; picture-in-picture 'self'; speaker 'self'; sync-script 'self'; sync-xhr 'self'; unsized-media 'self'; usb 'none'; vertical-scroll 'self'; vibrate 'none'; vr 'none'"
+    #Header set Permissions-Policy "accelerometer=Origin(), autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=(), usb=()"
     Header always unset X-Powered-By
     Header always unset server
     Header unset X-Powered-By
