@@ -157,6 +157,39 @@ aside #toggle-navbar {
   color: var(--white);
 }
 
+/* sidebar angel coba  */
+/* .navigation{
+  background: var(--dark-blue);
+}
+.navigation ul li{
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  height: 49px;
+  padding-left: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+} 
+.navigation ul li.active{
+  background-color: #FFF;
+}
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff ;
+}
+.navigation ul li.active a{
+  color: var(--dark-blue);
+}
+.navigation ul li a span{
+  font-weight: 400;
+  font-size: 20px;
+} */
+
 /* logout */
 .logout{
   background-color: transparent;
@@ -534,7 +567,7 @@ aside #toggle-navbar {
 
 #btn-delete{
   border: none;
-  background-color: var(--white);
+  background-color: white;
 }
 
 /* edit form */
@@ -622,4 +655,29 @@ aside #toggle-navbar {
 }
 .btn-cancel:hover{
   background-color: #43598a;
+}
+
+/* table */
+table.rounded-corner{
+  border: 1px solid transparent;
+    border-collapse: separate;
+    border-radius: 20px;
+    width: 100%;
+    background: white;
+}
+table.rounded-corners th, table.rounded-corners tr{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: left;
+ }
+ td.index ,th.index {
+  border-right-color: black;
+  border-width: 1px;
+}
+.table>thead {
+  border-color: transparent;
+}
+.none-border-right{
+  border-right-color: transparent !important;
 }

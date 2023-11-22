@@ -33,24 +33,24 @@
     {{-- end konfirmasi penghapusan --}}
 
     {{-- table index tools --}}
-    <table class="table table-bordered">
-        <thead class="table-light text-center align-middle">
+    <table class="table rounded-corner">
+        <thead class="table text-center align-middle">
             <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
+                <th scope="col" class="index">Image</th>
+                <th scope="col" class="none-border-right index">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($tools as $tool)
                 <tr>
-                    <td class="text-center align-middle">
+                    <td class="text-center align-middle index">
                         @if (Str::contains($tool->tool_image_url, ['http://', 'https://']))
                             <img src="{{ $tool->tool_image_url }}" alt="{{ $tool->tool_image_url }}" width="258" height="110">
                         @else
                             <img src="{{ (  asset('storage/tools/' . $tool->tool_image_url)) }}" alt="{{ $tool->tool_image_url }}" width="258" height="110">
                         @endif
                     </td>
-                    <td class="text-center align-middle">
+                    <td class="text-center align-middle none-border-right index">
                         <div class="d-flex justify-content-center">
                             <a href="{{ route('tools.edit', $tool->tool_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
                             <form id="deleteForm_{{ $tool->tool_id }}" action="{{ route('tools.destroy', $tool->tool_id) }}" method="POST">

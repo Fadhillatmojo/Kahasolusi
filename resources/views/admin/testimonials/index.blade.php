@@ -33,36 +33,36 @@
     {{-- end konfirmasi penghapusan --}}
 
     {{-- Table testimonials --}}
-    <table class="table table-bordered">
-        <thead class="table-light text-center align-middle">
+    <table class="table rounded-corner">
+        <thead class="table text-center align-middle">
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Rate</th>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
+                <th scope="col"class="index">Name</th>
+                <th scope="col"class="index">Description</th>
+                <th scope="col"class="index">Rate</th>
+                <th scope="col"class="index">Image</th>
+                <th scope="col" class="none-border-right index">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($testimonials as $testimonial)
                 <tr>
-                    <td class="align-middle text-center" style="font-weight: bold">{{ $testimonial->testimonial_client }}</td>
-                    <td class="align-middle">{{ $testimonial->testimonial_desc }}</td>
-                    <td class="text-center align-middle">
+                    <td class="align-middle text-center index" style="font-weight: bold">{{ $testimonial->testimonial_client }}</td>
+                    <td class="align-middle index">{{ $testimonial->testimonial_desc }}</td>
+                    <td class="text-center align-middle index">
                         @for ($i = 0; $i < $testimonial->testimonial_rate; $i++)
                             <img src="{{ asset('../adminassets/img/global/iconStar.svg') }}" alt="">
                         @endfor
                         <br>
                         ({{ $testimonial->testimonial_rate }})
                     </td>
-                    <td class="align-middle text-center">
+                    <td class="align-middle text-center index">
                         @if (Str::contains($testimonial->testimonial_image_url, ['http://', 'https://']))
                             <img src="{{ $testimonial->testimonial_image_url }}" alt="{{ $testimonial->testimonial_image_url }}" width="150" height="150">
                         @else
                             <img src="{{ (  asset('storage/testimonials/' . $testimonial->testimonial_image_url)) }}" alt="{{ $testimonial->testimonial_image_url }}" width="150" height="150">
                         @endif
                     </td>
-                    <td class="text-center align-middle">
+                    <td class="text-center align-middle none-border-right index">
                         <div class="d-flex justify-content-center">
                             <a href="{{ route('testimonials.edit', $testimonial->testimonial_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
                             <form id="deleteForm_{{ $testimonial->testimonial_id }}" action="{{ route('testimonials.destroy', $testimonial->testimonial_id) }}" method="POST">

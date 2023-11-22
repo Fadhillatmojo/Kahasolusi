@@ -30,25 +30,11 @@
                             @else
                                 <img src="{{ asset('storage/founders/' . $founder->person_image_url) }}" class="founder-img" alt="person">
                             @endif
-                            <h4>{{ $founder->person_name }}</h4>
+                            <h4>{{ $founder->person_position }}</h4>
                             <div class="thumb"></div>
-                            <p>
-                                {{ $founder->person_position }}
-                            </p>
                         </div>
                     @endforeach
                     <!-- End Single Item -->
-
-                    
-                    {{-- <!-- Single Item -->
-                    <div class="single-item">
-                        <img src="assets/img/commisioner-pict.jpg" class="founder-img" alt="person">
-                        <h4><a href="#">Lorem</a></h4>
-                        <p>
-                            Lorem ipsum dolor sit
-                        </p>
-                    </div>
-                    <!-- End Single Item --> --}}
                     
                 </div>
             </div>

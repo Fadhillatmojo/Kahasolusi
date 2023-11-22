@@ -33,32 +33,32 @@
     {{-- end konfirmasi penghapusan --}}
 
     {{-- Table index portfolio --}}
-    <table class="table table-bordered">
-        <thead class="table-light text-center align-middle">
+    <table class="table rounded-corner">
+        <thead class="table text-center align-middle">
             <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Image</th>
-                <th scope="col">Years Added</th>
-                <th scope="col">Link</th>
-                <th scope="col">Action</th>
+                <th scope="col" class="index">Title</th>
+                <th scope="col" class="index" >Description</th>
+                <th scope="col" class="index" >Image</th>
+                <th scope="col" class="index" >Years Added</th>
+                <th scope="col" class="index" >Link</th>
+                <th scope="col" class="none-border-right index">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($portfolios as $portfolio)
             <tr>
-                <td class="align-middle text-center" style="font-weight: bold">{{ $portfolio->portfolio_title }}</td>
-                <td class="align-middle">{{ $portfolio->portfolio_desc }}</td>
-                <td class="align-middle text-center">
+                <td class="align-middle text-center index" style="font-weight: bold">{{ $portfolio->portfolio_title }}</td>
+                <td class="align-middle index">{{ $portfolio->portfolio_desc }}</td>
+                <td class="align-middle text-center index">
                     @if (Str::contains($portfolio->portfolio_image_url, ['http://', 'https://']))
                         <img src="{{ $portfolio->portfolio_image_url }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @else
                         <img src="{{ (  asset('storage/portfolios/' . $portfolio->portfolio_image_url)) }}" alt="{{ $portfolio->portfolio_image_url }}" width="200" height="150">
                     @endif
                 </td>
-                <td class="align-middle text-center">{{ $portfolio->portfolio_year }}</td>
-                <td class="align-middle text-center"><a href="{{ $portfolio->portfolio_url }}" target="_blank">{{ $portfolio->portfolio_url }}</a></td>
-                <td class="text-center align-middle">
+                <td class="align-middle text-center index">{{ $portfolio->portfolio_year }}</td>
+                <td class="align-middle text-center index"><a href="{{ $portfolio->portfolio_url }}" target="_blank">{{ $portfolio->portfolio_url }}</a></td>
+                <td class="text-center align-middle none-border-right index">
                     <div class="d-flex justify-content-center">
                         <a href="{{ route('portfolios.edit', $portfolio->portfolio_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
                         <form id="deleteForm_{{ $portfolio->portfolio_id }}" action="{{ route('portfolios.destroy', $portfolio->portfolio_id) }}" method="POST">

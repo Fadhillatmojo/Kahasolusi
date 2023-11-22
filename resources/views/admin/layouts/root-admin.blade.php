@@ -44,24 +44,24 @@
                     </a>
                 </div>
                 
-                <div class="item-admin-section ps-3">
+                <div class="item-admin-section ps-3 mt-3">
                     <a href="{{ route('portfolios.index') }}" class="sidebar-item {{ Request::routeIs('portfolios.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide" class="me-3">
                         <span>Portfolios</span>
                     </a>
-    
+
                     <a href="{{ route('roles.index') }}" class="sidebar-item {{ Request::routeIs('roles.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
                         
                         <span>Roles</span>
                     </a>
-                    
+
                     <a href="{{ route('tools.index') }}" class="sidebar-item {{ Request::routeIs('tools.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide" class="me-3">
                         
                         <span>Tools</span>
                     </a>
-                    
+
                     <a href="{{ route('founders.index') }}" class="sidebar-item {{ Request::routeIs('founders.index') ? 'active' : '' }}" onclick="toggleActive(this)">
                         <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">
                         
