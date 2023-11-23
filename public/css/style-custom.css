@@ -417,3 +417,6 @@ li.telp, li.mail, li.loc .icon i {
 	color: #FFF;
 }
 
+.role-img{
+	border-radius: 50px;
+}

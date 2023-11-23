@@ -6,19 +6,23 @@
         @foreach ($roles as $role)
         {{-- single item --}}
         <div class="container-roles-content">
-            <div class="roles-card">
-                <img class="image-roles" src="{{ asset('assets/img/icon/CEO-Roles.png') }}">
-                {{-- <img class="image-roles" src="{{ $role->role_image_url }}"> --}}
-                <div class="container-text">
-                    {{-- <p class="roles-title">CEO of the Company</p> --}}
+            <div class="roles-card p-3">
+                @if (Str::contains($role->role_image_url, ['http://', 'https://']))
+                <img src="{{ $role->role_image_url }}" class="role-img" alt="roles{{ $role->role_id }}" width="100"
+                    height="100">
+                @else
+                <img src="{{ asset('storage/roles/' . $role->role_image_url) }}" class="role-img" alt="person"
+                    width="100" height="100">
+                @endif
+                <div class="container-text mt-3">
                     <p class="roles-title" style="word-wrap:break-word">{{ $role->role_name }}</p>
                 </div>
             </div>
         </div>
         {{-- end single item --}}
-            
+
         @endforeach
-        
+
     </div>
-    
+
 </div>
