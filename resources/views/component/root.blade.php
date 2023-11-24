@@ -29,7 +29,6 @@
     <link href="{{ asset('assets/css/bootsnav.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style-custom.css') }}" rel="stylesheet" /> --}}
     <link href="{{ asset('css/style-2.css') }}" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
     @stack('link')

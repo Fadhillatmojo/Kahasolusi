@@ -38,7 +38,6 @@ class CompanyStructureController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'person_name'      => 'required|string|max:50',
                 'person_position'  => 'required|string|max:50',
                 'person_image_url' => 'required|image|mimes:jpeg,jpg,png|max:2048'
             ]);
@@ -56,7 +55,6 @@ class CompanyStructureController extends Controller
             $photoResized->fit(250,250)->save($path);
             // ini untuk create datanya
             Company_structure::create([
-                'person_name'       => $request->person_name,
                 'person_position'   => $request->person_position,
                 'person_image_url'  => $savedFileName,
                 'admin_id'          => Auth::guard('admin')->id(),
@@ -84,7 +82,6 @@ class CompanyStructureController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'person_name'      => 'required|string|max:50',
                 'person_position'  => 'required|string|max:50',
                 'person_image_url' => 'nullable|image|mimes:jpeg,jpg,png|max:2048'
             ]);
@@ -111,13 +108,11 @@ class CompanyStructureController extends Controller
                 }
                 // ini untuk mengupdate datanya
                 $founder->update([
-                    'person_name'       => $request->person_name,
                     'person_position'   => $request->person_position,
                     'person_image_url'  => $savedFileName,
                 ]);
             } else {
                 $founder->update([
-                    'person_name'       => $request->person_name,
                     'person_position'   => $request->person_position,
                 ]);
             }

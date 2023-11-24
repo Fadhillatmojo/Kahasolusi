@@ -12,6 +12,10 @@ use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\CompanyStructureController;
 
 Route::get('/welcome', function () {
+    return view('welcome');
+});
+Route::get('/migrate', function () {
+    Artisan::call('route:clear');
     Artisan::call('migrate:fresh --seed');
     return view('welcome');
 });

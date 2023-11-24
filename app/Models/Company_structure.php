@@ -11,7 +11,6 @@ class Company_structure extends Model
     use HasFactory;
     protected $primaryKey = 'person_id';
     protected $fillable = [
-        'person_name',
         'person_position',
         'person_image_url',
         'admin_id'

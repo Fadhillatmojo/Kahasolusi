@@ -11,6 +11,8 @@ class Tool extends Model
     use HasFactory;
     protected $primaryKey = 'tool_id';
     protected $fillable = [
+        'tool_title',
+        'tool_desc',
         'tool_image_url',
         'admin_id'
     ];

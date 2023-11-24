@@ -16,7 +16,7 @@ class ToolController extends Controller
     public function index()
     {
         if (Auth::guard('admin')->check()) {
-            $tools = Tool::orderBy('created_at', 'DESC')->paginate(8);
+            $tools = Tool::orderBy('created_at', 'DESC')->get();
             $showButton = true;
             return view('admin.tools.index', compact('tools', 'showButton'));
         }
@@ -39,6 +39,8 @@ class ToolController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
+                'tool_title'  => 'required|string|max:10',
+                'tool_desc'  => 'required|string|max:10',
                 'tool_image_url'  => 'required|image|mimes:jpeg,jpg,png|max:2048'
             ]);
 
@@ -52,9 +54,11 @@ class ToolController extends Controller
             // ini adalah path tempat menaruh foto di dalam foldernya di laravel
             $path = storage_path('app/public/tools/' . $savedFileName);
             $photoResized = Image::make($request->file('tool_image_url'));
-            $photoResized->fit(258,110)->save($path);
+            $photoResized->fit(100,100)->save($path);
             // ini untuk create datanya
             tool::create([
+                'tool_title'      => $request->tool_title,
+                'tool_desc'       => $request->tool_desc,
                 'tool_image_url'  => $savedFileName,
                 'admin_id'        => Auth::guard('admin')->id(),
             ]);
@@ -82,6 +86,8 @@ class ToolController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
+                'tool_title'  => 'required|string|max:10',
+                'tool_desc'  => 'required|string|max:10',
                 'tool_image_url'  => 'required|image|mimes:jpeg,jpg,png|max:2048'
             ]);
             $tool = Tool::findOrFail($id);
@@ -105,6 +111,8 @@ class ToolController extends Controller
             }
             // ini untuk mengupdate datanya
             $tool->update([
+                'tool_title'  => $request->tool_title,
+                'tool_desc'  => $request->tool_desc,
                 'tool_image_url'  => $savedFileName,
             ]);
 

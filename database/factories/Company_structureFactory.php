@@ -18,7 +18,6 @@ class Company_structureFactory extends Factory
     public function definition(): array
     {
         return [
-            'person_name'=>$this->faker->name(),
             'person_position'=>$this->faker->jobTitle(),
             'person_image_url'=>$this->faker->imageUrl(640, 480, 'person', true),
             'admin_id'=>Arr::random([1,2,3])
