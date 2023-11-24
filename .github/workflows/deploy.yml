@@ -1,9 +1,9 @@
 name: Deployment
 
 on:
-  push:
-    branches:
-      - development
+  # push:
+  #   branches:
+  #     - development
   pull_request:
     types: [closed]
     branches:
