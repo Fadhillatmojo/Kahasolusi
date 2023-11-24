@@ -45,38 +45,58 @@
                 </div>
                 
                 <div class="item-admin-section ps-3 mt-3">
-                    <a href="{{ route('portfolios.index') }}" class="sidebar-item {{ Request::routeIs('portfolios.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide" class="me-3">
-                        <span>Portfolios</span>
-                    </a>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('portfolios.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('portfolios.index') }}" class="sidebar-item">
+                            <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide" class="me-3">
+                            <span>Portfolios</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('portfolios.index') ? 'active' : '' }}">.</b>
+                    </div>
 
-                    <a href="{{ route('roles.index') }}" class="sidebar-item {{ Request::routeIs('roles.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
-                        
-                        <span>Roles</span>
-                    </a>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('roles.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('roles.index') }}" class="sidebar-item" onclick="toggleActive(this)">
+                            <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
+                            
+                            <span>Roles</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('roles.index') ? 'active' : '' }}">.</b>
+                    </div>
 
-                    <a href="{{ route('tools.index') }}" class="sidebar-item {{ Request::routeIs('tools.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide" class="me-3">
-                        
-                        <span>Tools</span>
-                    </a>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('tools.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('tools.index') }}" class="sidebar-item" onclick="toggleActive(this)">
+                            <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide" class="me-3">
+                            <span>Tools</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('tools.index') ? 'active' : '' }}">.</b>
+                    </div>
 
-                    <a href="{{ route('founders.index') }}" class="sidebar-item {{ Request::routeIs('founders.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">
-                        
-                        <span>Founders</span>
-                    </a>
-                    <a href="{{ route('faqs.index') }}" class="sidebar-item {{ Request::routeIs('faqs.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconFAQ.svg') }}" alt="hide" class="me-3">
-                        
-                        <span>FAQs</span>
-                    </a>
-                    <a href="{{ route('testimonials.index') }}" class="sidebar-item {{ Request::routeIs('testimonials.index') ? 'active' : '' }}" onclick="toggleActive(this)">
-                        <img src="{{ asset('../adminassets/img/global/iconTestimonial.svg') }}" alt="hide" class="me-3">
-                        
-                        <span>Testimonials</span>
-                    </a>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('founders.index') }}" class="sidebar-item" onclick="toggleActive(this)">
+                            <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">                            
+                            <span>Founders</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
+                    </div>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('faqs.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('faqs.index') }}" class="sidebar-item" onclick="toggleActive(this)">
+                            <img src="{{ asset('../adminassets/img/global/iconFAQ.svg') }}" alt="hide" class="me-3">
+                            <span>FAQs</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('faqs.index') ? 'active' : '' }}">.</b>
+                    </div>
+                    <div class="side-navbar">
+                        <b class="round-top {{ Request::routeIs('testimonials.index') ? 'active' : '' }}">.</b>
+                        <a href="{{ route('testimonials.index') }}" class="sidebar-item" onclick="toggleActive(this)">
+                            <img src="{{ asset('../adminassets/img/global/iconTestimonial.svg') }}" alt="hide" class="me-3"> 
+                            <span>Testimonials</span>
+                        </a>
+                        <b class="round-bottom {{ Request::routeIs('testimonials.index') ? 'active' : '' }}">.</b>
+                    </div>
                     
                     <h5 class="sidebar-title">Others</h5>
                     
@@ -141,8 +161,9 @@
     <script>
         const navbar = document.querySelector('.col-navbar')
         const cover = document.querySelector('.screen-cover')
+        const round_top = document.querySelectorAll('.round-top')
+        const round_bottom = document.querySelectorAll('.round-bottom')
 
-        const sidebar_items = document.querySelectorAll('.sidebar-item')
 
         function toggleNavbar() {
             navbar.classList.toggle('d-none')
@@ -150,11 +171,14 @@
         }
 
         function toggleActive(e) {
-            sidebar_items.forEach(function(v, k) {
+            round_top.forEach(function(v, k) {
                 v.classList.remove('active')
             })
-            e.closest('.sidebar-item').classList.add('active')
-
+            round_bottom.forEach(function(v, k) {
+                v.classList.remove('active')
+            })
+            e.closest('.round-top').classList.add('active')
+            e.closest('.round-bottom').classList.add('active')
         }
     </script>
     {{-- end javascript tag --}}
