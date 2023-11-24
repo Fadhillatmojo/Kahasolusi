@@ -8,19 +8,21 @@
     {{-- end Meta Tag --}}
 
     {{-- Boostrap CSS --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     {{-- end bootstrap CSS --}}
 
-    {{--  fonts google  --}}
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    {{-- fonts google --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{--
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> --}}
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
     <link rel="stylesheet" href="{{ asset('../css/style-admin.css')}}">
     {{-- end style sheet CSS admin --}}
-    
+
     {{-- title admin --}}
     <title>Admin | @yield('title')</title>
     {{-- end title admin --}}
@@ -37,18 +39,19 @@
                             <img src="{{ asset('../adminassets/img/global/logoKaha.png') }}" alt="Logo">
                             <span>Kahasolusi</span>
                         </div>
-    
+
                         <button id="toggle-navbar" onclick="toggleNavbar()">
                             <img src="{{ asset('../adminassets/img/global/navbar-times.svg') }}" alt="hide">
                         </button>
                     </a>
                 </div>
-                
+
                 <div class="item-admin-section ps-3 mt-3">
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('portfolios.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('portfolios.index') }}" class="sidebar-item">
-                            <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide" class="me-3">
+                            <img src="{{ asset('../adminassets/img/global/iconPortfolio.svg') }}" alt="hide"
+                                class="me-3">
                             <span>Portfolios</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('portfolios.index') ? 'active' : '' }}">.</b>
@@ -58,7 +61,7 @@
                         <b class="round-top {{ Request::routeIs('roles.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('roles.index') }}" class="sidebar-item" onclick="toggleActive(this)">
                             <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
-                            
+
                             <span>Roles</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('roles.index') ? 'active' : '' }}">.</b>
@@ -76,7 +79,7 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('founders.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">                            
+                            <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">
                             <span>Founders</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
@@ -92,20 +95,23 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('testimonials.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('testimonials.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconTestimonial.svg') }}" alt="hide" class="me-3"> 
+                            <img src="{{ asset('../adminassets/img/global/iconTestimonial.svg') }}" alt="hide"
+                                class="me-3">
                             <span>Testimonials</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('testimonials.index') ? 'active' : '' }}">.</b>
                     </div>
-                    
+
                     <h5 class="sidebar-title">Others</h5>
-                    
-                    <form class="sidebar-item" onclick="toggleActive(this)" action="{{ route('logout') }}" method="POST">
+
+                    <form class="sidebar-item" onclick="toggleActive(this)" action="{{ route('logout') }}"
+                        method="POST">
                         @csrf
                         <button class="logout btn-block" type="submit">
                             <a>
-                                <img src="{{ asset('../adminassets/img/global/iconLogout.svg') }}" alt="hide" class="me-3">
-                                
+                                <img src="{{ asset('../adminassets/img/global/iconLogout.svg') }}" alt="hide"
+                                    class="me-3">
+
                                 <span>Logout</span>
                             </a>
                         </button>
@@ -132,15 +138,16 @@
                         <button class="btn-nav-input"><img src="../adminassets/img/global/search.svg" alt=""></button>
                     </div> --}}
                     @if (!Request::routeIs('faqs.index'))
-                        @if ($showButton)
-                            <button class="btn-add d-md-block">
-                                <a href="@yield('create-route')"><img src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
-                            </button>
-                        @else
-                        <button class="btn-add d-md-block" disabled>
-                            <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}" alt="">
-                        </button>
-                        @endif
+                    @if ($showButton)
+                    <button class="btn-add d-md-block">
+                        <a href="@yield('create-route')"><img
+                                src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
+                    </button>
+                    @else
+                    <button class="btn-add d-md-block" disabled>
+                        <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}" alt="">
+                    </button>
+                    @endif
                     @endif
                 </div>
             </div>
@@ -156,7 +163,9 @@
 
     {{-- Ini adalah section javascrip tag --}}
     @stack('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
     <script>
         const navbar = document.querySelector('.col-navbar')
