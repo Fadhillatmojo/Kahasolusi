@@ -1,4 +1,4 @@
-<!-- Start Testimonials Area 
+<!-- Start Testimonials Area
     ============================================= -->
 <div id="testimonials" class="testimonials-area overflow-hidden carousel-shadow relative half-bg default-padding">
     <div class="container">
@@ -32,13 +32,13 @@
                                             repellendus pariatur quibusdam ab nobis facilis quos sequi tenetur?
                                         </p>
                                         <div class="provider">
-                                            <div class="rating">
+                                            {{-- <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star-half-alt"></i>
-                                            </div>
+                                            </div> --}}
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                     </div>
@@ -60,13 +60,13 @@
                                             repellendus pariatur quibusdam ab nobis facilis quos sequi tenetur?
                                         </p>
                                         <div class="provider">
-                                            <div class="rating">
+                                            {{-- <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star-half-alt"></i>
-                                            </div>
+                                            </div> --}}
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                     </div>
@@ -88,13 +88,13 @@
                                             repellendus pariatur quibusdam ab nobis facilis quos sequi tenetur?
                                         </p>
                                         <div class="provider">
-                                            <div class="rating">
+                                            {{-- <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star-half-alt"></i>
-                                            </div>
+                                            </div> --}}
                                             <h5>Mulias Prosva</h5>
                                         </div>
                                     </div>

@@ -1,4 +1,4 @@
-/* ----------------------------------
+/* ----------------------------------1239ac
 
 Template Name: Cleanu - Cleaning Services Template
 Author: validtheme
@@ -4237,13 +4237,13 @@ body,
 .testimonial-carousel .item .provider h5 {
 	margin: 0;
 	font-weight: 600;
-	margin-left: 25px;
+	/* margin-left: 25px; */
 	position: relative;
 	z-index: 1;
-	padding-left: 40px;
+	/* padding-left: 40px; */
 }
 
-.testimonial-carousel .item .provider h5::after {
+/* .testimonial-carousel .item .provider h5::after {
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -4252,7 +4252,7 @@ body,
 	width: 30px;
 	background: #1d2746;
 	margin-top: -1px;
-}
+} */
 
 .testimonial-carousel .item .provider .rating i {
 	color: #ffc000;
@@ -4304,17 +4304,15 @@ body,
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
-	display: inline-block;
+	display: flex;
 	position: absolute;
-	right: 30px;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 0px;
 	margin: 0;
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot {
 	display: block;
-	margin: 16px 0;
+	margin: 16px;
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot span {
