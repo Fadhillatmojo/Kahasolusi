@@ -23,12 +23,13 @@
     <link href="{{ asset('assets/css/elegant-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/flaticon-set.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/owl.carousel.min.css') }}?v=1.1" rel="stylesheet" />
     <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/bootsnav.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/responsive.css') }}?v=1.1" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}?v=1.1" rel="stylesheet">
+    <link href="{{ asset('css/style-custom.css') }}?v=1.1" rel="stylesheet" />
     <link href="{{ asset('css/style-2.css') }}" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
     @stack('link')
@@ -40,14 +41,14 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
+    <!-- Start Header Top
         ============================================= -->
     <div class="top-bar-area multi-content bg-dark text-light">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-3 logo">
                     <a href="/">
-                        <img src="{{ asset('assets/img/KahaLogo.png')}}" class="logo" alt="Logo">
+                        <img src="{{ asset('assets/img/KahaLogo.png') }}" class="logo" alt="Logo">
                     </a>
                 </div>
                 <div class="col-lg-9 info item-flex space-between">
@@ -81,7 +82,7 @@
     </div>
     <!-- End Header Top -->
 
-    <!-- Header 
+    <!-- Header
         ============================================= -->
     <header id="header">
 

@@ -6,10 +6,6 @@
 /* Tablet Layout: 768px.*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.testimonial-carousel .item {
-		display: flex !important;
-		justify-content: center !important;
-	}	
 	.card-testi {
 		width: 80%;
 	}
@@ -483,12 +479,14 @@
 		margin-bottom: -30px;
 	}
 	.testimonial-carousel .item {
-		display: block;
+		display: flex;
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
 		text-align: center;
 		border-radius: 6px;
+		justify-content: center;
+		width: 80%;
 	}
 	.testimonial-carousel .item .provider {
 		justify-content: center;
@@ -514,14 +512,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
-	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
-		position: inherit;
-		top: auto;
-		bottom: 35px;
-		right: auto;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+	
 	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot {
 		display: inline-block;
 		margin: 0 10px;
@@ -1356,12 +1347,13 @@
 		margin-bottom: -30px;
 	}
 	.testimonial-carousel .item {
-		display: block;
+		display: flex;
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
 		text-align: center;
 		border-radius: 6px;
+		width: 350px;
 	}
 	.testimonial-carousel .item .provider {
 		justify-content: center;
@@ -1388,6 +1380,7 @@
 		transform: translateX(-50%);
 	}
 	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
+		display: flex;
 		position: inherit;
 		top: auto;
 		bottom: 35px;
@@ -1696,7 +1689,7 @@
 	}
 	/* Testimonials */
 	.testimonial-carousel .item .provider {
-		display: block;
+		display: flex;
 	}
 	.testimonial-carousel .item .provider h5::after {
 		display: none;
@@ -1739,4 +1732,22 @@
 	.services-types-area .item ul li {
 		width: 100%;
 	}
+}
+
+/* Custom layout. */
+
+@media only screen and (min-width:991px){
+	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
+    display: inline-block !important;
+    position: absolute;
+    right: 30px;
+	bottom: 100px !important;
+    top: 50%;
+	left: 92% !important;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+
+	
 }

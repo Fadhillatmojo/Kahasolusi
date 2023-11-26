@@ -304,6 +304,14 @@ svg.mask{
 	flex-direction: row-reverse;
 	align-items: center;
 }
+.owl-carousel.owl-drag .owl-item {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: flex !important;
+	justify-content: center !important;
+}
 
 /* card testimonial */
 #card-testimonial{
