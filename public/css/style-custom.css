@@ -417,9 +417,6 @@ li.telp, li.mail, li.loc .icon i {
 	display: flex;
 	justify-content: space-around;
 }
-.maps-area iframe {
-    width: 100%;
-}
 
 .widget-poin{
 	color: #FFF;
