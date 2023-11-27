@@ -1746,8 +1746,13 @@
 	left: 92% !important;
     transform: translateY(-50%);
     margin: 0;
-}
-
+	}
+	.testimonial-carousel .item {
+		width: inherit;
+	}
+	.card-testi {
+		width: inherit;
+	}
 
 	
 }
