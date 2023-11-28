@@ -9,7 +9,7 @@
 			<div class="row-footer row-cols-1 row-cols-lg-3 ">
 				<div class="col-lg-4 col-md-6 item">
 					<div class="f-item about">
-						<img src="{{ asset('assets/img/Logo white.png') }}" class="logo" alt="Logo">
+						<img src="{{ asset('assets/img/logo-white.png') }}" class="logo" alt="Logo">
 						<p>
 							PT Kaha Solusi Indonesia
 						</p>
