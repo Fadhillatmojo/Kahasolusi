@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +17,9 @@ class FAQFactory extends Factory
     public function definition(): array
     {
         return [
-            'faq_title'=> $this->faker->sentence(3),
-            'faq_answer'=>$this->faker->paragraph(),
-            'admin_id'=>Arr::random([1,2,3])
+            'faq_title' => $this->faker->sentence(3),
+            'faq_answer' => $this->faker->paragraph(),
+            'admin_id' => 1,
         ];
     }
 }

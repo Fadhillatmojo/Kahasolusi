@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,10 +17,10 @@ class ToolFactory extends Factory
     public function definition(): array
     {
         return [
-            'tool_title'=>$this->faker->word(),
-            'tool_desc'=>$this->faker->sentence(1),
-            'tool_image_url'=>$this->faker->imageUrl(640, 480, 'tool', true),
-            'admin_id'=>Arr::random([1,2,3])
+            'tool_title' => $this->faker->word(),
+            'tool_desc' => $this->faker->sentence(1),
+            'tool_image_url' => $this->faker->imageUrl(640, 480, 'tool', true),
+            'admin_id' => 1,
         ];
     }
 }
