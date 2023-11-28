@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +17,9 @@ class RoleFactory extends Factory
     public function definition(): array
     {
         return [
-            'role_name'=>$this->faker->name(),
-            'role_image_url'=>$this->faker->imageUrl(640, 480, 'role', true),
-            'admin_id'=>Arr::random([1,2,3])
+            'role_name' => $this->faker->name(),
+            'role_image_url' => $this->faker->imageUrl(640, 480, 'role', true),
+            'admin_id' => 1,
         ];
     }
 }

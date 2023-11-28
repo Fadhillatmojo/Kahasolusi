@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,12 +17,12 @@ class PortfolioFactory extends Factory
     public function definition(): array
     {
         return [
-            'portfolio_title'=>$this->faker->sentence(2),
-            'portfolio_desc'=>$this->faker->paragraph(),
-            'portfolio_url'=>$this->faker->url(),
-            'portfolio_image_url'=>$this->faker->imageUrl(640, 480, 'portfolio', true),
-            'portfolio_year'=>$this->faker->year(),
-            'admin_id'=>Arr::random([1,2,3])
+            'portfolio_title' => $this->faker->sentence(2),
+            'portfolio_desc' => $this->faker->paragraph(),
+            'portfolio_url' => $this->faker->url(),
+            'portfolio_image_url' => $this->faker->imageUrl(640, 480, 'portfolio', true),
+            'portfolio_year' => $this->faker->year(),
+            'admin_id' => 1,
         ];
     }
 }
