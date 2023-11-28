@@ -24,7 +24,7 @@ Testimonials
 <div id="popup-container-confirm">
     <div id="confirmation-popup" class="confirmation-popup">
         <div class="confirmation-content">
-            <p>Anda yakin ingin menghapus Portfolio ini?</p>
+            <p>Anda yakin ingin menghapus Data ini?</p>
             <button class="me-2 py-2 px-3 btn-cancel" onclick="hideDeleteConfirmation()">Batal</button>
             <button id="btnDelete" class="btn btn-danger">Hapus</button>
         </div>
@@ -82,22 +82,22 @@ Testimonials
                 // Sembunyikan pop-up
                 document.getElementById('popup-container').style.display = 'none';
             }
-            function showDeleteConfirmation(portfolioId) {
+            function showDeleteConfirmation(testimonialId) {
                 document.getElementById('popup-container-confirm').style.display = 'flex';
                 document.getElementById('confirmation-popup').style.display = 'block';
                 document.getElementById('btnDelete').onclick = function() {
-                    submitDeleteForm(portfolioId);
+                    submitDeleteForm(testimonialId);
                 };
             }
 
-            function hideDeleteConfirmation(portfolioId) {
+            function hideDeleteConfirmation(testimonialId) {
                 document.getElementById('popup-container-confirm').style.display = 'none';
                 document.getElementById('confirmation-popup').style.display = 'none';
             }
 
-            function submitDeleteForm(portfolioId) {
+            function submitDeleteForm(testimonialId) {
                 // Construct the form ID dynamically based on the portfolio ID
-                var formId = 'deleteForm_' + portfolioId;
+                var formId = 'deleteForm_' + testimonialId;
                 // Submit the form with the constructed ID
                 document.getElementById(formId).submit();
             }
