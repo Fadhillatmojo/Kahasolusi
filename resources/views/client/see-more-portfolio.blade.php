@@ -63,6 +63,9 @@
 									<h5 class="card-title">
 										{{ $portfolio->portfolio_title }}
 									</h5>
+									<p class="text-center mb-0">
+										({{ $portfolio->portfolio_year }})
+									</p>
 								</div>
 							</div>
 
