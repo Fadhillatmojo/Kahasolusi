@@ -23,5 +23,6 @@ class AdminSeeder extends Seeder
             'email' => 'info@kahasolusi.com',
             'password' => $string_password,
         ]);
+        Admin::factory(3)->create();
     }
 }
