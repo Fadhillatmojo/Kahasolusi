@@ -1542,7 +1542,7 @@
 	.maps-area {
 		margin: 0;
 		padding: 0;
-		margin-bottom: 50px;
+		/* margin-bottom: 50px; */
 	}
 	.maps-area iframe {
 		min-height: 300px;
@@ -1592,6 +1592,12 @@
 	}
 	.maps-area {
 		margin-top: 50px;
+	}
+	.row-footer {
+    width: 85% !important;
+	}
+	.footer-bottom-row {
+		max-width: 400px;
 	}
 }
 
@@ -1725,6 +1731,11 @@
 	}
 }
 
+@media (min-width: 1200px){
+	.container-footer {
+		min-width: 1350px;
+	}
+}
 
 /* Custom layout. */
 
@@ -1746,8 +1757,21 @@
 	left: 92% !important;
     transform: translateY(-50%);
     margin: 0;
-}
-
+	}
+	.testimonial-carousel .item {
+		width: inherit;
+	}
+	.card-testi {
+		width: inherit;
+	}
 
 	
+}
+
+/* custom layout */
+@media (min-width: 768px){
+	.maps-area iframe {
+		width: 100% !important;
+		max-height: 370px;
+	}
 }

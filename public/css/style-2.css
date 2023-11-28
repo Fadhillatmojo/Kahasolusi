@@ -389,23 +389,29 @@ li.telp, li.mail, li.loc .icon i {
 }
 
 /* footer */
-.footer{
-	margin-top: 100px;
-	background: #122245;
+.footer {
+    display: flex;
+    margin-top: 100px;
+    background: #122245;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
 .row-footer{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	width: 100%;
 }
 .link-footer{
-	width: 150px;
+	width: 120px;
 	list-style: none;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
 }
-.maps-area iframe {
-    width: 100%;
+.footer-bottom-box .link {
+    text-decoration: underline !important;
 }
 
 .widget-poin{
