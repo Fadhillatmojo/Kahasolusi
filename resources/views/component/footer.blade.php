@@ -1,10 +1,10 @@
 <footer class="footer text-light m-0">
     <!-- illustration
-	    <div class="animate-illustration">
-		   <img src="assets/img/illustration/2.png" alt="illustration">
-	    </div> -->
+ <div class="animate-illustration">
+  <img src="assets/img/illustration/2.png" alt="illustration">
+ </div> -->
     <!-- End illustration -->
-    <div class="container">
+    <div class="container-footer">
         <div class="f-items default-padding">
             <div class="row-footer row-cols-1 row-cols-lg-3 ">
                 <div class="col-lg-4 col-md-6 item">
@@ -82,8 +82,8 @@
                                 <div class="google-maps">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2180760583174!2d110.4015148!3d-7.766683700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59bd9063ef33%3A0x12c3bb6cfe6aced9!2sJl.%20Madukoro%20Raya%20Jl.%20Pringgolayan%20No.4C%2C%20RT.01%2FRW.26%2C%20Dabag%2C%20Condongcatur%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sen!2sid!4v1700645480433!5m2!1sen!2sid"
-                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        width="600" height="450" style="border:0;" allowfullscreen=""
+                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
