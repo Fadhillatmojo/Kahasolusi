@@ -28,13 +28,13 @@
 						</button>
 						<ul class="dropdown-menu w-100">
 							<li>
-								<a class="dropdown-item" href="{{ URL::current().'?sort=year_asc'}}">
-									Ascending
+								<a class="dropdown-item" href="{{ URL::current().'?sort=year_desc' }}">
+									Descending
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="{{ URL::current().'?sort=year_desc' }}">
-									Descending
+								<a class="dropdown-item" href="{{ URL::current().'?sort=year_asc'}}">
+									Ascending
 								</a>
 							</li>
 						</ul>
