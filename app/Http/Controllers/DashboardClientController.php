@@ -20,10 +20,20 @@ class DashboardClientController extends Controller
         $roles = Role::paginate(8);
         $testimonials = Testimonial::get();
         $tools = Tool::get();
+
         return view('dashboard', compact('faqs', 'founders', 'portfolios', 'roles', 'testimonials', 'tools'));
     }
-    public function seeMorePortfolio(){
-        $portfolios = Portfolio::orderBy('portfolio_id', 'DESC')->paginate(9);
-        return view('client.see-more-portfolio', compact('portfolios'));
+
+    public function seeMorePortfolio(Request $request)
+    {
+        if ($request->get('sort') == 'year_asc') {
+            $portfolios = Portfolio::orderBy('portfolio_year', 'ASC')->paginate(9);
+
+            return view('client.see-more-portfolio', compact('portfolios'));
+        } else {
+            $portfolios = Portfolio::orderBy('portfolio_year', 'DESC')->paginate(9);
+
+            return view('client.see-more-portfolio', compact('portfolios'));
+        }
     }
 }

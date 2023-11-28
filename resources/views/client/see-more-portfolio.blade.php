@@ -2,19 +2,45 @@
 @section('body')
 <div class="container">
 	<div id="portfolios" class="portfolios-area default-padding">
-		<div class="container-portfolios-title">
-			<h2>Proofs/Portfolios</h2>
-		</div>
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-				aria-expanded="false">
-				Dropdown button
-			</button>
-			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" href="#">Action</a></li>
-				<li><a class="dropdown-item" href="#">Another action</a></li>
-				<li><a class="dropdown-item" href="#">Something else here</a></li>
-			</ul>
+		<div class="header-more-porto row pb-5">
+			<div class="col-lg-3 col-md-2 col-sm-0">
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-12">
+				<h2 class="text-center">Proofs/Portfolios</h2>
+			</div>
+			<div class="col-lg-3 col-md-2 col-sm-0">
+				<div class="d-flex justify-content-end">
+					<div class="dropdown">
+						<button class="dropdown-toggle py-2 px-3 rounded text-white" type="button"
+							data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #F16724">
+							Sort by Year
+							<svg width="36" height="34" viewBox="0 0 36 34" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M22.4641 21.2691L24.8185 19.124L25.8608 20.0736L22.2488 23.3645L21.7269 23.84L21.2065 23.3658L17.5945 20.075L18.6369 19.124L20.9898 21.2691V10.3838H22.4641V21.2691ZM13.7659 12.6632V23.5485H15.2401V12.6632L17.5945 14.8083L18.6369 13.8586L15.0249 10.5678L14.5015 10.0923L13.9796 10.5678L10.3691 13.8586L11.4115 14.8083L13.7659 12.6632Z"
+									fill="white" />
+							</svg>
+							<svg width="12" height="6" viewBox="0 0 12 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.642578 0.500488L6.19203 5.50049L11.7415 0.500488H0.642578Z"
+									fill="white" />
+							</svg>
+						</button>
+						<ul class="dropdown-menu w-100">
+							<li>
+								<a class="dropdown-item" href="{{ URL::current().'?sort=year_asc'}}">
+									Ascending
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{ URL::current().'?sort=year_desc' }}">
+									Descending
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		{{-- Section row portfolio --}}
