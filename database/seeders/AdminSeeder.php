@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 
@@ -17,13 +16,12 @@ class AdminSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         Admin::truncate();
 
-        $pass = "HXspwjU25dRVuBIIAdj2uuh9";
-        $string_password = "$2y$10$".$pass."/0xoxEn/JSxEE7gMQYdeHvTshJlZq";
+        $pass = 'LMyJNwF55shWUXXbhxTYu';
+        $string_password = '$2y$10$'.$pass.'.81hxtZxLre1jM.P2gUkq/TRdtDIB3YK';
         Admin::insert([
-            "username"=> "kahasolusi",
-            "email"=> "info@kahasolusi.com",
-            "password"=> $string_password
+            'username' => 'kahasolusi',
+            'email' => 'info@kahasolusi.com',
+            'password' => $string_password,
         ]);
-        Admin::factory(3)->create();
     }
 }
