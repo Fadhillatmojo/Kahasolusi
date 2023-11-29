@@ -425,3 +425,41 @@ li.telp, li.mail, li.loc .icon i {
 .role-img{
 	border-radius: 50px;
 }
+
+/* success pop up */
+#popup-container {
+	display: flex;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	color: var(--white);
+	justify-content: center;
+	align-items: center;
+}
+
+#popup-box {
+	display: flex;
+	align-items: center;
+	padding: 35px;
+	z-index: 101;
+	border: solid 1px black;
+	background-color: var(--dark);
+	border-radius: 5px;
+	text-align: center;
+}
+
+#close-popup {
+	margin-top: -40px;
+	margin-right: -10px;
+	font-size: 50px;
+	cursor: pointer;
+}
+
+#table-radio{
+	border-collapse: separate;
+	border-spacing: 10px 0;
+}

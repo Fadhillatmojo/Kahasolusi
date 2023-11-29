@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyStructureController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\PortfolioController;
@@ -15,6 +16,7 @@ Route::controller(DashboardClientController::class)->group(function () {
     Route::get('/', 'index')->name('dashboardClient');
     Route::get('/portfolios', 'seeMorePortfolio')->name('seeMorePortfolio');
 });
+Route::post('/send-mail', [ContactUsController::class, 'sendEmail'])->name('contactUs');
 
 Route::middleware(['prevent-back-history'])->group(function () {
 
