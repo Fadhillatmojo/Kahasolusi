@@ -82,29 +82,29 @@ Tools
 @push('scripts')
 <script>
     function hidePopUp() {
-                // Sembunyikan pop-up
-                document.getElementById('popup-container').style.display = 'none';
-            }
-            
-            function showDeleteConfirmation(toolId) {
-                document.getElementById('popup-container-confirm').style.display = 'flex';
-                document.getElementById('confirmation-popup').style.display = 'block';
-                document.getElementById('btnDelete').onclick = function() {
-                    submitDeleteForm(toolId);
-                };
-            }
+        // Sembunyikan pop-up
+        document.getElementById('popup-container').style.display = 'none';
+    }
+    
+    function showDeleteConfirmation(toolId) {
+        document.getElementById('popup-container-confirm').style.display = 'flex';
+        document.getElementById('confirmation-popup').style.display = 'block';
+        document.getElementById('btnDelete').onclick = function() {
+            submitDeleteForm(toolId);
+        };
+    }
 
-            function hideDeleteConfirmation(toolId) {
-                document.getElementById('popup-container-confirm').style.display = 'none';
-                document.getElementById('confirmation-popup').style.display = 'none';
-            }
+    function hideDeleteConfirmation(toolId) {
+        document.getElementById('popup-container-confirm').style.display = 'none';
+        document.getElementById('confirmation-popup').style.display = 'none';
+    }
 
-            function submitDeleteForm(toolId) {
-                // Construct the form ID dynamically based on the portfolio ID
-                var formId = 'deleteForm_' + toolId;
-                // Submit the form with the constructed ID
-                document.getElementById(formId).submit();
-            }
+    function submitDeleteForm(toolId) {
+        // Construct the form ID dynamically based on the portfolio ID
+        var formId = 'deleteForm_' + toolId;
+        // Submit the form with the constructed ID
+        document.getElementById(formId).submit();
+    }
 </script>
 @endpush
 @endsection
