@@ -130,6 +130,7 @@ ul.nav>li>a.smooth-menu{
 }
 /* portfolios */
 .card{
+width: auto;
 box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 }
 

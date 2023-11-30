@@ -17,20 +17,20 @@
     <link rel="icon" href="data:," type=""> --}}
 
     <!-- ========== Start Stylesheet ========== -->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/font-awesome.min.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/themify-icons.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/elegant-icons.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/flaticon-set.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/magnific-popup.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/owl.carousel.min.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/owl.theme.default.min.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/animate.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/bootsnav.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('assets/css/responsive.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('css/style.css') }}?v=1.3" rel="stylesheet">
-    <link href="{{ asset('css/style-custom.css') }}?v=1.3" rel="stylesheet" />
-    <link href="{{ asset('css/style-2.css') }}?v=1.3" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/themify-icons.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/elegant-icons.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/flaticon-set.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/magnific-popup.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/owl.carousel.min.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/owl.theme.default.min.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/animate.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bootsnav.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('assets/css/responsive.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}?v=1.4" rel="stylesheet">
+    <link href="{{ asset('css/style-custom.css') }}?v=1.4" rel="stylesheet" />
+    <link href="{{ asset('css/style-2.css') }}?v=1.4" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
     @stack('link')
 

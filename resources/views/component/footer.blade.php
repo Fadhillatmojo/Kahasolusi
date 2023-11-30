@@ -5,9 +5,9 @@
  </div> -->
     <!-- End illustration -->
     <div class="container-footer">
-        <div class="d-flex justify-content-center f-items default-padding">
+        <div class="f-items d-flex justify-content-center">
             <div class="row-footer row-cols-1 row-cols-lg-3 ">
-                <div class="col-lg-4 col-md-6 item">
+                <div class="col-lg-5 col-md-6 item">
                     <div class="f-item about">
                         <img src="{{ asset('assets/img/logo-white.png') }}" class="logo" alt="Logo">
                         <h4>PT Kaha Solusi Indonesia</h4>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 item">
-                    <div class="f-item link">
+                    <div class="f-item link mt-5 mt-sm-0">
                         <h4 class="widget-title">Quick Link</h4>
                         <ul style="list-style: none;">
                             <li>
@@ -80,7 +80,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="maps-area">
+                <div class="maps-area col-lg-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
@@ -98,7 +98,7 @@
         </div>
     </div>
     <!-- Start Footer Bottom -->
-    <div class="footer-bottom">
+    <div class="footer-bottom d-flex align-items-end">
         <div class="container">
             <div class="footer-bottom-box">
                 <div class="row footer-bottom-row">

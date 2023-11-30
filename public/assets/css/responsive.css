@@ -123,6 +123,8 @@
 		padding-left: 15px;
 	}
 	.about-us-area .thumb {
+		display: flex;
+		justify-content: center;
 		margin-bottom: 30px;
 	}
 	.about-us-area .thumb img:first-child {
@@ -327,7 +329,7 @@
 	}
 	/* Portfolio */
 	.card{
-		width: 54%;
+		width: 80% !important;
 		margin: 10px;
 	}
 
@@ -874,13 +876,13 @@
 		margin-top: 30px;
 	}
 	.about-us-area .info {
-		padding-left: 15px;
+		padding-left: 15px !important;
 	}
 	.about-us-area .thumb {
 		margin-bottom: 30px;
 	}
 	.about-us-area .thumb img:first-child {
-		width: 100%;
+		width: 100% !important;
 	}
 	.about-us-area .info .bottom-info {
 		margin-right: 0;
@@ -1763,6 +1765,11 @@
 	}
 	.card-testi {
 		width: inherit;
+	}
+	body,
+	.banner-area,
+	.banner-area div {
+		height: 100%;
 	}
 
 	
