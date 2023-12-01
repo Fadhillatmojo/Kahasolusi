@@ -17,7 +17,7 @@ class TestimonialController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $count = Testimonial::count();
-            $testimonials = Testimonial::paginate(6);
+            $testimonials = Testimonial::orderBy('created_at', 'DESC')->paginate(6);
             $showButton = $count <= 3;
 
             return view('admin.testimonials.index', compact('testimonials', 'showButton'));

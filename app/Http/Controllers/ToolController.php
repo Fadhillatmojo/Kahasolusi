@@ -16,7 +16,7 @@ class ToolController extends Controller
     public function index()
     {
         if (Auth::guard('admin')->check()) {
-            $tools = Tool::orderBy('created_at', 'DESC')->get();
+            $tools = Tool::orderBy('updated_at', 'DESC')->get();
             $showButton = true;
 
             return view('admin.tools.index', compact('tools', 'showButton'));
