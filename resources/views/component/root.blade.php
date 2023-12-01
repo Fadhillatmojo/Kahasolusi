@@ -117,7 +117,7 @@
                                     <li>
                                         {{-- nyoba scrool view navbar tapi masih belom --}}
                                         {{-- <a class="active smooth-menu" href="#header">Home</a> --}}
-                                        <a href="/#header" class="smooth-menu">Home</a>
+                                        <a href="/" class="smooth-menu">Home</a>
                                     </li>
                                     <li>
                                         <a href="/#about" class="smooth-menu">About</a>
