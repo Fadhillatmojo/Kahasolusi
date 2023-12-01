@@ -16,7 +16,7 @@ class PortfolioController extends Controller
     public function index()
     {
         if (Auth::guard('admin')->check()) {
-            $portfolios = Portfolio::orderBy('created_at', 'DESC')->paginate(6);
+            $portfolios = Portfolio::orderBy('updated_at', 'DESC')->paginate(6);
             $showButton = true; // true karena portfolio dapat ditambah sampai tak terhingga
 
             return view('admin.portfolios.index', compact('portfolios', 'showButton'));

@@ -15,8 +15,9 @@ class FAQController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $count = FAQ::count();
-            $faqs = FAQ::paginate(6);
-            $showButton = $count <=6;
+            $faqs = FAQ::orderBy('created_at', 'DESC')->paginate(6);
+            $showButton = $count <= 6;
+
             return view('admin.faqs.index', compact('faqs', 'showButton'));
         }
     }
@@ -28,6 +29,7 @@ class FAQController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $faq = FAQ::findOrFail($id);
+
             return view('admin.faqs.edit', compact('faq'));
         }
     }
@@ -39,16 +41,29 @@ class FAQController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'faq_title'   => 'required|string|max:60',
-                'faq_answer'  => 'required|string|max:200'
+                'faq_title' => 'required|string|max:60',
+                'faq_answer' => 'required|string|max:200',
             ]);
             $faq = FAQ::findOrFail($id);
             $faq->update([
-                'faq_title'   => $request->faq_title,
-                'faq_answer'  => $request->faq_answer
+                'faq_title' => $request->faq_title,
+                'faq_answer' => $request->faq_answer,
             ]);
+
             //redirect to new edit form
             return redirect()->route('faqs.edit', $faq->faq_id)->with(['message' => 'FAQ Berhasil Diubah!']);
+        }
+    }
+
+    public function destroy(string $id)
+    {
+        if (Auth::guard('admin')->check()) {
+            // faq objek
+            $faq = FAQ::findOrFail($id);
+
+            $faq->delete();
+
+            return redirect()->route('faqs.index')->with(['message' => 'Data Berhasil Dihapus!']);
         }
     }
 }
