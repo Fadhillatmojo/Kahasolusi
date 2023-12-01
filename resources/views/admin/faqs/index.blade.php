@@ -20,18 +20,6 @@ FAQs
 @endif
 {{-- end bagian message popup --}}
 
-{{-- Bagian untuk konfirmasi penghapusan --}}
-<div id="popup-container-confirm">
-    <div id="confirmation-popup" class="confirmation-popup">
-        <div class="confirmation-content">
-            <p>Anda yakin ingin menghapus FAQ ini?</p>
-            <button class="me-2 py-2 px-3 btn-cancel" onclick="hideDeleteConfirmation()">Batal</button>
-            <button id="btnDelete" class="btn btn-danger">Hapus</button>
-        </div>
-    </div>
-</div>
-{{-- end konfirmasi penghapusan --}}
-
 <table class="table rounded-corner">
     <thead class="table text-center align-middle">
         <tr>
@@ -64,34 +52,4 @@ FAQs
         @endforeach
     </tbody>
 </table>
-
-{{-- scripts js --}}
-@push('scripts')
-<script>
-    function hidePopUp() {
-        // Sembunyikan pop-up
-        document.getElementById('popup-container').style.display = 'none';
-    }
-    function showDeleteConfirmation(faqId) {
-        document.getElementById('popup-container-confirm').style.display = 'flex';
-        document.getElementById('confirmation-popup').style.display = 'block';
-        document.getElementById('btnDelete').onclick = function() {
-            submitDeleteForm(faqId);
-        };
-    }
-
-    function hideDeleteConfirmation(faqId) {
-        document.getElementById('popup-container-confirm').style.display = 'none';
-        document.getElementById('confirmation-popup').style.display = 'none';
-    }
-
-    function submitDeleteForm(faqId) {
-        // Construct the form ID dynamically based on the portfolio ID
-        var formId = 'deleteForm_' + faqId;
-        // Submit the form with the constructed ID
-        document.getElementById(formId).submit();
-    }
-</script>
-@endpush
-{{ $faqs->links() }}
 @endsection
