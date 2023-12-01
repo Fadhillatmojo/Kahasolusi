@@ -34,19 +34,9 @@ FAQs
             <td class="align-middle index" style="font-weight: bold">{{ $faq->faq_title }}</td>
             <td class="align-middle index">{{ $faq->faq_answer }}</td>
             <td class="text-center align-middle none-border-right index">
-                <div class="d-flex justify-content-center">
-                    <a href="{{ route('faqs.edit', $faq->faq_id) }}">
-                        <img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}">
-                    </a>
-                    <form id="deleteForm_{{ $faq->faq_id }}" action="{{ route('faqs.destroy', $faq->faq_id) }}"
-                        method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="button" id="btn-delete"
-                            onclick="showDeleteConfirmation('{{ $faq->faq_id }}')"><img
-                                src="{{ asset('../adminassets/img/global/action/iconActionDelete.svg') }}"></button>
-                    </form>
-                </div>
+                <a href="{{ route('faqs.edit', $faq->faq_id) }}">
+                    <img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}">
+                </a>
             </td>
         </tr>
         @endforeach
