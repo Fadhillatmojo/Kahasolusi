@@ -1,4 +1,4 @@
-<div id="roles" class="-area ovroleserflow-hidden py-5">
+<div id="roles" class="roles-area ovroleserflow-hidden default-padding">
     <div class="container-roles-title">
         <h2>Roles</h2>
     </div>

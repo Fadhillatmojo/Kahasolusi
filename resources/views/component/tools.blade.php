@@ -1,4 +1,4 @@
-<div id="tools" class="-area ovroleserflow-hidden py-5">
+<div id="tools" class="tools-area ovroleserflow-hidden default-padding">
     <div class="container-tools-title mb-5">
         <h2 class="mb-5">Tools</h2>
     </div>
