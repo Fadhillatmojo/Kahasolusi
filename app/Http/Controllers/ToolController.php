@@ -126,8 +126,8 @@ class ToolController extends Controller
                 ]);
             }
 
-            //redirect to new edit form
-            return redirect()->route('tools.edit', $tool->tool_id)->with(['message' => 'Tool Berhasil Diubah!']);
+            //redirect to new index table
+            return redirect()->route('tools.index', $tool->tool_id)->with(['message' => 'Tool Berhasil Diubah!']);
         }
     }
 

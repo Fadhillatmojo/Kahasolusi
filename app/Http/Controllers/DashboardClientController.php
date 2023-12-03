@@ -15,9 +15,9 @@ class DashboardClientController extends Controller
     public function index()
     {
         $faqs = FAQ::paginate(6)->chunk(3);
-        $founders = Company_structure::orderBy('created_at', 'DESC')->paginate(4);
+        $founders = Company_structure::orderBy('created_at', 'DESC')->get();
         $portfolios = Portfolio::orderBy('portfolio_year', 'DESC')->paginate(6);
-        $roles = Role::paginate(8);
+        $roles = Role::get();
         $testimonials = Testimonial::get();
         $tools = Tool::get();
 

@@ -122,8 +122,8 @@ class RoleController extends Controller
                 ]);
             }
 
-            //redirect to new edit form
-            return redirect()->route('roles.edit', $role->role_id)->with(['message' => 'Role Berhasil Diubah!']);
+            //redirect to index table
+            return redirect()->route('roles.index', $role->role_id)->with(['message' => 'Role Berhasil Diubah!']);
         }
     }
 

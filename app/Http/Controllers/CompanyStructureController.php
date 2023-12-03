@@ -120,8 +120,8 @@ class CompanyStructureController extends Controller
                 ]);
             }
 
-            //redirect to new edit form
-            return redirect()->route('founders.edit', $founder->person_id)->with(['message' => 'Founder Berhasil Diubah!']);
+            //redirect to new index table
+            return redirect()->route('founders.index', $founder->person_id)->with(['message' => 'Founder Berhasil Diubah!']);
         }
     }
 
