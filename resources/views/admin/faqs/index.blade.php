@@ -42,4 +42,14 @@ FAQs
         @endforeach
     </tbody>
 </table>
+
+{{-- scripts js --}}
+@push('scripts')
+<script>
+    function hidePopUp() {
+        // Sembunyikan pop-up
+        document.getElementById('popup-container').style.display = 'none';
+    }
+</script>
+@endpush
 @endsection
