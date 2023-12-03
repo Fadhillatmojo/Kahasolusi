@@ -128,8 +128,8 @@ class TestimonialController extends Controller
             ]);
         }
 
-        //redirect to new edit form
-        return redirect()->route('testimonials.edit', $testimonial->testimonial_id)->with(['message' => 'testimonial Berhasil Diubah!']);
+        //redirect to new index table
+        return redirect()->route('testimonials.index', $testimonial->testimonial_id)->with(['message' => 'testimonial Berhasil Diubah!']);
     }
 
     /**

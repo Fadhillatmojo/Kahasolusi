@@ -195,8 +195,8 @@ class PortfolioController extends Controller
                     ]);
                 }
 
-                //redirect to new edit form
-                return redirect()->route('portfolios.edit', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
+                //redirect to new index table
+                return redirect()->route('portfolios.index', $portfolio->portfolio_id)->with(['message' => 'Portfolio Berhasil Diubah!']);
             }
         }
     }

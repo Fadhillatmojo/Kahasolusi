@@ -50,8 +50,8 @@ class FAQController extends Controller
                 'faq_answer' => $request->faq_answer,
             ]);
 
-            //redirect to new edit form
-            return redirect()->route('faqs.edit', $faq->faq_id)->with(['message' => 'FAQ Berhasil Diubah!']);
+            //redirect to new index table
+            return redirect()->route('faqs.index', $faq->faq_id)->with(['message' => 'FAQ Berhasil Diubah!']);
         }
     }
 }
