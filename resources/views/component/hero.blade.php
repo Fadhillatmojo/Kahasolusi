@@ -41,7 +41,8 @@
                                         <h2 data-animation="animated slideInLeft">Innovative IT Solutions for Your
                                             Business Success</h2>
                                         <div class="bottom" data-animation="animated slideInUp">
-                                            <a class="btn btn-theme primary effect btn-md" href="#">Contact Us</a>
+                                            <a class="btn btn-theme primary effect btn-md " href="#contact">Contact
+                                                Us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +64,8 @@
                                         <h2 data-animation="animated slideInLeft">Maximizing Your Business
                                             with Strategic IT Solutions</h2>
                                         <div class="bottom" data-animation="animated slideInUp">
-                                            <a class="btn btn-theme primary effect btn-md" href="#">Contact Us</a>
+                                            <a class="btn btn-theme primary effect btn-md" href="#contact">Contact
+                                                Us</a>
                                         </div>
                                     </div>
                                 </div>

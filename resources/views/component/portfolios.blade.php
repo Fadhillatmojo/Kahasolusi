@@ -3,8 +3,8 @@
         <h5>PORTFOLIOS</h5>
         <h2>Our Recent Project</h2>
     </div>
-
     <div id="project" class="project-area overflow-hidden">
+        <div class="circle-kanan-portfolio rounded-full"></div>
         <div class="container">
             <div class="project-items-area">
                 <div class="masonary">

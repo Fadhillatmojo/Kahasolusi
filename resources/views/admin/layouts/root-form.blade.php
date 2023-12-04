@@ -14,7 +14,7 @@
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
-    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.3">
+    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.5">
     {{-- end style sheet CSS admin --}}
 
     {{-- title admin --}}

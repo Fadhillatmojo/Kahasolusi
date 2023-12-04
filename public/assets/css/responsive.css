@@ -698,6 +698,16 @@
 		padding: 80px 0;
 		position: relative;
 	}
+
+	.circle-kanan-portfolio{
+		display: none;
+	}
+	.circle-kanan-testi{
+		display: none;
+	}
+	.circle-kiri{
+		display: none;
+	}
 	/* navbar */
 	a.smooth-menu{
 		text-align: left;
@@ -1328,16 +1338,28 @@
 	.services-style-three:nth-child(2) {
 		margin-top: 30px;
 	}
-
-
-
 	/* tools */
-	div#tools{
+		/* div#tools{
 		display: none !important;
+	} */
+	.card-tools {
+		width: 250px !important;
+		height: 100px  !important;
+		border-radius: 10px !important;
 	}
-
-
-	
+	.marquee-content {
+		width: 400% !important;
+	}
+	.marquee-content-reverse {
+		width: 400% !important;
+	}
+	.desc-tools h4{
+		font-size: 16px !important;
+		margin-bottom: 0px;
+	}
+	.desc-tools p{
+		font-size: 12px !important;
+	}
 	/* Testimonials */
 	.card-testi-item-text b {
 		font-size: 15px;
