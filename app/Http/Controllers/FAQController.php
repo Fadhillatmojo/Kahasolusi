@@ -41,8 +41,8 @@ class FAQController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'faq_title' => 'required|string|max:60',
-                'faq_answer' => 'required|string|max:200',
+                'faq_title' => 'required|string|max:255',
+                'faq_answer' => 'required|string|max:255',
             ]);
             $faq = FAQ::findOrFail($id);
             $faq->update([
