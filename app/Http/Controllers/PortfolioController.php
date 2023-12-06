@@ -40,8 +40,8 @@ class PortfolioController extends Controller
     {
         if (Auth::guard('admin')->check()) { // check apakah sudah login atau belom
             $request->validate([
-                'portfolio_title' => 'required|string|max:40',
-                'portfolio_desc' => 'required|string|max:120',
+                'portfolio_title' => 'required|string|max:100',
+                'portfolio_desc' => 'required|string|max:254',
                 'portfolio_year' => 'required|integer|digits:4|between:1900,2120',
                 'portfolio_url' => 'nullable|string|max:225',
                 'portfolio_image_url' => 'required|image|mimes:jpeg,jpg,png|max:2048',
@@ -115,8 +115,8 @@ class PortfolioController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'portfolio_title' => 'required|string|max:40',
-                'portfolio_desc' => 'required|string|max:120',
+                'portfolio_title' => 'required|string|max:100',
+                'portfolio_desc' => 'required|string|max:254',
                 'portfolio_year' => 'required|integer|digits:4|between:1900,2120',
                 'portfolio_url' => 'nullable|string|max:225',
                 'portfolio_image_url' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
