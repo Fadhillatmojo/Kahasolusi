@@ -40,8 +40,8 @@ class ToolController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'tool_title' => 'required|string|max:10',
-                'tool_desc' => 'required|string|max:10',
+                'tool_title' => 'required|string|max:15',
+                'tool_desc' => 'required|string|max:15',
                 'tool_image_url' => 'required|image|mimes:jpeg,jpg,png|max:2048',
             ]);
 
@@ -88,8 +88,8 @@ class ToolController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             $request->validate([
-                'tool_title' => 'required|string|max:10',
-                'tool_desc' => 'required|string|max:10',
+                'tool_title' => 'required|string|max:15',
+                'tool_desc' => 'required|string|max:15',
                 'tool_image_url' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
             ]);
             $tool = Tool::findOrFail($id);
