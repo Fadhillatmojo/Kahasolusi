@@ -87,7 +87,10 @@ ul.nav>li>a.smooth-menu{
 	box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 	margin: 10px;
 	height: 95%;
-	border-radius: 13px;
+	border-bottom-right-radius: 13px;
+	border-bottom-left-radius: 13px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
 }
 .circle-kanan-portfolio{
 	width: 904px;
@@ -113,6 +116,9 @@ ul.nav>li>a.smooth-menu{
 	font-weight: 600 !important;
     margin-bottom: 25px;
 	text-align: center;
+}
+.project-style-two .info span, .project-style-two .info h4 {
+    font-size: 16px;
 }
 
 /* tools */

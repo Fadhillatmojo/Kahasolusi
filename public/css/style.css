@@ -3936,7 +3936,10 @@ button:focus {
     z-index: 1;
 	overflow: hidden;
 	height: 100%;
-	border-radius: 15px;
+	border-bottom-right-radius: 13px;
+	border-bottom-left-radius: 13px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
 }
 
 .project-style-two img {
@@ -3978,7 +3981,7 @@ button:focus {
 }
 
 .project-style-two .info span {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 600;
 	transition: all 0.35s ease-in-out;
 	opacity: 0;
