@@ -74,7 +74,8 @@
                                             {{ $portfolio->portfolio_desc }}
                                         </span>
                                         @if ($portfolio->portfolio_url != null)
-                                            <h4><a href="{{ $portfolio->portfolio_url }}">Go to link ></a></h4>
+                                            <h4><a href="{{ $portfolio->portfolio_url }}" target="_blank">Go to link ></a>
+                                            </h4>
                                         @endif
                                     </div>
                                 </div>
