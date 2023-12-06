@@ -34,10 +34,6 @@ html, body, .wrapper {
     background: #F3F7FF;
 }
 
-.card{
-	margin: 10px;
-}
-
 ul.nav>li>a.smooth-menu{
 	padding: 0 !important;
 	text-align: center;
@@ -87,8 +83,14 @@ ul.nav>li>a.smooth-menu{
 }
 /* portfolios */
 .card{
-width: auto;
-box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
+	width: auto;
+	box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
+	margin: 10px;
+	height: 95%;
+	border-bottom-right-radius: 13px;
+	border-bottom-left-radius: 13px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
 }
 .circle-kanan-portfolio{
 	width: 904px;
@@ -114,6 +116,9 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 	font-weight: 600 !important;
     margin-bottom: 25px;
 	text-align: center;
+}
+.project-style-two .info span, .project-style-two .info h4 {
+    font-size: 16px;
 }
 
 /* tools */
