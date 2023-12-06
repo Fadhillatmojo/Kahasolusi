@@ -1,5 +1,5 @@
 <!-- Start Contact Area -->
-<div class="included-bg">
+<div class="included-bg relative">
     <div id="contact" class="contact-area bg-theme text-light">
         <div class="container">
             <div class="contact-content">
@@ -55,7 +55,7 @@
                                                 type="text" required>
                                             {{-- <span class="alert-error"></span> --}}
                                             @if ($errors->has('name'))
-                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                <span class="text-danger">{{ $errors->first('name') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@
                                                 placeholder="example@gmail.com *" type="email" required>
                                             {{-- <span class="alert-error"></span> --}}
                                             @if ($errors->has('email'))
-                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                <span class="text-danger">{{ $errors->first('email') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                                 placeholder="+6289896764 *" type="text" required>
                                             {{-- <span class="alert-error"></span> --}}
                                             @if ($errors->has('phone'))
-                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                                <span class="text-danger">{{ $errors->first('phone') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -85,10 +85,9 @@
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12 input-comment">
                                         <div class="form-group comments">
-                                            <textarea class="form-control" id="comments" name="comments"
-                                                placeholder="Tell Us About Project *" required></textarea>
+                                            <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *" required></textarea>
                                             @if ($errors->has('comments'))
-                                            <span class="text-danger">{{ $errors->first('comments') }}</span>
+                                                <span class="text-danger">{{ $errors->first('comments') }}</span>
                                             @endif
                                         </div>
                                     </div>

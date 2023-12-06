@@ -20,7 +20,7 @@
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
-    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.4">
+    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.5">
     {{-- end style sheet CSS admin --}}
 
     {{-- title admin --}}
@@ -60,7 +60,8 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('roles.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('roles.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide" class="me-3">
+                            <img src="{{ asset('../adminassets/img/global/iconRole.svg') }}" alt="hide"
+                                class="me-3">
 
                             <span>Roles</span>
                         </a>
@@ -70,7 +71,8 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('tools.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('tools.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide" class="me-3">
+                            <img src="{{ asset('../adminassets/img/global/iconTool.svg') }}" alt="hide"
+                                class="me-3">
                             <span>Tools</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('tools.index') ? 'active' : '' }}">.</b>
@@ -79,7 +81,8 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('founders.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide" class="me-3">
+                            <img src="{{ asset('../adminassets/img/global/iconFounder.svg') }}" alt="hide"
+                                class="me-3">
                             <span>Founders</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('founders.index') ? 'active' : '' }}">.</b>
@@ -87,7 +90,8 @@
                     <div class="side-navbar">
                         <b class="round-top {{ Request::routeIs('faqs.index') ? 'active' : '' }}">.</b>
                         <a href="{{ route('faqs.index') }}" class="sidebar-item" onclick="toggleActive(this)">
-                            <img src="{{ asset('../adminassets/img/global/iconFAQ.svg') }}" alt="hide" class="me-3">
+                            <img src="{{ asset('../adminassets/img/global/iconFAQ.svg') }}" alt="hide"
+                                class="me-3">
                             <span>FAQs</span>
                         </a>
                         <b class="round-bottom {{ Request::routeIs('faqs.index') ? 'active' : '' }}">.</b>
@@ -126,7 +130,8 @@
                 <div class="d-flex justify-content-between align-items-center w-100 mb-3 mb-md-0">
                     <div class="d-flex justify-content-start align-items-center">
                         <button id="toggle-navbar" onclick="toggleNavbar()">
-                            <img src="{{ asset('../adminassets/img/global/burger.svg') }}" class="mb-2" alt="">
+                            <img src="{{ asset('../adminassets/img/global/burger.svg') }}" class="mb-2"
+                                alt="">
                         </button>
                         <h2 class="nav-title">@yield('title-page')</h2>
                     </div>
@@ -138,16 +143,18 @@
                         <button class="btn-nav-input"><img src="../adminassets/img/global/search.svg" alt=""></button>
                     </div> --}}
                     @if (!Request::routeIs('faqs.index'))
-                    @if ($showButton)
-                    <button class="btn-add d-md-block">
-                        <a href="@yield('create-route')"><img
-                                src="{{ asset('../adminassets/img/global/addButton.svg') }}" alt=""></a>
-                    </button>
-                    @else
-                    <button class="btn-add d-md-block" disabled>
-                        <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}" alt="">
-                    </button>
-                    @endif
+                        @if ($showButton)
+                            <button class="btn-add d-md-block">
+                                <a href="@yield('create-route')"><img
+                                        src="{{ asset('../adminassets/img/global/addButton.svg') }}"
+                                        alt=""></a>
+                            </button>
+                        @else
+                            <button class="btn-add d-md-block" disabled>
+                                <img src="{{ asset('../adminassets/img/global/addButtonDisabled.svg') }}"
+                                    alt="">
+                            </button>
+                        @endif
                     @endif
                 </div>
             </div>
