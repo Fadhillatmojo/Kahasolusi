@@ -6,12 +6,13 @@
 		<div class="error-box">
 			<div class="row">
 				<div class="col-lg-8">
-					<h1>5<span><img src="{{ asset('assets/img/illustration/10.png') }}" alt="illustration"></span>0
+					<h1>
+						500
 					</h1>
-					<h2>Bad Request</h2>
+					<h2>Internal Server Error</h2>
 					<p>
-						Household shameless incommode at no objection behaviour. Especially do at he possession
-						insensible sympathize boisterous it. Songs he on an widen me event truth.
+						Uh-oh! There's a hiccup on Kahasolusi's website. Our team is on it to fix the issue.
+						Please try reloading the page or revisit later.
 					</p>
 				</div>
 			</div>
