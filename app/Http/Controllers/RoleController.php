@@ -18,7 +18,7 @@ class RoleController extends Controller
         if (Auth::guard('admin')->check()) {
             $count = Role::count();
             $roles = Role::orderBy('updated_at', 'DESC')->paginate(8);
-            $showButton = $count < 8;
+            $showButton = true;
 
             return view('admin.roles.index', compact('roles', 'showButton'));
         }
