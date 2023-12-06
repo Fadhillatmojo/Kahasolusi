@@ -168,7 +168,7 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 
 .marquee-content {
 	display: flex;
-	animation: marquee 45s linear infinite;
+	animation: marquee 60s linear infinite;
 	width: 200%;
 	padding: 0 50px;
 	justify-content: space-evenly;
@@ -176,7 +176,7 @@ box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.20);
 }
 .marquee-content-reverse {
 	display: flex;
-	animation: marquee-reverse 45s linear infinite;
+	animation: marquee-reverse 60s linear infinite;
 	width: 200%;
 	padding: 0 50px;
 	justify-content: space-evenly;
