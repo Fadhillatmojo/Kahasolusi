@@ -267,8 +267,8 @@ ul.nav>li>a.smooth-menu{
 	text-align: center;
 }
 .card-tools{
-	width: 384px;
-	height: 162px;
+	width: 250px;
+	height: 150px;
 	display: flex;
 	padding: 10px 20px;
 	flex-shrink: 0;
