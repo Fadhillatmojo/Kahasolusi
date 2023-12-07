@@ -7,14 +7,14 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     {{-- end bootstrap CSS --}}
 
-    {{--  fonts google  --}}
+    {{-- fonts google --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     {{-- end fonts google --}}
 
     {{-- style sheet CSS admin --}}
-    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.7">
+    <link rel="stylesheet" href="{{ asset('../css/style-admin.css') }}?v=1.8">
     {{-- end style sheet CSS admin --}}
 
     {{-- title admin --}}
