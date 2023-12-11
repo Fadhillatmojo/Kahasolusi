@@ -1,4 +1,4 @@
-/* ----------------------------------
+/* ----------------------------------1239ac
 
 Template Name: Cleanu - Cleaning Services Template
 Author: validtheme
@@ -998,7 +998,7 @@ a:active {
 
 .relative {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 
 .bg-fixed {
@@ -1424,8 +1424,6 @@ button:focus {
 }
 
 .top-bar-area.multi-content .social li a {
-	height: 40px;
-	width: 40px;
 	line-height: 44px;
 	display: inline-block;
 	text-align: center;
@@ -1438,7 +1436,7 @@ button:focus {
 .top-bar-area.multi-content .social li a i {
 	margin: 0;
 	color: var(--white);
-	font-size: 14px;
+	font-size: 30px;
 	top: 0;
 }
 
@@ -1548,11 +1546,11 @@ button:focus {
      # Banner 
 =================================================================== */
 
-body,
+/* body,
 .banner-area,
 .banner-area div {
 	height: 100%;
-}
+} */
 
 .banner-area.auto-height,
 .banner-area.auto-height div {
@@ -1589,7 +1587,7 @@ body,
 	display: flex;
 	image-orientation: revert;
 	flex-direction: column;
-	align-items: center;
+	/* align-items: center; */
 	position: relative;
 	z-index: 9;
 	overflow: hidden;
@@ -2034,7 +2032,7 @@ body,
 }
 
 .banner-area.content-less .content h2 {
-	text-align: center;
+	/* text-align: center; */
 	margin-bottom: 0;
 }
 
@@ -3937,6 +3935,11 @@ body,
     position: relative;
     z-index: 1;
 	overflow: hidden;
+	height: 100%;
+	border-bottom-right-radius: 13px;
+	border-bottom-left-radius: 13px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
 }
 
 .project-style-two img {
@@ -3978,7 +3981,7 @@ body,
 }
 
 .project-style-two .info span {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 600;
 	transition: all 0.35s ease-in-out;
 	opacity: 0;
@@ -4237,13 +4240,13 @@ body,
 .testimonial-carousel .item .provider h5 {
 	margin: 0;
 	font-weight: 600;
-	margin-left: 25px;
+	/* margin-left: 25px; */
 	position: relative;
 	z-index: 1;
-	padding-left: 40px;
+	/* padding-left: 40px; */
 }
 
-.testimonial-carousel .item .provider h5::after {
+/* .testimonial-carousel .item .provider h5::after {
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -4252,7 +4255,7 @@ body,
 	width: 30px;
 	background: #1d2746;
 	margin-top: -1px;
-}
+} */
 
 .testimonial-carousel .item .provider .rating i {
 	color: #ffc000;
@@ -4304,17 +4307,15 @@ body,
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
-	display: inline-block;
+	display: flex;
 	position: absolute;
-	right: 30px;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 0px;
 	margin: 0;
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot {
 	display: block;
-	margin: 16px 0;
+	margin: 16px;
 }
 
 .testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot span {
@@ -6970,8 +6971,8 @@ ul.achivement li .counter .timer {
 /* Google maps */
 
 .maps-area iframe {
-	width: 400px;
-	min-height: 430px;
+	width: 390px;
+	min-height: 410px;
 	margin-bottom: -10px;
 	border-radius: 5px;
 	border: 2px solid rgba(18, 57, 172, 0.2);
@@ -7007,11 +7008,11 @@ footer {
 }
 
 footer .f-items {
-	margin-top: -50px;
+	margin-top: 50px;
 }
 
 footer .f-items .item {
-	margin-top: 50px;
+	margin-top: 0px;
 }
 
 footer .animate-illustration {
@@ -7048,7 +7049,7 @@ footer img {
 }
 
 footer .f-items .f-item.about {
-	border-right: 1px solid #e7e7e7;
+	/* border-right: 1px solid #e7e7e7; */
 	padding-right: 40px;
 	margin-right: 10px;
 }
@@ -7157,6 +7158,7 @@ footer.bg-theme .f-items .f-item.link li a:hover {
 footer .f-items .f-item.link li a {
 	font-weight: 400;
 	color:#FFF;
+	font-size: 18px;
 }
 
 footer.bg-dark .f-items .f-item.link li a,

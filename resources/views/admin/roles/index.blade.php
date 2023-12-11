@@ -33,26 +33,26 @@
     {{-- end konfirmasi penghapusan --}}
 
     {{-- table index roles --}}
-    <table class="table table-bordered">
-        <thead class="table-light text-center align-middle">
+    <table class="table rounded-corner">
+        <thead class="table text-center align-middle">
             <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Image</th>
-                <th scope="col">Action</th>
+                <th scope="col" class="index">Title</th>
+                <th scope="col" class="index">Image</th>
+                <th scope="col" class="none-border-right index">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($roles as $role)
                 <tr>
-                    <td class="align-middle text-center" style="font-weight: bold">{{ $role->role_name }}</td>
-                    <td class="align-middle text-center">
+                    <td class="align-middle text-center index" style="font-weight: bold">{{ $role->role_name }}</td>
+                    <td class="align-middle text-center index">
                         @if (Str::contains($role->role_image_url, ['http://', 'https://']))
                             <img src="{{ $role->role_image_url }}" alt="{{ $role->role_image_url }}" width="150" height="150">
                         @else
                             <img src="{{ (  asset('storage/roles/' . $role->role_image_url)) }}" alt="{{ $role->role_image_url }}" width="150" height="150">
                         @endif
                     </td>
-                    <td class="text-center align-middle">
+                    <td class="text-center align-middle none-border-right index">
                         <div class="d-flex justify-content-center">
                             <a href="{{ route('roles.edit', $role->role_id) }}"><img src="{{ asset('../adminassets/img/global/action/iconActionEdit.svg') }}"></a>
                             <form id="deleteForm_{{ $role->role_id }}" action="{{ route('roles.destroy', $role->role_id) }}" method="POST">

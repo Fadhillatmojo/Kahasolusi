@@ -1,2 +1,7 @@
 *
 !.gitignore
+!tools/
+!founders/
+!portfolios/
+!roles/
+!testimonials/

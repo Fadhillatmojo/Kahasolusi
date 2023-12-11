@@ -6,10 +6,6 @@
 /* Tablet Layout: 768px.*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.testimonial-carousel .item {
-		display: flex !important;
-		justify-content: center !important;
-	}	
 	.card-testi {
 		width: 80%;
 	}
@@ -47,9 +43,6 @@
 	/* navbar */
 	a.smooth-menu{
 		text-align: left;
-	}
-	.smooth-menu:before {
-		width: 95% !important;
 	}
 	/* Topbar */
 	.top-bar-area .item-flex {
@@ -130,6 +123,8 @@
 		padding-left: 15px;
 	}
 	.about-us-area .thumb {
+		display: flex;
+		justify-content: center;
 		margin-bottom: 30px;
 	}
 	.about-us-area .thumb img:first-child {
@@ -334,7 +329,8 @@
 	}
 	/* Portfolio */
 	.card{
-		width: 54%;
+		width: 80% !important;
+		height: 100%  !important;
 		margin: 10px;
 	}
 
@@ -474,10 +470,10 @@
 
 	/* tools */
 	.marquee-content {
-		animation: marquee 10s linear infinite !important;
+		animation: marquee 40s linear infinite !important;
 	}
 	.marquee-content-reverse {
-		animation: marquee-reverse 10s linear infinite !important;
+		animation: marquee-reverse 40s linear infinite !important;
 	}
 
 
@@ -486,12 +482,14 @@
 		margin-bottom: -30px;
 	}
 	.testimonial-carousel .item {
-		display: block;
+		display: flex;
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
 		text-align: center;
 		border-radius: 6px;
+		justify-content: center;
+		width: 80%;
 	}
 	.testimonial-carousel .item .provider {
 		justify-content: center;
@@ -517,14 +515,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
-	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
-		position: inherit;
-		top: auto;
-		bottom: 35px;
-		right: auto;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+	
 	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots .owl-dot {
 		display: inline-block;
 		margin: 0 10px;
@@ -708,12 +699,19 @@
 		padding: 80px 0;
 		position: relative;
 	}
+
+	.circle-kanan-portfolio{
+		display: none;
+	}
+	.circle-kanan-testi{
+		display: none;
+	}
+	.circle-kiri{
+		display: none;
+	}
 	/* navbar */
 	a.smooth-menu{
 		text-align: left;
-	}
-	.smooth-menu:before {
-		width: 95% !important;
 	}
 	/* Topbar */
 	.top-bar-area {
@@ -783,6 +781,7 @@
 	}
 	.banner-area.top-pad-extra .content {
 		padding-top: 140px;
+		margin: 0px !important;
 	}
 	.banner-area .carousel-item .bottom {
 		justify-content: center;
@@ -843,7 +842,7 @@
 	.btn-md{
 		font-size: 7px;
 	}
-	p.text-left{
+	p.text-justify{
 		font-size: small;
 	}
 	.misi-button{
@@ -888,13 +887,13 @@
 		margin-top: 30px;
 	}
 	.about-us-area .info {
-		padding-left: 15px;
+		padding-left: 15px !important;
 	}
 	.about-us-area .thumb {
 		margin-bottom: 30px;
 	}
 	.about-us-area .thumb img:first-child {
-		width: 100%;
+		width: 100% !important;
 	}
 	.about-us-area .info .bottom-info {
 		margin-right: 0;
@@ -922,9 +921,9 @@
 		display: flex;
 		justify-content: center;
 	}	
-	.project-style-two .info span, .project-style-two .info h4 { 
-		font-size: 10px;
-	}
+	/* .project-style-two .info span, .project-style-two .info h4 { 
+		font-size: 16px;
+	} */
 
 	/* Estimate */
 	.estimate-area .estimate-form .shape {
@@ -1056,7 +1055,7 @@
 	}
 	/* Portfolio */
 	.card{
-		width: 70%;
+		height: 100% !important;
 	}
 	.btn{
 		font-size: 10px;
@@ -1340,16 +1339,28 @@
 	.services-style-three:nth-child(2) {
 		margin-top: 30px;
 	}
-
-
-
 	/* tools */
-	div#tools{
+		/* div#tools{
 		display: none !important;
+	} */
+	.card-tools {
+		width: 250px !important;
+		height: 100px  !important;
+		border-radius: 10px !important;
 	}
-
-
-	
+	.marquee-content {
+		width: 400% !important;
+	}
+	.marquee-content-reverse {
+		width: 400% !important;
+	}
+	.desc-tools h4{
+		font-size: 16px !important;
+		margin-bottom: 0px;
+	}
+	.desc-tools p{
+		font-size: 12px !important;
+	}
 	/* Testimonials */
 	.card-testi-item-text b {
 		font-size: 15px;
@@ -1361,12 +1372,13 @@
 		margin-bottom: -30px;
 	}
 	.testimonial-carousel .item {
-		display: block;
+		display: flex;
 		padding: 50px 30px;
 		padding-bottom: 70px;
 		background: #ffffff;
 		text-align: center;
 		border-radius: 6px;
+		width: 350px;
 	}
 	.testimonial-carousel .item .provider {
 		justify-content: center;
@@ -1393,6 +1405,7 @@
 		transform: translateX(-50%);
 	}
 	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
+		display: flex;
 		position: inherit;
 		top: auto;
 		bottom: 35px;
@@ -1554,7 +1567,7 @@
 	.maps-area {
 		margin: 0;
 		padding: 0;
-		margin-bottom: 50px;
+		/* margin-bottom: 50px; */
 	}
 	.maps-area iframe {
 		min-height: 300px;
@@ -1604,6 +1617,12 @@
 	}
 	.maps-area {
 		margin-top: 50px;
+	}
+	.row-footer {
+    width: 85% !important;
+	}
+	.footer-bottom-row {
+		max-width: 400px;
 	}
 }
 
@@ -1671,14 +1690,18 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1350px) {
+	.container.bg {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1350px) {
 	/* global reset - start */
 	.order-last {
 		order: 0;
 	}
 }
-
-
 /* Custom layout. */
 
 @media only screen and (max-width: 400px) {
@@ -1697,7 +1720,7 @@
 	}
 	/* Testimonials */
 	.testimonial-carousel .item .provider {
-		display: block;
+		display: flex;
 	}
 	.testimonial-carousel .item .provider h5::after {
 		display: none;
@@ -1733,11 +1756,52 @@
 	}
 }
 
+@media (min-width: 1200px){
+	.container-footer {
+		min-width: 1350px;
+	}
+}
 
 /* Custom layout. */
 
 @media only screen and (max-width: 450px) {
 	.services-types-area .item ul li {
 		width: 100%;
+	}
+}
+
+/* Custom layout. */
+
+@media only screen and (min-width:991px){
+	.testimonials-area .testimonial-carousel.owl-carousel .owl-dots {
+    display: inline-block !important;
+    position: absolute;
+    right: 30px;
+	bottom: 100px !important;
+    top: 50%;
+	left: 92% !important;
+    transform: translateY(-50%);
+    margin: 0;
+	}
+	.testimonial-carousel .item {
+		width: inherit;
+	}
+	.card-testi {
+		width: inherit;
+	}
+	body,
+	.banner-area,
+	.banner-area div {
+		height: 100%;
+	}
+
+	
+}
+
+/* custom layout */
+@media (min-width: 768px){
+	.maps-area iframe {
+		width: 100% !important;
+		max-height: 370px;
 	}
 }

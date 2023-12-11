@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('company_structures', function (Blueprint $table) {
             $table->id("person_id");
-            $table->string("person_name");
             $table->string("person_position");
             $table->string("person_image_url");
             $table->unsignedBigInteger('admin_id')->required();

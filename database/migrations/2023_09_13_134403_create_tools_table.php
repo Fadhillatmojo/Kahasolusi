@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tools', function (Blueprint $table) {
             $table->id("tool_id");
+            $table->string("tool_title");
+            $table->string("tool_desc");
             $table->string("tool_image_url");
             $table->unsignedBigInteger("admin_id")->required();
             $table->timestamps();

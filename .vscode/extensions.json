@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "open-southeners.laravel-pint",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "georgykurian.laravel-ide-helper",
+        "bmewburn.vscode-intelephense-client"
+    ]
+}
